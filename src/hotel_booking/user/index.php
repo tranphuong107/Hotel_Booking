@@ -14,7 +14,27 @@
         <?php
             include ('header.php');
         ?>
-
+    <!-- Service -->
+    <section>
+        <div class = "text-uppercase fw-bold mb-4" style = "color:#FFC40E">
+            <h1><center>Dịch vụ</center></h1>
+        </div>
+        <div class="card mb-3 container" style="">
+            <div class="row g-0 border-white">
+                <div class="col-md-4">
+                <img src="" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service end -->
+    </section>
 
         <?php
             include ('footer.php');

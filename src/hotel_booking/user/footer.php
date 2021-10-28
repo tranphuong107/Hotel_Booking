@@ -13,73 +13,59 @@
 
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
-    <!-- Section: Social media -->
-    <section
-      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-    >
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
 
     <!-- Section: Links  -->
-    <section class="">
+    <section class="p-5">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo_footer.png" alt="">
+            <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo_footer.png" alt="" class = "img-fluid">
             <p>
             Đến với Khu nghỉ dưỡng Premier Village Mona Media, quý khách sẽ được trải nghiệm dịch vụ Spa cao cấp, trung tâm thể hình hiện đại và các hoạt động giải trí trên biển
             </p>
+            <ul class = "row" style = "list-style: none">
+              <li class = "col-3">
+              <a href="">
+                <img src="../images/facebook.png" alt="#" class = "img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Follow on Facebook">
+              </a></li>
+              <li class = "col-3">
+              <a href="#">
+                <img src="../images/insta.png" alt="#" class = "img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Follow on Instagram">
+              </a></li>
+              <li class = "col-3">
+              <a href="#">
+                <img src="../images/twitter.png" alt="#" class = "img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Follow on Twitter">
+              </a></li>
+            </ul>
           </div>
+          <!-- <div class = "row">
+            
+          </div> -->
           <!-- Grid column -->
 
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
+            <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
+              Dịch vụ
+            </h5>
             <p>
-              <a href="#!" class="text-reset">Angular</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Nhà hàng</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">React</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Khách sạn</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Vue</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Phòng họp</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Laravel</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Đám cưới</a>
+            </p>
+            <p>
+              <a href="#!" class="text-decoration-none" style = "color: white">Massage</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -87,20 +73,20 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
+            <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
+              Liên kết
+            </h5>
             <p>
-              <a href="#!" class="text-reset">Pricing</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Trang chủ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Dịch vụ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Phòng</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-decoration-none" style = "color: white">Đơn hàng</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -108,16 +94,28 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Contact
-            </h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
+              Hình ảnh
+            </h5>
+            <!-- picture -->
+            <ul class = "row p-0 m-0 large-columns-2" style = "list-style:none">
+              <li class = "col p-0 m-1">
+              <a href="">
+                <img src="../images/double-room.jpg" alt="#" class = "img-fluid">
+              </a></li>
+              <li class = "col p-0 m-1">
+              <a href="#">
+                <img src="../images/single-room.jpg" alt="#" class = "img-fluid">
+              </a></li>
+            </ul>
+            <ul class = "row p-0 m-0 medium-columns-2" style = "list-style:none">
+             <li class = "col col-auto p-0 m-1">
+              <a href="#">
+                <img src="../images/image-index.jpg" alt="#" class = "img-fluid">
+              </a></li>
+            </ul>
+            </div>
+            
           </div>
           <!-- Grid column -->
         </div>
@@ -129,21 +127,10 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      <a class="text-reset fw-bold" href="#">CSE485.CNW</a>
     </div>
     <!-- Copyright -->
 </footer>
-<!-- Footer -->
-
-      <!-- <section style = "background-color:black" class = "sticky-bottom">
-        <div class = "container">
-          <div class = "row">
-            <div class = "col">
-              <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo_footer.png" alt="">
-            </div>
-          </div>
-        </div>
-      </section> -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
