@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th10 27, 2021 lúc 03:14 AM
+-- Thời gian đã tạo: Th10 29, 2021 lúc 01:32 PM
 -- Phiên bản máy phục vụ: 8.0.17
 -- Phiên bản PHP: 7.3.10
 
@@ -30,11 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_admins` (
   `admin_id` int(10) UNSIGNED NOT NULL,
-  `admin_name` varchar(50) NOT NULL,
-  `admin_mobile` varchar(12) NOT NULL,
-  `admin_email` varchar(100) NOT NULL,
-  `admin_pass` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `admin_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `admin_mobile` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `admin_email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `admin_pass` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tb_admins`
+--
+
+INSERT INTO `tb_admins` (`admin_id`, `admin_name`, `admin_mobile`, `admin_email`, `admin_pass`) VALUES
+(1, 'admin', '0378954644', 'tranthibichphuong1007@gmail.com', '$2y$10$SUNHktx/e3P5MKmOwxe4E.kADRaMl7SCORS6PAmzflhguH5o9JLwS');
 
 -- --------------------------------------------------------
 
@@ -44,18 +51,17 @@ CREATE TABLE `tb_admins` (
 
 CREATE TABLE `tb_customers` (
   `cus_id` int(10) UNSIGNED NOT NULL,
-  `cus_name` varchar(50) NOT NULL,
-  `cus_mobile` varchar(12) NOT NULL,
-  `cus_email` varchar(100) NOT NULL,
-  `cus_pass` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `cus_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `cus_mobile` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `cus_email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tb_customers`
 --
 
-INSERT INTO `tb_customers` (`cus_id`, `cus_name`, `cus_mobile`, `cus_email`, `cus_pass`) VALUES
-(1, 'Đặng Tuấn Anh', '0988280697', 'dtanh@gmail.com', '123');
+INSERT INTO `tb_customers` (`cus_id`, `cus_name`, `cus_mobile`, `cus_email`) VALUES
+(2, 'Nguyễn Tuấn Minh', '0378789645', 'minhnt@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -72,7 +78,7 @@ CREATE TABLE `tb_order_rooms` (
   `ordroom_status` int(10) NOT NULL DEFAULT '0',
   `room_id` int(10) UNSIGNED DEFAULT NULL,
   `cus_id` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -89,7 +95,7 @@ CREATE TABLE `tb_order_services` (
   `ordser_status` int(10) NOT NULL DEFAULT '0',
   `ser_id` int(10) UNSIGNED NOT NULL,
   `cus_id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -99,12 +105,13 @@ CREATE TABLE `tb_order_services` (
 
 CREATE TABLE `tb_rooms` (
   `room_id` int(10) UNSIGNED NOT NULL,
-  `room_type` varchar(50) NOT NULL,
+  `room_type` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `room_size` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `room_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `room_price` int(11) NOT NULL,
   `room_amount_people` int(10) NOT NULL,
-  `room_image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `room_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -114,20 +121,21 @@ CREATE TABLE `tb_rooms` (
 
 CREATE TABLE `tb_services` (
   `ser_ID` int(10) UNSIGNED NOT NULL,
-  `ser_name` varchar(50) NOT NULL,
-  `ser_room_size` varchar(10) NOT NULL,
+  `ser_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ser_room_size` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ser_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ser_price` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tb_services`
 --
 
-INSERT INTO `tb_services` (`ser_ID`, `ser_name`, `ser_room_size`, `ser_price`) VALUES
-(1, 'Nhà hàng', '200', 300000),
-(2, 'Phòng họp', '50', 200000),
-(3, 'Đám cưới', '400', 1000000),
-(4, 'Massage', '30', 150000);
+INSERT INTO `tb_services` (`ser_ID`, `ser_name`, `ser_room_size`, `ser_description`, `ser_price`) VALUES
+(1, 'Nhà hàng', '200', '', 300000),
+(2, 'Phòng họp', '50', '', 200000),
+(3, 'Đám cưới', '400', '', 1000000),
+(4, 'Massage', '30', '', 150000);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -181,13 +189,13 @@ ALTER TABLE `tb_services`
 -- AUTO_INCREMENT cho bảng `tb_admins`
 --
 ALTER TABLE `tb_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_customers`
 --
 ALTER TABLE `tb_customers`
-  MODIFY `cus_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cus_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_order_rooms`
