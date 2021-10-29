@@ -39,20 +39,25 @@
             <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
               Dịch vụ
             </h5>
+            <style>
+              .ser:hover{
+                color: #FFC40E !important;
+              }
+            </style>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Nhà hàng</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Nhà hàng</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Khách sạn</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Khách sạn</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Phòng họp</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Phòng họp</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Đám cưới</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Đám cưới</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Massage</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Massage</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -64,22 +69,27 @@
               Liên kết
             </h5>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Trang chủ</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Trang chủ</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Dịch vụ</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Dịch vụ</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Phòng</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Phòng</a>
             </p>
             <p>
-              <a href="#!" class="text-decoration-none" style = "color: white">Đơn hàng</a>
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Đơn hàng</a>
             </p>
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <style>
+              .col:hover{
+                opacity: 0.8;
+              }
+            </style>
             <!-- Links -->
             <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
               Hình ảnh
