@@ -32,20 +32,20 @@
             <div class="row">
                 
                 <div class="col-12">
-                <form action ="" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height 100%; border-radius: 30px">
+                <form action ="process-login.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height 100%; border-radius: 30px">
                 <h2 class ="text-center  mb-3 text-uppercase">LOGIN</h2>
                     <div class="mb-3">
                         <label for="txtUser" class="form-label">User name</label>
-                        <input type="text" class="form-control rounded-pill" id="txtUser" name ="txtUser">  
+                        <input type="text" class="form-control rounded-pill" id="txtName" name ="txtName">  
                     </div>
                     
                     <div class="mb-3">
                         <label for="txtpass01" class="form-label">Password</label>
-                        <input type="password" class="form-control rounded-pill" id="txtPass01" name ="txtPass01">
+                        <input type="password" class="form-control rounded-pill" id="txtPass" name ="txtPass">
                     </div>
                     
                     <div  class=" d-flex justify-content-center">
-                    <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnRegister">Login</button>
+                    <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnLogin">Login</button>
                     </div>
                 </form>
                 </div>
