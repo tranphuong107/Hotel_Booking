@@ -84,7 +84,6 @@
             </p>
             <p>
               <a href="#!" class="ser text-decoration-none" style = "color: white">Đơn hàng</a>
-
             </p>
           </div>
           <!-- Grid column -->
