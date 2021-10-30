@@ -12,11 +12,11 @@
   </head>
   <style>
     .bg-re{
-        background-image: url(../images/francesca-saraco-_dS27XGgRyQ-unsplash.jpg);
+        background-image: url(../images/login.jpg); 
     }
     .my-btn{
         border: none;
-        background-color: #16a085;
+        background-color: #e17055;
     }
     .my-form{
         background-color: white;
@@ -29,30 +29,30 @@
                 
                 <div class="col-12">
                 <form action ="process-register.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%; border-radius: 30px">
-                <h2 class ="text-center pt-3 mb-3 text-uppercase">Đăng ký</h2>
+                <h2 class ="text-center pt-3 mb-3 text-uppercase">ĐĂNG KÝ</h2>
                     <div class="mb-3">
-                        <label for="txtUser" class="form-label">User name</label>
+                        <label for="txtUser" class="form-label">Tên tài khoản</label>
                         <input type="text" class="form-control rounded-pill" id="txtUser" name ="txtUser">  
                     </div>
                     <div class="mb-3">
-                        <label for="txtMobile" class="form-label">User Mobile</label>
+                        <label for="txtMobile" class="form-label">Số điện thoại</label>
                         <input type="text" class="form-control rounded-pill" id="txtMobile" name ="txtMobile">
                     </div>
                     <div class="mb-3">
-                        <label for="txtEmail" class="form-label">Email address</label>
+                        <label for="txtEmail" class="form-label">Địa chỉ Email</label>
                         <input type="email" class="form-control rounded-pill" id="txtEmail" name ="txtEmail" aria-describedby="emailHelp">
                        
                     </div>
                     <div class="mb-3">
-                        <label for="txtpass01" class="form-label">Password</label>
+                        <label for="txtpass01" class="form-label">Mật khẩu</label>
                         <input type="password" class="form-control rounded-pill" id="txtPass01" name ="txtPass01">
                     </div>
                     <div class="mb-3">
-                        <label for="txtpass02" class="form-label">Retype Password</label>
+                        <label for="txtpass02" class="form-label">Nhập lại mật khẩu</label>
                         <input type="password" class="form-control rounded-pill" id="txtPass02" name ="txtPass02">
                     </div>
                     <div  class=" d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary my-btn px-3 fs-5 " name ="btnRegister">Register</button>
+                    <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnRegister">Đăng ký</button>
                     </div>
                 </form>
                 </div>
