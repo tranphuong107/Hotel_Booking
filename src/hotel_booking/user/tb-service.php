@@ -26,7 +26,7 @@
             $result = mysqli_query($conn,$sql);
 
             // Phân tích và xử lí kết quả
-            if(mysqli_num_rows($result)>0){
+            if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){
                 echo '<tr>';
                 echo  '<th scope="row">'.$row['ser_ID'].'</th>';
