@@ -1,9 +1,7 @@
-
-
-        <?php
+    <?php
             include ('header.php');
             echo ''
-        ?>
+    ?>
 <main>
     <!-- Banner -->
 
