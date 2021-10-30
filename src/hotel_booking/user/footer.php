@@ -80,11 +80,7 @@
               <a href="#!" class="ser text-decoration-none" style = "color: white">Dịch vụ</a>
             </p>
             <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Phòng</a>
-            </p>
-            <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Đơn hàng</a>
-
+              <a href="#!" class="ser text-decoration-none" style = "color: white">Khách sạn</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -93,7 +89,7 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
             <style>
-              .col:hover{
+              .img-ser:hover{
                 opacity: 0.8;
               }
             </style>
@@ -104,17 +100,17 @@
             </h5>
             <!-- picture -->
             <ul class = "row p-0 m-0 large-columns-2" style = "list-style:none">
-              <li class = "col p-0 m-1">
+              <li class = "col img-ser p-0 m-1">
               <a href="">
                 <img src="../images/double-room.jpg" alt="#" class = "img-fluid">
               </a></li>
-              <li class = "col p-0 m-1">
+              <li class = "col img-ser p-0 m-1">
               <a href="#">
                 <img src="../images/single-room.jpg" alt="#" class = "img-fluid">
               </a></li>
             </ul>
             <ul class = "row p-0 m-0 medium-columns-2" style = "list-style:none">
-             <li class = "col col-auto p-0 m-1">
+             <li class = "col img-ser col-auto p-0 m-1">
               <a href="#">
                 <img src="../images/image-index.jpg" alt="#" class = "img-fluid">
               </a></li>
