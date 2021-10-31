@@ -53,7 +53,7 @@
         </div>
         <div class = "container">
         <div class="card-group p-0">
-            <a href= "#" class="card text-white m-3" style = "">
+            <a href= "#" class="card text-white m-3" style = "width:15rem">
                 <img src="../images/wedding.jpg" class="card-img h-100" alt="">
                 <div class="card-img-overlay">
                     <h5 class="card-title text-uppercase fs-4 text-center ">wedding</h5>

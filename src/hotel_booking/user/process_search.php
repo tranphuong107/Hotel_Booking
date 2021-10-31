@@ -1,14 +1,14 @@
-
-<!-- Start Food Search -->
-<div class="container-fluid px-0">
-
-<div class=" Food-Search px-0 text-center">
-    <form action="" class="">
-    <input type="search"  class="my-2 p-2 border-0 rounded-2 " style="width: 400px;" name="Search" placeholder="Search for Food...">
-    <input type="submit" name="submit" value="Search" class="py-2 btn btn-primary  my-color border-0">
-    </form>
-</div>
-
-</div>
-
-<!-- End Food search -->
+<div class="container-fluid">
+                    
+                        <div class="input-group">
+                            <input type="text" class="form-control " style="width:45%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?" >
+                            <select class="form-select" id="inputGroupSelect02" style="width:20%; padding:0px">
+                                <option selected>LOẠI PHÒNG</option>
+                                <option value="1">Single Room</option>
+                                <option value="2">Double Room</option>
+                                <option value="3">Family Room</option>
+                            </select>
+  
+                            <button class="btn btn-dark " type="button">SEARCH</button>
+                        </div>
+                </div>
