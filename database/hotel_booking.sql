@@ -4,7 +4,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th10 29, 2021 lúc 01:32 PM
+-- Thời gian đã tạo: Th10 30, 2021 lúc 08:33 AM
 -- Phiên bản máy phục vụ: 8.0.17
 -- Phiên bản PHP: 7.3.10
 
@@ -31,10 +31,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_admins` (
   `admin_id` int(10) UNSIGNED NOT NULL,
-  `admin_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `admin_mobile` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `admin_email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `admin_pass` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `admin_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `admin_mobile` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `admin_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `admin_pass` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -42,7 +42,8 @@ CREATE TABLE `tb_admins` (
 --
 
 INSERT INTO `tb_admins` (`admin_id`, `admin_name`, `admin_mobile`, `admin_email`, `admin_pass`) VALUES
-(1, 'admin', '0378954644', 'tranthibichphuong1007@gmail.com', '$2y$10$SUNHktx/e3P5MKmOwxe4E.kADRaMl7SCORS6PAmzflhguH5o9JLwS');
+(1, 'admin', '0378954644', 'tranthibichphuong1007@gmail.com', '$2y$10$SUNHktx/e3P5MKmOwxe4E.kADRaMl7SCORS6PAmzflhguH5o9JLwS'),
+(13, 'admin1', '0356287263', 'admin@gmail.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -52,17 +53,18 @@ INSERT INTO `tb_admins` (`admin_id`, `admin_name`, `admin_mobile`, `admin_email`
 
 CREATE TABLE `tb_customers` (
   `cus_id` int(10) UNSIGNED NOT NULL,
-  `cus_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `cus_mobile` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `cus_email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `cus_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cus_mobile` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cus_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cus_pass` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tb_customers`
 --
 
-INSERT INTO `tb_customers` (`cus_id`, `cus_name`, `cus_mobile`, `cus_email`) VALUES
-(2, 'Nguyễn Tuấn Minh', '0378789645', 'minhnt@gmail.com');
+INSERT INTO `tb_customers` (`cus_id`, `cus_name`, `cus_mobile`, `cus_email`, `cus_pass`) VALUES
+(2, 'Nguyễn Tuấn Minh', '0378789645', 'minhnt@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -106,13 +108,24 @@ CREATE TABLE `tb_order_services` (
 
 CREATE TABLE `tb_rooms` (
   `room_id` int(10) UNSIGNED NOT NULL,
-  `room_type` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `room_size` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `room_type` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `room_size` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `room_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `room_price` int(11) NOT NULL,
   `room_amount_people` int(10) NOT NULL,
-  `room_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `room_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tb_rooms`
+--
+
+INSERT INTO `tb_rooms` (`room_id`, `room_type`, `room_size`, `room_description`, `room_price`, `room_amount_people`, `room_image`) VALUES
+(1, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single-room.jpg'),
+(2, 'Luxury Single Room Art', '30m2', 'Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 2, 'luxury-single.jpg'),
+(3, 'Deluxe Double Room', '35m2', 'Yên bình và riêng tư, phòng Deluxe rộng 35 m2 mang lại không gian nghỉ dưỡng thư thái và tiện nghi. Balcony rộng rãi nhìn ra thung lũng tạo thêm một điểm nhấn lãng mạn cho kì nghỉ của bạn.', 2500000, 3, 'deluxe-double'),
+(4, 'Prenium Deluxe Double Room', '43m2', 'Premium Deluxe là lựa chọn tuyệt vời cho du khách yêu thích sự thoải mái và tiện nghi chuẩn quốc tế. Phù hợp cho một chuyến công tác kết hợp nghỉ dưỡng hay đơn giản chỉ là tận hưởng kì nghỉ bên cạnh người thương', 3000000, 3, ''),
+(5, 'Luxury Family Room Suite', '59m2', 'Không gian rộng với 2 phòng ngủ riêng biệt, 1 phòng khách sang trọng, ấm áp, Family Suite sở hữu diện tích 59m2 mang lại sự tiện nghi và thoải mái nhất cho cả gia đình, đồng thời các thành viên đều có một không gian riêng.', 3500000, 4, '');
 
 -- --------------------------------------------------------
 
@@ -122,21 +135,22 @@ CREATE TABLE `tb_rooms` (
 
 CREATE TABLE `tb_services` (
   `ser_ID` int(10) UNSIGNED NOT NULL,
-  `ser_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `ser_room_size` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ser_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ser_room_size` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `ser_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `ser_price` int(10) NOT NULL
+  `ser_price` int(10) NOT NULL,
+  `ser_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tb_services`
 --
 
-INSERT INTO `tb_services` (`ser_ID`, `ser_name`, `ser_room_size`, `ser_description`, `ser_price`) VALUES
-(1, 'Nhà hàng', '200', '', 300000),
-(2, 'Phòng họp', '50', '', 200000),
-(3, 'Đám cưới', '400', '', 1000000),
-(4, 'Massage', '30', '', 150000);
+INSERT INTO `tb_services` (`ser_ID`, `ser_name`, `ser_room_size`, `ser_description`, `ser_price`, `ser_image`) VALUES
+(1, 'Nhà hàng', '200', 'Nhà hàng thiết kế phong cách châu Âu mang lại sự sang trọng và đẳng cấp, không gian bên ngoài thoáng đãng phù hợp với những người tìm kiếm sự thư giãn yên bình.', 300000, ''),
+(2, 'Phòng họp', '50', 'Phòng họp với số lượng tối đa 50 người, không gian thoáng đãng tràn ngập ánh mặt trời với một bên là tường kính nhìn ra mặt biển.', 200000, ''),
+(3, 'Đám cưới', '400', 'Khách sạn cung cấp dịch vụ tổ chức đám cưới phù hợp tùy nhu cầu của từng cặp đôi. Chúng tôi có một phòng đám cưới nhỏ hoặc các cặp đôi lựa chọn tổ chức đám cưới ở biển.', 1000000, ''),
+(4, 'Massage', '30', 'Đến với chúng tôi, khách hàng sẽ được trải nghiệm những phút giây yên bình, thư giãn. Cơ thể và tâm trí được thả lỏng, cảm nhận sự chậm rãi của tự nhiên..', 150000, '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -190,7 +204,7 @@ ALTER TABLE `tb_services`
 -- AUTO_INCREMENT cho bảng `tb_admins`
 --
 ALTER TABLE `tb_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_customers`
@@ -214,7 +228,7 @@ ALTER TABLE `tb_order_services`
 -- AUTO_INCREMENT cho bảng `tb_rooms`
 --
 ALTER TABLE `tb_rooms`
-  MODIFY `room_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `room_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_services`

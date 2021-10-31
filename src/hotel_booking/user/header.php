@@ -13,6 +13,9 @@
       .nav-link:hover{
         color: #FFC40E !important;
       }
+      .my-bg{
+        background-color:#ffbe76;
+      }
     </style>
 
   </head>
@@ -34,7 +37,22 @@
                 <a class="nav-link active fw-bold fs-6 text-decoration-none mx-2" style = "color:black" aria-current="page" href="index.php">Trang chủ</a>
                 <a href="room.php" class = "nav-link fs-6 fw-bold text-decoration-none  mx-2" style = "color:black">Phòng</a>
                 <a href="service.php" class = "nav-link  fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Dịch vụ</a>
-                <a href="show-order.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng nhập</a>
+
+                <?php
+                   //bảo vệ tk user
+                   session_start();// ở đây có dịch vụ bảo vệ
+                   if(isset($_SESSION['loginUserOK'])){ 
+                       echo '<a href="#" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đơn hàng</a>';
+                       echo '<a href="logout.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng xuất</a>';
+                       echo '<label for="" class ="fs-6 fw-bold text-decoration-none mx-2 text-uppercase my-bg p-2 py-auto rounded-pill text-white">'.$_SESSION['loginUserOK'].'</label>';
+                   }else
+                   {
+                    echo '<a href="login.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng nhập</a>';
+                    echo '<a href="register.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng ký</a>';
+                   }
+                   
+                ?>
+                 
               </div>
             </div>
         </div>
