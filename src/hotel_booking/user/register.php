@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,6 +54,14 @@
                         <label for="txtpass02" class="form-label">Nhập lại mật khẩu</label>
                         <input type="password" class="form-control rounded-pill" id="txtPass02" name ="txtPass02">
                     </div>
+                    <p class ="text-center text-red" >
+                    <?php
+                        if(isset($_SESSION['thongbao'])){
+                            echo $_SESSION['thongbao'];
+                            unset($_SESSION['thongbao']);
+                        }
+                    ?>
+                    </p>
                     <div  class=" d-flex justify-content-center">
                     <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnRegister">Đăng ký</button>
                     </div>

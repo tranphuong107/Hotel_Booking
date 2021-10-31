@@ -1,31 +1,49 @@
 <?php
-        if(isset($_POST['btnRegister'])){
+    include('../config.php')
+?>
+<?php
+        session_start();
+        if(isset($_POST['btnRegister']) && $_POST['txtUser'] !='' && $_POST['txtMobile'] != '' 
+        && $_POST['txtEmail'] != '' && $_POST['txtPass01'] != ''  && $_POST['txtPass02'] != ''){
             $user = $_POST['txtUser'];
             $mobile =$_POST['txtMobile'];
             $email = $_POST['txtEmail'];
             $pass01= $_POST['txtPass01'];
             $pass02 = $_POST['txtPass02'];
-        }
-        $conn = mysqli_connect('localhost','root','123456789','hotel_booking');
-            //Truy vấn dữ liệu để kiểm tra email
-            $sql = "SELECT * FROM tb_customers WHERE cus_email ='$email'";
-            
-            $result = mysqli_query($conn,$sql);
-            //Xử lý kết quả
-            if(mysqli_num_rows($result) > 0){
-                echo 'Email đã tồn tại';
-            }
-            else{
-                //băm mật khẩu
-                $pass_hash = password_hash($pass01,PASSWORD_DEFAULT);
-                $sql2 = "INSERT INTO tb_customers(cus_name,cus_mobile,cus_email,cus_pass) 
-                VALUES('$user','$mobile','$email','$pass_hash');";
-                
-                $result2 = mysqli_query($conn,$sql2);
-                if($result2 >= 1){
-                    header ('location:login.php');
+            if($pass01 != $pass02){
+                $_SESSION['thongbao'] = 'Mật khẩu không trùng nhau!';
+                header('location:register.php'); 
+            }else{
+                $sql = "SELECT * FROM tb_customers WHERE cus_name ='$user'";
+                $result = mysqli_query($conn,$sql);
+                //Xử lý kết quả
+                if(mysqli_num_rows($result) > 0){
+                    $_SESSION['thongbao'] = 'Tên tài khoản đã tồn tại!';
+                    header('location:register.php');  
+                }else{
+                    //Truy vấn dữ liệu để kiểm tra email
+                    $sql2 = "SELECT * FROM tb_customers WHERE cus_email ='$email'";
+                    $result2 = mysqli_query($conn,$sql2);
+                    //Xử lý kết quả
+                    if(mysqli_num_rows($result2) > 0){
+                        $_SESSION['thongbao'] = 'Email đã tồn tại!';
+                        header('location:register.php'); 
                     }else{
-                        echo 'lỗi';
+                    //băm mật khẩu
+                        $pass_hash = md5($pass01);
+                        $sql3 = "INSERT INTO tb_customers(cus_name,cus_mobile,cus_email,cus_pass) 
+                        VALUES('$user','$mobile','$email','$pass_hash');";
+                        $result3 = mysqli_query($conn,$sql3);
+                        if($result3 >= 1){// nếu đăng ký thành công chuyển sang đăng nhập
+                            $_SESSION['thongbao'] = 'Đăng ký thành công!';
+                            header ('location:login.php');
+                        }
                     }
+                }
             }
+        }else{
+            $_SESSION['thongbao'] = 'Vui lòng nhập đủ thông tin!';
+            header('location:register.php');
+        }
+            
     ?>   
