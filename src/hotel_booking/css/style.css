@@ -9,5 +9,11 @@
     background-color: white;
 }
 .room-search{
-    background-color: tomato;
+    background-color: rgb(80, 77, 77);
+    height: 100px
+
+}
+.breadcrumb li a{
+    text-decoration: none;
+    
 }
