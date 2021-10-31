@@ -15,6 +15,8 @@
             if(mysqli_num_rows($result)>0){
                 //kiểm tra xác thực :
                 $_SESSION['loginUserOK']= $cus_name;//biến phiên như một thẻ làm việc hiệu lực 24h tên là loginOK
+                $row = mysqli_fetch_assoc($result);
+                $_SESSION['idCus'] = $row['cus_id'];
                 header("location:index.php");
 
             }else{

@@ -1,6 +1,5 @@
     <?php
-            include ('header.php');
-            echo ''
+            include ('header.php');  
     ?>
 <main>
     <!-- Banner -->
