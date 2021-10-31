@@ -34,6 +34,7 @@
                 <a class="nav-link active fw-bold fs-6 text-decoration-none mx-2" style = "color:black" aria-current="page" href="index.php">Trang chủ</a>
                 <a href="room.php" class = "nav-link fs-6 fw-bold text-decoration-none  mx-2" style = "color:black">Phòng</a>
                 <a href="service.php" class = "nav-link  fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Dịch vụ</a>
+
                 <?php
                    //bảo vệ tk user
                    session_start();// ở đây có dịch vụ bảo vệ
@@ -46,6 +47,7 @@
                     echo '<a href="register.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng ký</a>';
                    }
                 ?>
+                 
               </div>
             </div>
         </div>
