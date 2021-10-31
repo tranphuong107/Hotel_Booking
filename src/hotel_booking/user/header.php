@@ -37,12 +37,13 @@
                 <?php
                    //bảo vệ tk user
                    session_start();// ở đây có dịch vụ bảo vệ
-                   if(isset($_SESSION['loginuOK'])){ 
+                   if(isset($_SESSION['loginUserOK'])){ 
                        echo '<a href="#" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đơn hàng</a>';
                        echo '<a href="logout.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng xuất</a>';
                    }else
                    {
                     echo '<a href="login.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng nhập</a>';
+                    echo '<a href="register.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng ký</a>';
                    }
                 ?>
               </div>
