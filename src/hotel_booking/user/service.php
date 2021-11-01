@@ -58,7 +58,7 @@
                 $ser_room_size = $row['ser_room_size'];
                 $ser_description = $row['ser_description'];
                 $ser_price = $row['ser_price'];
-                $ser_image = $row['ser_images']; 
+                $ser_image = $row['ser_image']; 
             
     ?>
     <div class = "container py-2">
