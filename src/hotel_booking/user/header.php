@@ -49,8 +49,7 @@
                    {
                     echo '<a href="login.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng nhập</a>';
                     echo '<a href="register.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng ký</a>';
-                   }
-                   
+                   }  
                 ?>
                  
               </div>
