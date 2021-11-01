@@ -20,9 +20,9 @@
 
   </head>
   <body>
-  <section style = "background-color:white">
+
     <div class = "container" >
-    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top pt-3">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top pt-3 navbar-scroll">
       <div class="container row align-items-center">
         <div class = "col-3">
           <a class="navbar-brand" href="index.php">
@@ -59,6 +59,6 @@
       </div>
     </nav>
   </div>
-</section>
+
 
  
