@@ -46,6 +46,7 @@
             transform: scale(1.1);
             transition: transform 0.2s ease;
         }
+        
     </style>
         <div class = "text-uppercase fw-bold m-5" style = "color:black">
             <h1><center>Dịch vụ</center></h1>
@@ -61,8 +62,8 @@
                     if($result == true){
                         while($row = mysqli_fetch_assoc($result)){
                             echo '<div class="col">';
-                            echo '<a href= "#" class="card bg-image text-white m-3 h-100">';
-                            echo '<img src="../images/'.$row['ser_images'].'" class="card-img h-100" alt="">';
+                            echo '<a href= "service.php" class="card bg-image text-white m-3 h-100">';
+                            echo '<img src="../images/'.$row['ser_image'].'" class="card-img h-100" alt="" style ="object-fit:cover">' ;
                             echo '<div class="card-img-overlay">
                                     <h5 class="card-title text-uppercase fs-4 text-center">'.$row['ser_name'].'</h5>
                                 </div>';

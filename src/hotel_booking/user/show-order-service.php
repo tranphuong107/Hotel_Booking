@@ -29,18 +29,18 @@
     </style>
     <div class = "ser-ord">
         <div class = "container-fluid form-center" style = "padding: 14vh 50vh;" > 
-              
-                <form action="process-order-service.php" method = "post" class = "m-3 p-5 mx-auto shadow-lg" style = "background-color:#d2cebd5e">
-                    
-                    
+            <form action="process-order-service.php" method = "post" class = "m-3 p-0 mx-auto shadow-lg" style = "background-color:#e0e0cd47">
+                <div style >
+                    <img src="../images/<?php echo $ser_image;?>" alt="" style = "object-fit:cover;width:100%;height:20rem;">
+                </div>
                             
-                            <h1 style = "color:#9E6A0D" class = "mb-5">Đặt dịch vụ</h1>
+                            <h1 style = "color:#5c3215" class = "ms-5 mt-5">Đặt dịch vụ</h1>
                             <input id = "ser-id" name = "service-id" value = "<?php echo $ser_id;?>" hidden >
-                            <div class = "m-1" style = "color:#d8ac75">
+                            <div class = "ms-5" style = "color:#d8ac75">
                                 <h2><?php echo $ser_name;?> </h2>
                             </div>
 
-                                <div class = "m-1 row" style = "color:white">
+                                <div class = "ms-5 my-1 row" style = "color:white">
                                     <div class = "col-3">
                                         Số người :
                                     </div> 
@@ -48,7 +48,7 @@
                                         <?php echo $ser_room_size;?>
                                     </div>
                                 </div>
-                                <div class = "m-1 row" style = "color:white">
+                                <div class = "ms-5 my-1 row" style = "color:white">
                                     <div class = "col-3">
                                         Giá dịch vụ :
                                     </div>
@@ -56,14 +56,14 @@
                                         <input type = "text" id = "ser-price" value = "<?php echo $ser_price;?>" style = "background-color: #ffffff00 !important;border: none !important; color:white;">
                                     </div>
                                 </div>
-                                <div class = "m-1 row" style = "color:white">
+                                <div class = "ms-5 my-1 row" style = "color:white">
                                     <div class = "col-3">
                                         Từ ngày : 
-                                        <input type="date" id="from-date" name = "from-date">
+                                        <input type="date" id="from-date" name = "from-date" required>
                                     </div>
                                     <div class = "col-4 ms-3">
                                         Đến ngày : 
-                                        <input type="date" id="to-date" name = "to-date" onchange = "myFunction()">
+                                        <input type="date" id="to-date" name = "to-date" onchange = "myFunction()" required>
                                     </div> 
                                 </div>
                                 <script type = "text/javascript" scr = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
@@ -77,7 +77,7 @@
                                             })
                                         });
                                     </script>
-                                <div  class = "m-1 row" style = "color:white">
+                                <div  class = "ms-5 my-1 row" style = "color:white">
                                     <div class = "col-3">
                                         Số ngày:
                                     </div> 
@@ -85,7 +85,7 @@
                                         <input type = "text" id = "demo" name = "demo" readonly style = "background-color: #ffffff00 !important;border: none !important; color:white;"></input>
                                     </div> 
                                 </div>
-                                    <div class = "m-1 row"  style = "color:white">
+                                    <div class = "ms-5 my-1 row"  style = "color:white">
                                     <div class = "col-3">
                                         Tổng số tiền : 
                                     </div> 
@@ -105,9 +105,14 @@
                                         document.getElementById("total").value = price * day;
                                     }
                                 </script>
-
-                                <button class = "btn mt-2" style = "background-color:#9E6A0D" id = "confirm">Xác nhận đặt</button>
-                          
+                            <div>
+                                <style type = "text/css" scoped>
+                                    .btn:hover{
+                                        color:#784f27;
+                                    }
+                                </style>
+                                <button class = "btn m-5" style = "background-color:#b8ab8147" id = "confirm"><h6 class = "mt-2">Xác nhận đặt</h6></button>
+                            </div>
                            
                     
             <?php
