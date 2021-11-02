@@ -34,8 +34,6 @@
             <span class="visually-hidden">Next</span>
         </button>
         </div>
-
-
     <!-- Banner end -->
 
     <!-- Service -->
