@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th10 02, 2021 lúc 11:33 AM
+-- Thời gian đã tạo: Th10 02, 2021 lúc 03:04 PM
 -- Phiên bản máy phục vụ: 8.0.17
 -- Phiên bản PHP: 7.3.10
 
@@ -106,7 +106,7 @@ CREATE TABLE `tb_order_services` (
   `ordser_total_day` int(10) NOT NULL,
   `ordser_start` date NOT NULL,
   `ordser_end` date NOT NULL,
-  `ordser_status` int(10) NOT NULL DEFAULT '0',
+  `ordser_status` tinyint(1) NOT NULL DEFAULT '0',
   `ser_id` int(10) UNSIGNED NOT NULL,
   `cus_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -141,9 +141,11 @@ CREATE TABLE `tb_rooms` (
 INSERT INTO `tb_rooms` (`room_id`, `room_type`, `room_size`, `room_description`, `room_price`, `room_amount_people`, `room_image`) VALUES
 (1, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single-room.jpg'),
 (2, 'Luxury Single Room Art', '30m2', 'Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 2, 'luxury-single.jpg'),
-(3, 'Deluxe Double Room', '35m2', 'Yên bình và riêng tư, phòng Deluxe rộng 35 m2 mang lại không gian nghỉ dưỡng thư thái và tiện nghi. Balcony rộng rãi nhìn ra thung lũng tạo thêm một điểm nhấn lãng mạn cho kì nghỉ của bạn.', 2500000, 3, 'deluxe-double'),
-(4, 'Prenium Deluxe Double Room', '43m2', 'Premium Deluxe là lựa chọn tuyệt vời cho du khách yêu thích sự thoải mái và tiện nghi chuẩn quốc tế. Phù hợp cho một chuyến công tác kết hợp nghỉ dưỡng hay đơn giản chỉ là tận hưởng kì nghỉ bên cạnh người thương', 3000000, 3, ''),
-(5, 'Luxury Family Room Suite', '59m2', 'Không gian rộng với 2 phòng ngủ riêng biệt, 1 phòng khách sang trọng, ấm áp, Family Suite sở hữu diện tích 59m2 mang lại sự tiện nghi và thoải mái nhất cho cả gia đình, đồng thời các thành viên đều có một không gian riêng.', 3500000, 4, '');
+(6, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single_room.jpg'),
+(7, 'Deluxe Double Room', '35m2', ' Yên bình và riêng tư, phòng Deluxe rộng 35 m2 mang lại không gian nghỉ dưỡng thư thái và tiện nghi. Balcony rộng rãi nhìn ra thung lũng tạo thêm một điểm nhấn lãng mạn cho kì nghỉ của bạn.', 2500000, 3, 'double_room.jpg'),
+(8, 'Luxury Family Room Suite', '59m2', ' Không gian rộng với 2 phòng ngủ riêng biệt, 1 phòng khách sang trọng, ấm áp, Family Suite sở hữu diện tích 59m2 mang lại sự tiện nghi và thoải mái nhất cho cả gia đình, đồng thời các thành viên đều có một không gian riêng. ', 3500000, 4, 'family_room.jpg'),
+(9, 'Luxury Single Room Art', '30m2', ' Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 1, 'single_room2.jpg'),
+(10, 'Prenium Deluxe Double Room', '43m2', ' Premium Deluxe là lựa chọn tuyệt vời cho du khách yêu thích sự thoải mái và tiện nghi chuẩn quốc tế. Thiết kế đương đại cùng trang thiết bị đẳng cấp phù hợp cho một chuyến công tác kết hợp nghỉ dưỡng hay đơn giản chỉ là tận hưởng kì nghỉ bên cạnh người t', 3000000, 2, 'single_room3.jpg');
 
 -- --------------------------------------------------------
 
@@ -246,7 +248,7 @@ ALTER TABLE `tb_order_services`
 -- AUTO_INCREMENT cho bảng `tb_rooms`
 --
 ALTER TABLE `tb_rooms`
-  MODIFY `room_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `room_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_services`
