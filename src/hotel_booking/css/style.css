@@ -17,6 +17,16 @@
     text-decoration: none;
     
 }
+
+.bg-img{
+    background-image: url(../images/Bg_room.jpg);
+   
+}
+container row col card card-img card-img-top img{
+    transform: scale(1.2 1.2);
+}
+
+
 /* start css for sidebar */
 body{
     font-family: 'Roboto' , sans-serif;
@@ -138,4 +148,5 @@ label #sidebar-btn :hover{
 #check:checked ~ .content{
     margin-left: 60px;
 }
-/* end css for sidebar */
+/
+* end css for sidebar */
