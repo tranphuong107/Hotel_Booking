@@ -48,15 +48,15 @@
                         <!-- rright -->
                     <div class="col-6 ps-5" style="background-color:#f1f2f6;">
                         <div>
-                            <h2 class="text-center pt-5">ĐƠN PHÒNG</h2>
+                            <h2 class="text-center pt-5 pb-4">ĐƠN PHÒNG</h2>
                         </div>
-                        <div class="fs-5 px-0">
+                        <div class="fs-5 px-0 ps-5" style="padding-left:15px;">
                             <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordroom_id;?><br />
                             <label for="" class="fw-bold">Loại phòng: </label> <?php echo $room_type;?><br />
                             <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordroom_start;?><br />
                             <label for="" class="fw-bold">Ngày trả phòng: </label> <?php echo $ordroom_end;?><br />
                             <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordroom_total_day;?><br />
-                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordroom_total;?><br />
+                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordroom_total; echo' VNĐ';?><br />
                             <?php
                                 if($ordroom_status){
                                     echo'<label for="" class="fw-bold">Tình trạng đơn: </label> Đơn hàng đã xác nhận<br />';
@@ -107,17 +107,17 @@
                     </div>
 
                         <!-- rright -->
-                    <div class="col-6 ps-5" style="background-color:#f1f2f6;">
+                    <div class="col-6 ps-5 " style="background-color:#f1f2f6;">
                         <div>
-                            <h2 class="text-center pt-5">ĐƠN DICH VỤ</h2>
+                            <h2 class="text-center pt-5 pb-4">ĐƠN DỊCH VỤ</h2>
                         </div>
-                        <div class="fs-5 px-0">
+                        <div class="fs-5 px-0 ps-5">
                             <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordser_id;?><br />
                             <label for="" class="fw-bold">Tên dịch vụ: </label> <?php echo $ser_name;?><br />
                             <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordser_start;?><br />
                             <label for="" class="fw-bold">Ngày trả phòng: </label> <?php echo $ordser_end;?><br />
                             <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordser_total_day;?><br />
-                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordser_total;?><br />
+                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordser_total; echo' VNĐ';?><br />
                             <?php
                                 if($ordser_status){
                                     echo'<label for="" class="fw-bold">Tình trạng đơn: </label> Đơn hàng đã xác nhận<br />';
