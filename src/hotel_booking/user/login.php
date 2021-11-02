@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,7 +36,15 @@
                 
                 <div class="col-12">
                 <form action ="process-login.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height 100%; border-radius: 30px">
-                <h2 class ="text-center  mb-3 text-uppercase">ĐĂNG NHẬP</h2>
+                <h2 class ="text-center p-3 mb-3 text-uppercase">ĐĂNG NHẬP</h2>
+                <p class ="text-center mt-0" >
+                    <?php
+                        if(isset($_SESSION['thongbao'])){
+                            echo $_SESSION['thongbao'];
+                            unset($_SESSION['thongbao']);
+                        }
+                    ?>
+                </p>
                     <div class="mb-3">
                         <label for="txtUser" class="form-label">Tên tài khoản</label>
                         <input type="text" class="form-control rounded-pill" id="txtName" name ="txtName">  
@@ -44,10 +55,12 @@
                         <input type="password" class="form-control rounded-pill" id="txtPass" name ="txtPass">
                     </div>
                     
-                    <div class="pt-4">
+                    <div class="pt-2">
                     <div  class=" d-flex justify-content-center ">
                     <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnLoginuser">Đăng nhập</button>
                     </div>
+
+                    
 
                     <div class=" text-center pt-3">
                         <label for="txtpass01" class="form-label ">Bạn chưa có tài khoản?</label>

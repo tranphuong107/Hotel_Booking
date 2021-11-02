@@ -1,5 +1,5 @@
 <?php
-   include('../config.php')
+    include('../config.php')
 ?>
 <?php
         session_start();
@@ -14,7 +14,7 @@
                 $_SESSION['thongbao'] = 'Mật khẩu không trùng nhau!';
                 header('location:register.php'); 
             }else{
-                $sql = "SELECT * FROM tb_customers WHERE cus_name ='$user'";
+                $sql = "SELECT * FROM tb_admins WHERE admin_name ='$user'";
                 $result = mysqli_query($conn,$sql);
                 //Xử lý kết quả
                 if(mysqli_num_rows($result) > 0){
@@ -22,7 +22,7 @@
                     header('location:register.php');  
                 }else{
                     //Truy vấn dữ liệu để kiểm tra email
-                    $sql2 = "SELECT * FROM tb_customers WHERE cus_email ='$email'";
+                    $sql2 = "SELECT * FROM tb_admins WHERE admin_email ='$email'";
                     $result2 = mysqli_query($conn,$sql2);
                     //Xử lý kết quả
                     if(mysqli_num_rows($result2) > 0){
@@ -31,7 +31,7 @@
                     }else{
                     //băm mật khẩu
                         $pass_hash = md5($pass01);
-                        $sql3 = "INSERT INTO tb_customers(cus_name,cus_mobile,cus_email,cus_pass) 
+                        $sql3 = "INSERT INTO tb_admins(admin_name,admin_mobile,admin_email,admin_pass) 
                         VALUES('$user','$mobile','$email','$pass_hash');";
                         $result3 = mysqli_query($conn,$sql3);
                         if($result3 >= 1){// nếu đăng ký thành công chuyển sang đăng nhập

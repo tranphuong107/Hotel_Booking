@@ -17,6 +17,7 @@
     text-decoration: none;
     
 }
+
 .bg-img{
     background-image: url(../images/Bg_room.jpg);
    
@@ -25,3 +26,127 @@ container row col card card-img card-img-top img{
     transform: scale(1.2 1.2);
 }
 
+
+/* start css for sidebar */
+body{
+    font-family: 'Roboto' , sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+} */
+header{
+    position: fixed;
+    background-color: #D98E73;
+    padding: 20px;
+    width: 100%;
+    height: 70px;
+   
+}
+.left-area a{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    position: fixed;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: -25px;
+}
+.logout-btn{
+    padding: 5px;
+    background:#fff;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #F2BAA1;
+    padding: 10px;
+    transition: 0.5s;
+    transition-property: color;
+}
+.logout-btn:hover{
+    color: #e17055;
+}
+
+.sidebar{
+    background: #A65746;
+    margin-top: 70px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+.sidebar ul{
+    padding: 0;
+}
+.sidebar i{
+    padding-right: 10px;
+}
+.sidebar ul a{
+    color: white;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    font-size: 20px;
+    transition: 0.4s;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+.sidebar a:hover{
+    background: #D98E73;
+}
+label #sidebar-btn{
+    z-index: 1;
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    left :300px;
+    font-size: 20px;
+    transition: 0.5s;
+    transition-property: color;
+    margin-top: -10px;
+}
+label #sidebar-btn :hover{
+    color:#D98E73;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+.content{
+    position: fixed;
+    width: 100%;
+    margin-top: 70px;
+    margin-left: 250px ;
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+}
+#check:checked ~ .content{
+    margin-left: 60px;
+}
+/
+* end css for sidebar */

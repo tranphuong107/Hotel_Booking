@@ -17,7 +17,7 @@
             </p>
             <ul class = "row" style = "list-style: none">
               <li class = "col-3">
-              <a href="">
+              <a href="#">
                 <img src="../images/facebook.png" alt="#" class = "img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Follow on Facebook">
               </a></li>
               <li class = "col-3">
@@ -36,51 +36,58 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 ms-0">
             <!-- Links -->
             <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
-              Dịch vụ
+              Liên hệ
             </h5>
-
             <style>
               .ser:hover{
                 color: #FFC40E !important;
               }
             </style>
-            <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Nhà hàng</a>
-            </p>
-            <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Khách sạn</a>
-            </p>
-            <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Phòng họp</a>
-            </p>
-            <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Đám cưới</a>
-            </p>
-            <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Massage</a>
+            <div class = "row">
+              <div class = "col-2">
+                <i class="fa fa-home" aria-hidden="true" style = "font-size:25px"></i>
+              </div>
+              <div class = "col-10">
+                <p>Số 12 Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
+              </div>
+            </div>
+            <div class = "row">
+              <div class = "col-2">
+                <i class="fa fa-envelope" aria-hidden="true" style = "font-size:20px"></i>
+              </div>
+              <div class = "col-10">
+                <p>monamedia_resort@gmail.com</p>
+              </div>
+            </div>
+            <div class = "row">
+              <div class = "col-2">
+              <i class="fa fa-phone" aria-hidden="true" style = "font-size:20px"></i>
+              </div>
+              <div class = "col-10">
+                <p>0982456456</p>
+              </div>
+            </div>
 
-            </p>
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
             <!-- Links -->
             <h5 class="text-uppercase fw-bold mb-4" style = "color:#FFC40E">
               Liên kết
             </h5>
             <p>
-
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Trang chủ</a>
+              <a href="index.php" class="ser text-decoration-none" style = "color: #6c757d">Trang chủ</a>
             </p>
             <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Dịch vụ</a>
+              <a href="service.php" class="ser text-decoration-none" style = "color: #6c757d">Dịch vụ</a>
             </p>
             <p>
-              <a href="#!" class="ser text-decoration-none" style = "color: white">Khách sạn</a>
+              <a href="room.php" class="ser text-decoration-none" style = "color: #6c757d">Khách sạn</a>
             </p>
           </div>
           <!-- Grid column -->
