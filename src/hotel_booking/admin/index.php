@@ -13,8 +13,8 @@
                 $res = mysqli_query($conn, $sql);
                 //Count Rows
                 $count = mysqli_num_rows($res);
+                
             ?>
-
         <h1><?php echo $count; ?></h1>
         <br />
         <label for="" class="fs-4">PHÒNG</label>
@@ -75,6 +75,7 @@
         <label for="" class="fs-4">ĐƠN HÀNG</label>
         </div>
     </div>
+    
 </div>
 
 
