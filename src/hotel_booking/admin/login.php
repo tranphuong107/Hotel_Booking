@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,11 +15,11 @@
   </head>
   <style>
     .bg-re{
-        background-image: url(../images/francesca-saraco-_dS27XGgRyQ-unsplash.jpg);
+        background-image: url(../images/loginad.jpg);
     }
     .my-btn{
         border: none;
-        background-color: #16a085;
+        background-color: #e17055;
     }
     .my-form{
         background-color: white;
@@ -33,19 +36,28 @@
                 
                 <div class="col-12">
                 <form action ="process-login.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height 100%; border-radius: 30px">
-                <h2 class ="text-center  mb-3 text-uppercase">LOGIN</h2>
+                <h2 class ="text-center  mb-3 text-uppercase">ĐĂNG NHẬP</h2>
                     <div class="mb-3">
-                        <label for="txtUser" class="form-label">User name</label>
+                        <label for="txtUser" class="form-label">Tên tài khoản</label>
                         <input type="text" class="form-control rounded-pill" id="txtName" name ="txtName">  
                     </div>
                     
                     <div class="mb-3">
-                        <label for="txtpass01" class="form-label">Password</label>
+                        <label for="txtpass01" class="form-label">Mật khẩu</label>
                         <input type="password" class="form-control rounded-pill" id="txtPass" name ="txtPass">
                     </div>
                     
+                    <p class ="text-center mt-0" >
+                    <?php
+                        if(isset($_SESSION['thongbaoadmin'])){
+                            echo $_SESSION['thongbaoadmin'];
+                            unset($_SESSION['thongbaoadmin']);
+                        }
+                    ?>
+                    </p>
+                    
                     <div  class=" d-flex justify-content-center">
-                    <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnLogin">Login</button>
+                    <button type="submit" class="btn text-white my-btn px-3 fs-5 " name ="btnLoginAdmin">Đăng nhập</button>
                     </div>
                 </form>
                 </div>

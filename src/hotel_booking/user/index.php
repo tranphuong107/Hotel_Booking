@@ -1,6 +1,5 @@
     <?php
-            include ('header.php');
-            echo ''
+            include ('header.php');  
     ?>
 <main>
     <!-- Banner -->
@@ -35,8 +34,6 @@
             <span class="visually-hidden">Next</span>
         </button>
         </div>
-
-
     <!-- Banner end -->
 
     <!-- Service -->
@@ -47,39 +44,35 @@
             transform: scale(1.1);
             transition: transform 0.2s ease;
         }
+        
     </style>
         <div class = "text-uppercase fw-bold m-5" style = "color:black">
             <h1><center>Dịch vụ</center></h1>
         </div>
-        <div class = "container">
-        <div class="card-group p-0">
-            <a href= "#" class="card text-white m-3" style = "width:15rem">
-                <img src="../images/wedding.jpg" class="card-img h-100" alt="">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-uppercase fs-4 text-center ">wedding</h5>
-                </div>
-            </a>
-            <a href= "#" class="card bg-image hover-zoom text-white m-3" style = "width:15rem">
-                <img src="../images/restaurant.jpg" class="card-img h-100" alt="">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-uppercase fs-4 text-center ">restaurant</h5>
-                </div>
-            </a>
-            <a href= "#" class="card bg-image hover-zoom text-white m-3" style = "width:15rem">
-                <img src="../images/massage.jpg" class="card-img h-100" alt="">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-uppercase fs-4 text-center">massage</h5>
-                </div>
-            </a>
-            <a href= "#" class="card bg-image text-white m-3">
-                <img src="../images/meeting-room.jpg" class="card-img h-100" alt="">
-                <div class="card-img-overlay">
-                    <h5 class="card-title text-uppercase fs-4 text-center">meeting room</h5>
-                </div>
-            </a>
+        <div class = "row row-cols-1 row-cols-md-4 p-0">
+  
+                <?php 
+                    include '../config.php';
+
+                    $sql = "SELECT * FROM tb_services";
+                    $result = mysqli_query($conn,$sql);
+
+                    if($result == true){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo '<div class="col">';
+                            echo '<a href= "service.php" class="card bg-image text-white m-3 h-100">';
+                            echo '<img src="../images/'.$row['ser_image'].'" class="card-img h-100" alt="" style ="object-fit:cover">' ;
+                            echo '<div class="card-img-overlay">
+                                    <h5 class="card-title text-uppercase fs-4 text-center">'.$row['ser_name'].'</h5>
+                                </div>';
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                    }
+                ?>
+
             
-            </div>
-        </div>
+            
         </div>
     </section>
      <!-- Service end -->
@@ -88,27 +81,42 @@
         <section class = "bg-light p-4">
             <div class = "text-uppercase fw-bold m-5" style = "color:#FFC40E"> 
                 <h1><center>Khách sạn</center></h1>
-            </div>
+                </div>
+        <?php        
+            $sql1 = "SELECT * FROM tb_rooms";
+            $result1 = mysqli_query($conn,$sql1);
+             if($result1 == true){
+                while($row1 = mysqli_fetch_assoc($result1)){?>
             <div class = "container content-justify-center">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#room1">
-                        <h1>Nhà 1</h1></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#room2">
-                        <h1>Nhà 2</h1></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#room2">
-                        <h1>Nhà 3</h1></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#room2">
-                        <h1>Nhà 4</h1></a>
-                    </li>
-                </ul>
+                    <ul class="nav nav-tabs nav-fill mb-3" role="tablist">
+                        <?php
+                        echo '<li class="nav-item" role="presentation">
+                                            <a class="nav-link active" aria-current="page" id = "room-'.$row1['room_id'].'" href="#rooms-'.$row1['room_id'].'">
+                                            <h1>'.$row1['room_type'].'</h1></a>
+                                        </li>';
+                        
+                        ?>
+                    </ul>
+
+                <div class = "tab-content"> 
+                <?php
+              
+                             echo' <div
+                                class="tab-pane fade show active"
+                                id="rooms-'.$row1['room_id'].'"
+                                role="tabpanel"
+                                aria-labelledby="room-'.$row1['room_id'].'"
+                                >
+                        '.$row1['room_description'].'
+                            </div>';
+                     
+                       
+                    ?>
+                </div>
             </div>
+            <?php
+                }}
+                ?>
         </section>
         <!-- Hotel end -->
 </main>

@@ -41,8 +41,10 @@
     <div class = "text-uppercase fw-bold m-5 pt-3" style = "color:black">
         <h1><center>Dịch vụ</center></h1>
     </div>
-
+    <div class = "container">
     <!-- List service -->
+    <form action="show-service-order.php" method="get">
+        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
     <?php
         include '../config.php';
 
@@ -52,6 +54,7 @@
 
         if (mysqli_num_rows($result) > 0){
             while ($row = mysqli_fetch_assoc($result)){
+                $ser_id = $row['ser_ID'];
                 $ser_name = $row['ser_name'];
                 $ser_room_size = $row['ser_room_size'];
                 $ser_description = $row['ser_description'];
@@ -59,41 +62,42 @@
                 $ser_image = $row['ser_image']; 
             
     ?>
-    <div class = "container py-2">
-        <div class = "row py-3" style = "border-bottom: 2px solid #FFC40E">
-            <div class = "col col-3">
-            <!-- images -->
-                <?php
-                    if($ser_image == ""){
-                        echo "<div class='error'>Image not Available.</div>";
-                    }else{
-                    echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid h-100 w-100">';
-        
-                    }
-                ?>
+    
+        <div class="col-5 m-5">
+            <div class="card border-white h-100 lg-dark">
+            <style type="text/css" scoped>
+                .img-resize{
+                    height: 300px !important;
+                    padding-bottom: 10px;
+                    object-fit: cover;
+                    border-bottom : 3px solid #68541c;
+                }
+                .inner {
+                    overflow: hidden;
+                }
+                .inner img{
+                    transition: all 1.5s ease;
+                }
+                .inner:hover img{
+                    transform: scale(1.5);
+                }
+            </style>
+            <div class = "inner">
+                <img src="../images/<?php echo $ser_image;?>" class="card-img-top img-resize img-fluid" alt="">
             </div>
+            <div class="card-body">
+                <h2 class="card-title"><?php echo $ser_name;?></h2>
+                <p class="card-text m-1">Số người: <?php echo $ser_room_size;?></p>
+                <p class="card-text m-1">Giá dịch vụ: <?php echo $ser_price;?></p>
+                <p class="card-text m-1"><?php echo $ser_description;?></p>
+                <a href="show-order-service.php?id=<?php echo $ser_id;?>" method = "GET" class = "text-decoration-none m-1" style = "color: #967824">Đặt dịch vụ >>></a>
 
-            <!-- name and more -->
-            <div class = "col ">
-                    <div>
-                        <h2><?php echo $ser_name; ?></h2>
-                    </div>
-                    <div>Số người: <?php echo $ser_room_size;?></div>
-                    <div>Giá tiền: <?php echo $ser_price;?> VNĐ</div>
-                    <div><p><?php echo $ser_description; ?></p></div> 
-                    <div>
-                    <style type="text/css" scoped>
-                        .ord:hover{
-                            color: black;
-                        }
-                    </style>
-                        <a href="show-order-service.php" class = "ord text-decoration-none " style = "color:#9E6A0D">Đặt dịch vụ >>></a></div>
-                    
             </div>
-
+            </div>
         </div>
-    </div>
-    <?php }} ?>
+    
+   <?php }} ?>
+    </div></form></div>
 </div>
     <!-- List service end -->
 </main>
