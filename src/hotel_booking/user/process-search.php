@@ -30,9 +30,13 @@
             </div>
             <div class="col-md-7 pt-2  ">
                     <form action="process-search.php" method="post">
-                        <div class="input-group mb-3">
+                        <!-- <div class="input-group mb-3">
                             <input type="text" name="search" style="width:50%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?" >                          
                             <button class="btn btn-dark " type="submit" name="btnsearch">SEARCH</button>
+                        </div> -->
+                        <div class="d-flex ">
+                            <input class="form-cn me-2 mr-0" type="search" name="search" style="width:45%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?">
+                            <button class="btn btn-dark" type="submit" name="btnsearch">Search</button>
                         </div>
                     </form>                   
             </div>
