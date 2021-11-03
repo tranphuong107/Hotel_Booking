@@ -36,93 +36,123 @@
         </div>
     <!-- Banner end -->
 
-    <!-- Service -->
-    <section class = "p-5">
-    <style type="text/css" scoped>
-        .card:hover{
-            opacity: 0.8;
-            transform: scale(1.1);
-            transition: transform 0.2s ease;
-        }
-        
-    </style>
-        <div class = "text-uppercase fw-bold m-5" style = "color:black">
-            <h1><center>Dịch vụ</center></h1>
-        </div>
-      
-            
-            <div class = "row row-cols-1 row-cols-md-4 p-0">
-          
-                    
-                <?php 
-                    include '../config.php';
+        <!-- Hotel -->
+        <section class = "p-4 container">
+            <div class = "text-uppercase fw-bold m-5" style = "color:#FFC40E"> 
+                <h1><center>Khách sạn</center></h1>
+            </div>
+            <div class = "row row-cols-1 row-cols-md-3 p-0 m-0"> 
+                <style type = "text/css" scoped>
+                    .ui-card{
+                        position: relative;
+                    }
+                    .ui-card img{
+                        transform: scale (1.3);
+                        transition: all 0.3s ease-out;
+                    }
+                    .ui-card:hover img{
+                        /* transform: scale(1.1) translateY(20px); */
+                        opacity: 0.4;
+                    }
+                    .description {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        padding: 15px;
+                        text-align: center;
+                        font-size: 19px;       
+                    }
+                    .description h5{
+                        transform: translateY(30px);
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
+                    }
+                    .description p{
+                        transform: translateY(30px);
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
+                    }
+                    .description a{
+                        transform: translateY(30px);
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
+                    }
+                    .ui-card:hover .description h5{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    .ui-card:hover .description p{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    .ui-card:hover .description a{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                </style>   
+                <?php     
+                    include '../config.php';   
+                    $sql1 = "SELECT * FROM tb_rooms";
+                    $result1 = mysqli_query($conn,$sql1);
+                    if($result1 == true){
+                        while($row1 = mysqli_fetch_assoc($result1)){
+                            echo '<div class="col ui-card" style = "height:25rem !important; margin-bottom: 3rem;">';
+                                echo '<img src="../images/'.$row1['room_image'].'" class="card-img h-100" alt="" style ="object-fit:cover">' ;
+                                echo '<div class = "description">
+                                        <h5 class="card-title text-uppercase fs-4 text-center">'.$row1['room_type'].'</h5>
+                                        <p class = "p-3">'.$row1['room_description'].'</p>';
+                                echo '<a href= "room.php" class="btn" style = "background-color:#987740;color:white;">Xem chi tiết';
+                                echo '</a>';
+                                echo '</div>';
+                            echo '</div>';
+              
+                    }}
+                    ?>
+            </div>
+        </section>
+        <!-- Hotel end -->
 
+    <!-- Service -->
+    <section class = "bg-light py-5">
+        <div class = "container py-2">
+            <h1 class = "text-uppercase fw-bold"><center>Dịch vụ</center></h1>
+            <!-- images -->
+                <?php
                     $sql = "SELECT * FROM tb_services";
                     $result = mysqli_query($conn,$sql);
-
                     if($result == true){
-                        while($row = mysqli_fetch_assoc($result)){
-                            echo '<div class="col" style = "height:30rem !important; margin-bottom: 3rem;">';
-                            echo '<a href= "service.php" class="card bg-image text-white m-3 h-100">';
-                            echo '<img src="../images/'.$row['ser_image'].'" class="card-img h-100" alt="" style ="object-fit:cover">' ;
-                            echo '<div class="card-img-overlay">
-                                    <h5 class="card-title text-uppercase fs-4 text-center">'.$row['ser_name'].'</h5>
-                                </div>';
-                            echo '</a>';
-                            echo '</div>';
-                        }
-                    }
+                        while($row = mysqli_fetch_assoc($result)){?>
+                            <div class = "row justify-content-center py-4" style = "border-bottom: 2px solid #cc9635c7;height: 20rem;" data-aos = "fade-left" data-aos-duration= "1000" data-aos-delay = "200">
+                                <div class = "col-3">
+                                <?php
+                                 if($row['ser_image'] == ""){
+                                    echo "<div class='error'>Image not Available.</div>";
+                                }else{
+                                 echo '<img src="../images/'.$row['ser_image'].'" alt="" style = "height: 17rem !important;padding: 0px; width: 100%;object-fit: cover;">';
+                                }?>
+                            </div>
+                            <div class = "col-8 p-2">
+                                <div><h2><?php echo $row['ser_name'];?></h2></div>
+                                <div class = "ser-des"><p><?php echo $row['ser_description']; ?></p></div> 
+                            <div>
+                            <style type="text/css" scoped>
+                                .ord:hover{
+                                    color: black;
+                                }
+                            </style>
+                                <a href="service.php" class = "ord text-decoration-none" style = "color:#9E6A0D" >Xem chi tiết >>></a></div>
+                            </div>
+                        </div>
+                    <?php
+                    }}
+                  
                 ?>
-            
-       
-        </div>
     </section>
 
      <!-- Service end -->
-
-        <!-- Hotel -->
-        <section class = "bg-light p-4">
-            <div class = "text-uppercase fw-bold m-5" style = "color:#FFC40E"> 
-                <h1><center>Khách sạn</center></h1>
-                </div>
-        <?php        
-            $sql1 = "SELECT * FROM tb_rooms";
-            $result1 = mysqli_query($conn,$sql1);
-             if($result1 == true){
-                while($row1 = mysqli_fetch_assoc($result1)){?>
-            <div class = "container content-justify-center">
-                    <ul class="nav nav-tabs nav-fill mb-3" role="tablist">
-                        <?php
-                        echo '<li class="nav-item" role="presentation">
-                                            <a class="nav-link active" aria-current="page" id = "room-'.$row1['room_id'].'" href="#rooms-'.$row1['room_id'].'">
-                                            <h1>'.$row1['room_type'].'</h1></a>
-                                        </li>';
-                        
-                        ?>
-                    </ul>
-
-                <div class = "tab-content"> 
-                <?php
-              
-                             echo' <div
-                                class="tab-pane fade show active"
-                                id="rooms-'.$row1['room_id'].'"
-                                role="tabpanel"
-                                aria-labelledby="room-'.$row1['room_id'].'"
-                                >
-                        '.$row1['room_description'].'
-                            </div>';
-                     
-                       
-                    ?>
-                </div>
-            </div>
-            <?php
-                }}
-                ?>
-        </section>
-        <!-- Hotel end -->
 </main>
+
         <?php
             include ('footer.php');
         ?>
