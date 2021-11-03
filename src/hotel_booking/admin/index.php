@@ -82,7 +82,7 @@
         <div class="col-4 text-center p-5 m-3  fw-bold float-start" style="width:30%; background-color:#f1f2f6;">
             <label for="" class="fs-4 mb-1">TỔNG</label>
             <?php 
-                $sql1 = "SELECT SUM(ordroom_total) AS Total1 FROM tb_order_rooms WHERE ordroom_status= 1";
+                $sql1 = "SELECT SUM(ordroom_total) AS Total1 FROM tb_order_rooms WHERE ordroom_status= 'Đã xác nhận'";
 
                 //Execute the Query
                 $res1 = mysqli_query($conn, $sql1);
@@ -91,7 +91,7 @@
                 $row1 = mysqli_fetch_assoc($res1);
                 
                 //GEt the Total REvenue
-                $sql2 = "SELECT SUM(ordser_total) AS Total2 FROM tb_order_services WHERE ordser_status= 1";
+                $sql2 = "SELECT SUM(ordser_total) AS Total2 FROM tb_order_services WHERE ordser_status= 'Đã xác nhận'";
 
                 //Execute the Query
                 $res2 = mysqli_query($conn, $sql2);
