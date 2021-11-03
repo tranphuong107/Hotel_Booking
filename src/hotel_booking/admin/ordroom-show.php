@@ -5,7 +5,7 @@
 <div class="content p-3">
     <div>
         <div class="">
-            <h1 class="text-center pt-3">Danh sách đơn phòng</h1>
+            <h1 class="text-center pt-3">Danh sách Đơn phòng</h1>
         </div>
         <div class=" p-3 ">
             <form action="" method ="post">
@@ -27,7 +27,8 @@
                         <th scope="col" class="top">Số ngày thuê</th>
                         <th scope="col" class="top">Tổng hóa đơn</th>
                         <th scope="col" class="top">Tình trạng đơn</th>
-                        <th scope="col" class="top">Xóa nhân viên</th>
+                        <th scope="col" class="top">Xác nhận đơn</th>
+                        <th scope="col" class="top">Hủy đơn</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,15 +52,14 @@
                                      echo '<td>'.$row['ordroom_start'].'</td>';
                                      echo '<td>'.$row['ordroom_total_day'].'</td>';
                                      echo '<td>'.$row['ordroom_total'].'</td>';
-                                     if($row['ordroom_status']){
-                                         echo '<td>Đơn đã xác nhận</td>';
-                                     }else{
-                                         echo '<td><a href ="confirm-order.php?id='.$row['ordroom_id'].'"><i class="fas fa-user-times"></i></a></td>';
-                                     }
-                                     
-                                     echo '<td><a href ="delete-order.php?id='.$row['ordroom_id'].'"><i class="fas fa-user-times"></i></a></td>';
-                                     echo '</tr>';
-                                     
+                                     echo '<td>'.$row['ordroom_status'].'</td>';
+                                     if($row['ordroom_status']=='Đã hủy'){
+                                        echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    }else{
+                                        echo '<td><a href ="confirm-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
+                                    }
+                                    echo '<td><a href ="cancel-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    echo '</tr>';
                                  }
                              }
                         }else{
@@ -77,13 +77,13 @@
                                         echo '<td>'.$row['ordroom_start'].'</td>';
                                         echo '<td>'.$row['ordroom_total_day'].'</td>';
                                         echo '<td>'.$row['ordroom_total'].'</td>';
-                                        if($row['ordroom_status']){
-                                            echo '<td>Đơn đã xác nhận</td>';
+                                        echo '<td>'.$row['ordroom_status'].'</td>';
+                                        if($row['ordroom_status']=='Đã hủy'){
+                                            echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
                                         }else{
-                                            echo '<td><a href ="confirm-order.php?id='.$row['ordroom_id'].'"><i class="fas fa-user-times"></i></a></td>';
+                                            echo '<td><a href ="confirm-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
                                         }
-                                        
-                                        echo '<td><a href ="delete-order.php?id='.$row['ordroom_id'].'"><i class="fas fa-user-times"></i></a></td>';
+                                        echo '<td><a href ="cancel-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
                                         echo '</tr>';
                                         
                                     }
