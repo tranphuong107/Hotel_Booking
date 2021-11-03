@@ -49,8 +49,11 @@
         <div class = "text-uppercase fw-bold m-5" style = "color:black">
             <h1><center>Dịch vụ</center></h1>
         </div>
-        <div class = "row row-cols-1 row-cols-md-4 p-0">
-  
+      
+            
+            <div class = "row row-cols-1 row-cols-md-4 p-0">
+          
+                    
                 <?php 
                     include '../config.php';
 
@@ -59,7 +62,7 @@
 
                     if($result == true){
                         while($row = mysqli_fetch_assoc($result)){
-                            echo '<div class="col">';
+                            echo '<div class="col" style = "height:30rem !important; margin-bottom: 3rem;">';
                             echo '<a href= "service.php" class="card bg-image text-white m-3 h-100">';
                             echo '<img src="../images/'.$row['ser_image'].'" class="card-img h-100" alt="" style ="object-fit:cover">' ;
                             echo '<div class="card-img-overlay">
@@ -70,11 +73,11 @@
                         }
                     }
                 ?>
-
             
-            
+       
         </div>
     </section>
+
      <!-- Service end -->
 
         <!-- Hotel -->

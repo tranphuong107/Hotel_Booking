@@ -53,24 +53,23 @@
                                         Giá dịch vụ :
                                     </div>
                                     <div class = "col-6 ms-3"> 
-                                        <input type = "text" id = "ser-price" value = "<?php echo $ser_price;?>" style = "background-color: #ffffff00 !important;border: none !important; color:white;">
+                                        <input type = "text" id = "ser-price" value = "<?php echo $ser_price;?>" style = "background-color: #ffffff00 !important;border: none !important; color:white; width:6rem;">VNĐ
                                     </div>
                                 </div>
                                 <div class = "ms-5 my-1 row" style = "color:white">
                                     <div class = "col-3">
                                         Từ ngày : 
-                                        <input type="date" id="from-date" name = "from-date" required>
+                                        <input type="date" id="from-date" name = "from-date" oninvalid="this.setCustomValidity('Vui lòng chọn ngày!')" required>
                                     </div>
                                     <div class = "col-4 ms-3">
                                         Đến ngày : 
-                                        <input type="date" id="to-date" name = "to-date" onchange = "myFunction()" required>
+                                        <input type="date" id="to-date" name = "to-date" oninvalid="this.setCustomValidity('Vui lòng chọn ngày!')" onchange = "myFunction()" required>
                                     </div> 
                                 </div>
                                 <script type = "text/javascript" scr = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
                                     <script type = "text/javascript">
                                         var fromdate;
                                         $('#from-date').on('change', function() {
-                                            alert ("hello!!!");
                                             fromdate = $(this).val();
                                             $('#to-date').prop('min', function() {
                                                 return fromdate;
@@ -90,7 +89,7 @@
                                         Tổng số tiền : 
                                     </div> 
                                     <div class = "col-6 ms-3 ">
-                                        <input type = "text" id = "total" name = "total" readonly style = "background-color: #ffffff00 !important;border: none !important; color:white; "></input>
+                                        <input type = "text" id = "total" name = "total" readonly style = "background-color: #ffffff00 !important;border: none !important; color:white;  width:6rem;"></input>
                                         <span>VNĐ</span>
                                     </div> 
                                 </div>

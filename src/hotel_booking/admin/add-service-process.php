@@ -21,7 +21,7 @@
 
         include '../config.php';
 
-        $sql = "INSERT INTO tb_services(ser_name, ser_room_size, ser_description, ser_price, ser_images) 
+        $sql = "INSERT INTO tb_services(ser_name, ser_room_size, ser_description, ser_price, ser_image) 
                 VALUES ('$ser_name','$ser_size','$ser_des','$ser_price','$filename');";
         $result = mysqli_query($conn,$sql);
         
