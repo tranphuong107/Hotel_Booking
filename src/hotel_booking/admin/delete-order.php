@@ -3,15 +3,34 @@
 ?>
 <?php
     if(isset($_GET['id'])){
-        $emp_id = $_GET['id'];
+        $order_id = $_GET['id'];
         //truy vấn
-        $sql ="DELETE FROM db_employees WHERE emp_id ='$emp_id'";
+        $sql ="UPDATE tb_order_rooms SET ordroom_status = 2 WHERE ordroom_id = '$order_id'";
+        $result = mysqli_query($conn,$sql);
+        echo $sql;
+        if($result>0){
+            header("location: order-show.php");
+        }else{
+            echo '<script>';
+            echo 'alert ("Có lỗi gì đó cả ra. Vui lòng thử lại!!!");';
+            echo "location.href = 'ordroom-show.php';";     
+            echo '</script>';
+        }
+    }else{
+        if(isset($_GET['ids'])){
+            $order_id = $_GET['ids'];
+        //truy vấn
+        $sql ="UPDATE tb_order_services SET ordser_status = 2 WHERE ordser_id = '$order_id'";
         $result = mysqli_query($conn,$sql);
         if($result>0){
-            header("location: index.php");
+            header("location: ordser-show.php");
 
         }else{
-            echo'lỗi';
+            echo '<script>';
+            echo 'alert ("Có lỗi gì đó cả ra. Vui lòng thử lại!!!");';
+            echo "location.href = 'ordroom-show.php';";     
+            echo '</script>';
+        }
         }
     }
 ?>

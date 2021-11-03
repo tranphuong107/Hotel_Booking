@@ -98,7 +98,7 @@
                     <div class="col-6 px-0">
                         <!-- left -->
                         <?php
-                            if($room_image == ""){
+                            if($ser_image == ""){
                                 echo "<div class='error'>Image not Available.</div>";
                             }else{
                                 echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid "> ';
@@ -119,11 +119,14 @@
                             <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordser_total_day;?><br />
                             <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordser_total; echo' VNĐ';?><br />
                             <?php
-                                if($ordser_status){
+                                if($ordser_status == 1){
                                     echo'<label for="" class="fw-bold">Tình trạng đơn: </label> Đơn hàng đã xác nhận<br />';
                                 }else{
+                                    if($ordser_status == 2){
+                                        echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã hủy<br />';
+                                    }else{
                                     echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng chờ xác nhận<br />';
-                                }
+                                }}
                             ?>
                         </div>
                     </div>
