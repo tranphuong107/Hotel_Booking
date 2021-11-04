@@ -34,11 +34,11 @@
             ?>
             <div class = "container-fluid p-5">
                 <div class = "row">
-                    <div class="col-6 px-0">
+                    <div class="col-6 px-0   my-auto">
                         <!-- left -->
                         <?php
                             if($room_image == ""){
-                                echo "<div class='error'>Image not Available.</div>";
+                                echo "<div class='text-center error'>Image not Available.</div>";
                             }else{
                                 echo '<img src="../images/'.$room_image.'" alt="" class = "img-fluid "> ';
                             }
@@ -99,11 +99,11 @@
             ?>
             <div class = "container-fluid p-5">
                 <div class = "row">
-                    <div class="col-6 px-0">
+                    <div class="col-6 px-0 my-auto">
                         <!-- left -->
                         <?php
-                            if($room_image == ""){
-                                echo "<div class='error'>Image not Available.</div>";
+                            if($ser_image == ""){
+                                echo "<div class='text-center  error'>Image not Available.</div>";
                             }else{
                                 echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid "> ';
                             }
@@ -115,7 +115,7 @@
                         <div>
                             <h2 class="text-center pt-5 pb-4">ĐƠN DỊCH VỤ</h2>
                         </div>
-                        <div class="fs-5 px-0 ps-5">
+                        <div class="fs-5 px-0 ps-5 pb-5">
                             <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordser_id;?><br />
                             <label for="" class="fw-bold">Tên dịch vụ: </label> <?php echo $ser_name;?><br />
                             <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordser_start;?><br />
