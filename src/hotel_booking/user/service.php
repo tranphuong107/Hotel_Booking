@@ -37,11 +37,11 @@
 
 
     <!-- Banner end -->
-<div class = "m-5">
+<div class = "m-3">
     <div class = "text-uppercase fw-bold m-5 pt-3" style = "color:black">
         <h1><center>Dịch vụ</center></h1>
     </div>
-    <div class = "container">
+    <div class = "container-fluid">
     <!-- List service -->
     <form action="show-service-order.php" method="get">
         <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
@@ -63,7 +63,7 @@
             
     ?>
     
-        <div class="col-5 m-5">
+        <div class="col-4 m-5 ">
             <div class="card border-white h-100 lg-dark">
             <style type="text/css" scoped>
                 .img-resize{
@@ -86,7 +86,7 @@
                 <img src="../images/<?php echo $ser_image;?>" class="card-img-top img-resize img-fluid" alt="">
             </div>
             <div class="card-body">
-                <h2 class="card-title"><?php echo $ser_name;?></h2>
+                <h2 class="card-title "><?php echo $ser_name;?></h2>
                 <p class="card-text m-1">Số người: <?php echo $ser_room_size;?></p>
                 <p class="card-text m-1">Giá dịch vụ: <?php echo $ser_price;?></p>
                 <p class="card-text m-1"><?php echo $ser_description;?></p>

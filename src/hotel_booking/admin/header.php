@@ -42,7 +42,7 @@
         <li><a href="cus-show.php"><i class="fas fa-user"></i><span>Khách hàng</span></a></li>
         <li><a href="ordroom-show.php"><i class="fas fa-clipboard"></i><span>Đơn phòng</span></a></li>
         <li><a href="ordser-show.php"><i class="fas fa-clipboard"></i><span>Đơn dịch vụ</span></a></li>
-        <li><a href=""><i class="fas fa-tools"></i><span>Giao diện</span></a></li>
+        <li><a href="admin-list.php"><i class="fas fa-users-cog"></i><span>Quản lý admin</span></a></li>
         <li><a href="../user/index.php"><i class="fas fa-home"></i><span>Trang chủ</span></a></li>
       </ul>
     </div>
