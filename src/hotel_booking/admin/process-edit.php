@@ -1,6 +1,7 @@
 <?php
-    include '../config.php';
+    include ('../config.php');
 ?>
+
 <?php
         if(isset($_POST['btnsubmit']))
         {
@@ -25,10 +26,7 @@
                 if($result2 > 0){
                     header('<location:index.php');
                 }else{
-                    echo "lỗi";
+                    echo 'lỗi';
                 }
         }
-    ?>
-<?php
-    include 'footer.php';
 ?>

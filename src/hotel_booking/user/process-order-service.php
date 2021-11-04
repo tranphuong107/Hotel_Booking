@@ -31,7 +31,10 @@
                echo "location.href = 'index.php';";     
                echo '</script>';
           }else{
-               echo "Lỗi";
+               echo '<script>';
+               echo 'alert ("Có lỗi gì đó cả ra. Vui lòng thử lại!!!");';
+               echo "location.href = 'index.php';";     
+               echo '</script>';
           }
 
       }else{

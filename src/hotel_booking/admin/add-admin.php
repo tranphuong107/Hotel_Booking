@@ -2,7 +2,7 @@
     include('../config.php')
 ?>
 <?php
-        session_start();
+        // session_start();
         if(isset($_POST['btnRegister']) && $_POST['txtUser'] !='' && $_POST['txtMobile'] != '' 
         && $_POST['txtEmail'] != '' && $_POST['txtPass01'] != ''  && $_POST['txtPass02'] != ''){
             $user = $_POST['txtUser'];
