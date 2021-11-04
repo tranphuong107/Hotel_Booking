@@ -51,7 +51,7 @@
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ordser_start'].'</td>';
                                      echo '<td>'.$row['ordser_end'].'</td>';
-                                     echo '<td>'.$row['ordser_total'].'</td>';
+                                     echo '<td>'.number_format($row['ordser_total']).' đ</td>';
                                      echo '<td>'.$row['ordser_status'].'</td>';
                                      if($row['ordser_status']=='Đã hủy'){
                                         echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
@@ -77,7 +77,7 @@
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ordser_start'].'</td>';
                                      echo '<td>'.$row['ordser_end'].'</td>';
-                                     echo '<td>'.$row['ordser_total'].'</td>';
+                                     echo '<td>'.number_format($row['ordser_total']).' đ</td>';
                                      echo '<td>'.$row['ordser_status'].'</td>';
                                      if($row['ordser_status']=='Đã hủy'){
                                         echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';

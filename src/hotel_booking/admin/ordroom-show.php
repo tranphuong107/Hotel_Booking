@@ -51,7 +51,7 @@
                                      echo '<td>'.$row['room_type'].'</td>';
                                      echo '<td>'.$row['ordroom_start'].'</td>';
                                      echo '<td>'.$row['ordroom_end'].'</td>';
-                                     echo '<td>'.$row['ordroom_total'].'</td>';
+                                     echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                      echo '<td>'.$row['ordroom_status'].'</td>';
                                      if($row['ordroom_status']=='Đã hủy'){
                                         echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
@@ -76,7 +76,7 @@
                                         echo '<td>'.$row['room_type'].'</td>';
                                         echo '<td>'.$row['ordroom_start'].'</td>';
                                         echo '<td>'.$row['ordroom_end'].'</td>';
-                                        echo '<td>'.$row['ordroom_total'].'</td>';
+                                        echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                         echo '<td>'.$row['ordroom_status'].'</td>';
                                         if($row['ordroom_status']=='Đã hủy'){
                                             echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
