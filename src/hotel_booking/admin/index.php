@@ -15,9 +15,9 @@
                 $count = mysqli_num_rows($res);
                 
             ?>
-        <h1><?php echo $count; ?></h1>
-        <br />
-        <label for="" class="fs-4">PHÒNG</label>
+            <h1><?php echo $count; ?></h1>
+            <br />
+            <label for="" class="fs-4">PHÒNG</label>
         </div>
 
         <div class="col-4 text-center p-5 m-3 fw-bold float-start " style="width:30%; background-color:#f1f2f6;">
@@ -31,9 +31,9 @@
                 $count = mysqli_num_rows($res);
             ?>
 
-        <h1><?php echo $count; ?></h1>
-        <br />
-        <label for="" class="fs-4">DỊCH VỤ</label>
+            <h1><?php echo $count; ?></h1>
+            <br />
+            <label for="" class="fs-4">DỊCH VỤ</label>
         </div>
 
         <div class="col-4 text-center p-5 m-3 fw-bold float-start" style="width:30%; background-color:#f1f2f6;">

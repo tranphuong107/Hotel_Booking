@@ -5,7 +5,7 @@
 <div class="content p-3">
     <div>
         <div class="">
-            <h1 class="text-center pt-3">Danh sách dịch vụ</h1>
+            <h1 class="text-center pt-3">Danh sách phòng</h1>
         </div>
         <div class=" p-3 ">
             <form action="" method ="post">
@@ -13,21 +13,21 @@
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
                     <a href="ordser-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
             </form>
-            <a href="add-service-process.php"><i class="far fa-plus-square"></i></a>
+            <a href="process-add-room.php"><i class="far fa-plus-square"></i></a>
         </div>
     </div> 
 
             <table class="table my-3 py-5 border-light  text-aline table-light text-center" style="table-layout: auto;">
                 <thead class="table-light">
                     <tr class =" border-dark">
-                        <th scope="col" class="top">Mã dịch vụ</th>
-                        <th scope="col" class="top">Tên dịch vụ</th>
-                        <!-- <th scope="col" class="top" >Mã dịch vụ</th> -->
-                        <th scope="col" class="top">Số lượng</th>
-                        <th scope="col" class="top">Giá dịch vụ</th>
+                        <th scope="col" class="top">Mã phòng</th>
+                        <th scope="col" class="top">Tên phòng</th>
+                        <th scope="col" class="top">Kích thước</th>
                         <th scope="col" class="top">Mô tả</th>
-                        <th scope="col" class="top">Thao tác</th>
-                        <th scope="col" class="top">Tình trạng đơn</th>
+                        <th scope="col" class="top">Hình ảnh</th>
+                        <th scope="col" class="top">Hình ảnh 1</th>
+                        <th scope="col" class="top">Hình ảnh 2</th>
+                        <th scope="col" class="top">Hình ảnh 3</th>
                         <th scope="col" class="top">Thao tác</th>
                     </tr>
                 </thead>
@@ -39,7 +39,7 @@
                         if (isset($_POST['btn-search'])){
                             $cus_name = $_POST['cus-name'];
                             $sql = "SELECT o.ordser_id,o.ordser_total,o.ordser_total_day,o.ordser_start,o.ordser_end,o.ordser_status,r.ser_type,r.ser_id,c.cus_name
-                            FROM  tb_order_services o ,tb_rooms r ,tb_customers c
+                            FROM  tb_order_rooms o ,tb_rooms r ,tb_customers c
                             WHERE  o.ser_id = r.ser_id AND o.cus_id =c.cus_id AND c.cus_name ='$cus_name'";
                              $result = mysqli_query($conn,$sql);
                              if($result == true){

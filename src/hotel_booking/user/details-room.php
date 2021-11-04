@@ -72,7 +72,7 @@
                      
                     
                     <h5 class="card-text">Giá: <?php echo number_format($row['room_price'])?>₫</h5>
-                    <a href="show-order-room.php"class="btn btn-warning mt-0 p-3 " style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt ngay</a>
+                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-3 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt ngay</a>
             </div>                                 
         </div>
     

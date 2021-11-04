@@ -75,9 +75,7 @@
                     //Food Not Available
                     echo "<div class='error'>Room not found.</div>";
                 }
-    
-           
-            ?>
+        ?>
 
         
     
