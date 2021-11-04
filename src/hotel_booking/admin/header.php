@@ -39,7 +39,7 @@
       <ul>
         <li><a href=""><i class='fas fa-bed'></i><span>Phòng</span></a></li> 
         <li><a href="service-show.php"><i class="fas fa-concierge-bell"></i><span>Dịch vụ</span></a></li>
-        <li><a href=""><i class="fas fa-user"></i><span>Khách hàng</span></a></li>
+        <li><a href="cus-show.php"><i class="fas fa-user"></i><span>Khách hàng</span></a></li>
         <li><a href="ordroom-show.php"><i class="fas fa-clipboard"></i><span>Đơn phòng</span></a></li>
         <li><a href="ordser-show.php"><i class="fas fa-clipboard"></i><span>Đơn dịch vụ</span></a></li>
         <li><a href=""><i class="fas fa-tools"></i><span>Giao diện</span></a></li>
