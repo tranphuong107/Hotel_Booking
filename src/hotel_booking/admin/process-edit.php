@@ -19,7 +19,8 @@
                 $room_description = 'room_description',
                 $room_price = 'room_price',
                 $room_amount_people = 'room_amount_people'
-                WHERE $room_type = 'room_type';
+                WHERE $room_type = 'room_type'";
+
                 $result2 = mysqli_query($conn,$sql2);
                 // echo $sql2;
                

@@ -88,7 +88,7 @@
             <div class="card-body">
                 <h2 class="card-title "><?php echo $ser_name;?></h2>
                 <p class="card-text m-1">Số người: <?php echo $ser_room_size;?></p>
-                <p class="card-text m-1">Giá dịch vụ: <?php echo $ser_price;?></p>
+                <p class="card-text m-1">Giá dịch vụ: <?php echo $ser_price;?> VNĐ</p>
                 <p class="card-text m-1"><?php echo $ser_description;?></p>
                 <a href="show-order-service.php?id=<?php echo $ser_id;?>" method = "GET" class = "text-decoration-none m-1" style = "color: #967824">Đặt dịch vụ >>></a>
 
