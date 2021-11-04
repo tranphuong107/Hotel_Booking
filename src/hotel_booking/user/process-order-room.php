@@ -20,8 +20,8 @@
                echo "Lỗii";
           }
 
-          $sql1 = "INSERT INTO tb_order_rooms (ordroom_total, ordroom_total_day, ordroom_start, ordroom_end, ordroom_status, room_id, cus_id)
-               VALUES ('$total', '$room_total_day', '$order_start', '$order_end','0','$room_id','$cus_id' )";
+          $sql1 = "INSERT INTO tb_order_rooms (ordroom_total, ordroom_total_day, ordroom_start, ordroom_end,  room_id, cus_id)
+               VALUES ('$total', '$room_total_day', '$order_start', '$order_end','$room_id','$cus_id' )";
                // echo $sql1;
           $result = mysqli_query($conn,$sql1);
 
