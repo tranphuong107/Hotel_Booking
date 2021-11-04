@@ -24,7 +24,7 @@
                         <th scope="col" class="top" >Mã phòng</th>
                         <th scope="col" class="top">Tên phòng</th>
                         <th scope="col" class="top">Ngày nhận phòng</th>
-                        <th scope="col" class="top">Số ngày thuê</th>
+                        <th scope="col" class="top">Ngày trả phòng</th>
                         <th scope="col" class="top">Tổng hóa đơn</th>
                         <th scope="col" class="top">Tình trạng đơn</th>
                         <th scope="col" class="top">Xác nhận đơn</th>
@@ -38,7 +38,7 @@
                         //2. Thực hiện truy vấn
                         if (isset($_POST['btn-search'])){
                             $cus_name = $_POST['cus-name'];
-                            $sql = "SELECT o.ordroom_id,o.ordroom_total,o.ordroom_total_day,o.ordroom_start,o.ordroom_end,o.ordroom_status,r.room_type,r.room_id,c.cus_name
+                            $sql = "SELECT o.ordroom_id,o.ordroom_total,o.ordroom_start,o.ordroom_end,o.ordroom_status,r.room_type,r.room_id,c.cus_name
                             FROM  tb_order_rooms o ,tb_rooms r ,tb_customers c
                             WHERE  o.room_id = r.room_id AND o.cus_id =c.cus_id AND c.cus_name ='$cus_name'";
                              $result = mysqli_query($conn,$sql);
@@ -50,7 +50,7 @@
                                      echo '<td>'.$row['room_id'].'</td>';
                                      echo '<td>'.$row['room_type'].'</td>';
                                      echo '<td>'.$row['ordroom_start'].'</td>';
-                                     echo '<td>'.$row['ordroom_total_day'].'</td>';
+                                     echo '<td>'.$row['ordroom_end'].'</td>';
                                      echo '<td>'.$row['ordroom_total'].'</td>';
                                      echo '<td>'.$row['ordroom_status'].'</td>';
                                      if($row['ordroom_status']=='Đã hủy'){
@@ -63,7 +63,7 @@
                                  }
                              }
                         }else{
-                            $sql = "SELECT o.ordroom_id,o.ordroom_total,o.ordroom_total_day,o.ordroom_start,o.ordroom_end,o.ordroom_status,r.room_type,r.room_id,c.cus_name
+                            $sql = "SELECT o.ordroom_id,o.ordroom_total,o.ordroom_start,o.ordroom_end,o.ordroom_status,r.room_type,r.room_id,c.cus_name
                             FROM  tb_order_rooms o ,tb_rooms r ,tb_customers c
                             WHERE  o.room_id = r.room_id AND o.cus_id =c.cus_id";
                             $result = mysqli_query($conn,$sql);
@@ -75,7 +75,7 @@
                                         echo '<td>'.$row['room_id'].'</td>';
                                         echo '<td>'.$row['room_type'].'</td>';
                                         echo '<td>'.$row['ordroom_start'].'</td>';
-                                        echo '<td>'.$row['ordroom_total_day'].'</td>';
+                                        echo '<td>'.$row['ordroom_end'].'</td>';
                                         echo '<td>'.$row['ordroom_total'].'</td>';
                                         echo '<td>'.$row['ordroom_status'].'</td>';
                                         if($row['ordroom_status']=='Đã hủy'){

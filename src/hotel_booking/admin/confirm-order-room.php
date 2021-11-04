@@ -7,12 +7,16 @@
         //truy vấn
         $sql ="UPDATE tb_order_rooms SET ordroom_status = 'Đã xác nhận' WHERE ordroom_id = '$order_id'";
         $result = mysqli_query($conn,$sql);
-        echo $sql;
         if($result>0){
-            header("location: ordroom-show.php");
-
+            echo '<script>';
+            echo 'alert ("Xác nhận đơn thành công");';
+            echo "location.href = 'ordroom-show.php';";   
+            echo '</script>';
         }else{
-            echo'lỗi';
+            echo '<script>';
+            echo 'alert ("Có lỗi xảy ra");';  
+            echo "location.href = 'ordroom-show.php';";   
+            echo '</script>';
         }
     }
 ?>
