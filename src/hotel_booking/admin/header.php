@@ -44,6 +44,9 @@
         <li><a href="ordser-show.php"><i class="fas fa-clipboard"></i><span>Đơn dịch vụ</span></a></li>
         <li><a href="admin-list.php"><i class="fas fa-users-cog"></i><span>Quản lý admin</span></a></li>
         <li><a href="../user/index.php"><i class="fas fa-home"></i><span>Trang chủ</span></a></li>
+        <div class="text-center p-3">
+        <label for="" class ="fs-6 fw-bold text-decoration-none mx-2 text-uppercase  p-2  py-auto rounded-pill " style ="color: #A65746; background:#fff;"><?php  echo $_SESSION['loginAdminOK'] ?></label>
+        </div>
       </ul>
     </div>
     <!-- sidebar end -->
