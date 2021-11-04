@@ -11,7 +11,6 @@
             //bước 2 truy vấn thông tin
             $sql = "SELECT *FROM tb_admins WHERE admin_name ='$admin_name' AND admin_pass ='$pass_hash'";
             $result = mysqli_query($conn,$sql);
-            echo mysqli_num_rows($result);
             //bước 3 xác thực
             if(mysqli_num_rows($result)>0){
                 //kiểm tra xác thực :
