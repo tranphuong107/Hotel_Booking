@@ -2,7 +2,7 @@
     include 'header.php';
 ?>
     <h1><center>Thêm dịch vụ</center></h1>
-    <div id = "content"> 
+    <div id = "content" class = "content"> 
     <form action="add-service-process.php" method="POST" enctype="multipart/form-data">
           <div class = "container mb">
                 Tên bài thi <input type="text" name = "ser-name" class = "form-control">

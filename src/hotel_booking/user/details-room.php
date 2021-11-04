@@ -17,6 +17,7 @@
                 </div>
             </div>
         </div>
+
         <?php
             if(isset($_GET['id'])){
                 $room_id = $_GET['id'];

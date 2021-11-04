@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost
--- Thời gian đã tạo: Th10 02, 2021 lúc 03:04 PM
--- Phiên bản máy phục vụ: 8.0.17
--- Phiên bản PHP: 7.3.10
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 04, 2021 lúc 02:48 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_admins` (
   `admin_id` int(10) UNSIGNED NOT NULL,
-  `admin_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `admin_mobile` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `admin_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `admin_pass` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `admin_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `admin_mobile` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
+  `admin_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `admin_pass` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -41,7 +40,6 @@ CREATE TABLE `tb_admins` (
 --
 
 INSERT INTO `tb_admins` (`admin_id`, `admin_name`, `admin_mobile`, `admin_email`, `admin_pass`) VALUES
-(13, 'admin1', '0356287263', 'admin@gmail.com', 'admin'),
 (14, 'phuong', '0231234563', 'phuong@gmail.com', '60c9312821b0d1eb614810a21f159147');
 
 -- --------------------------------------------------------
@@ -52,9 +50,9 @@ INSERT INTO `tb_admins` (`admin_id`, `admin_name`, `admin_mobile`, `admin_email`
 
 CREATE TABLE `tb_customers` (
   `cus_id` int(10) UNSIGNED NOT NULL,
-  `cus_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `cus_mobile` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `cus_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cus_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `cus_mobile` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
+  `cus_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `cus_pass` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -81,7 +79,7 @@ CREATE TABLE `tb_order_rooms` (
   `ordroom_total_day` int(10) NOT NULL,
   `ordroom_start` date NOT NULL,
   `ordroom_end` date NOT NULL,
-  `ordroom_status` tinyint(1) NOT NULL DEFAULT '0',
+  `ordroom_status` varchar(30) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Chờ xác nhận',
   `room_id` int(10) UNSIGNED DEFAULT NULL,
   `cus_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -91,8 +89,8 @@ CREATE TABLE `tb_order_rooms` (
 --
 
 INSERT INTO `tb_order_rooms` (`ordroom_id`, `ordroom_total`, `ordroom_total_day`, `ordroom_start`, `ordroom_end`, `ordroom_status`, `room_id`, `cus_id`) VALUES
-(1, 900000, 1, '2021-10-31', '2021-11-01', 0, 2, 23),
-(2, 900000, 1, '2021-11-10', '2021-11-11', 0, 2, 4);
+(1, 900000, 1, '2021-10-31', '2021-11-01', 'Đã xác nhận', 2, 23),
+(2, 900000, 1, '2021-11-10', '2021-11-11', 'Đã hủy', 2, 4);
 
 -- --------------------------------------------------------
 
@@ -106,7 +104,7 @@ CREATE TABLE `tb_order_services` (
   `ordser_total_day` int(10) NOT NULL,
   `ordser_start` date NOT NULL,
   `ordser_end` date NOT NULL,
-  `ordser_status` tinyint(1) NOT NULL DEFAULT '0',
+  `ordser_status` varchar(30) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Chờ xác nhận',
   `ser_id` int(10) UNSIGNED NOT NULL,
   `cus_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -116,7 +114,7 @@ CREATE TABLE `tb_order_services` (
 --
 
 INSERT INTO `tb_order_services` (`ordser_id`, `ordser_total`, `ordser_total_day`, `ordser_start`, `ordser_end`, `ordser_status`, `ser_id`, `cus_id`) VALUES
-(1, 400000, 2, '2021-10-31', '2021-11-02', 0, 2, 23);
+(1, 400000, 2, '2021-10-31', '2021-11-02', 'Chờ xác nhận', 2, 23);
 
 -- --------------------------------------------------------
 
@@ -126,12 +124,12 @@ INSERT INTO `tb_order_services` (`ordser_id`, `ordser_total`, `ordser_total_day`
 
 CREATE TABLE `tb_rooms` (
   `room_id` int(10) UNSIGNED NOT NULL,
-  `room_type` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `room_size` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `room_type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `room_size` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `room_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `room_price` int(11) NOT NULL,
   `room_amount_people` int(10) NOT NULL,
-  `room_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `room_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -155,8 +153,8 @@ INSERT INTO `tb_rooms` (`room_id`, `room_type`, `room_size`, `room_description`,
 
 CREATE TABLE `tb_services` (
   `ser_ID` int(10) UNSIGNED NOT NULL,
-  `ser_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `ser_room_size` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ser_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `ser_room_size` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `ser_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ser_price` int(10) NOT NULL,
   `ser_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL

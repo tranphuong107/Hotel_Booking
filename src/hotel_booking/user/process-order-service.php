@@ -1,12 +1,12 @@
 <?php
      session_start();//bảo vệ tk admin
      if(isset($_SESSION['loginUserOK'])){
-        $cus_name = $_SESSION['loginUserOK'];
+          $cus_name = $_SESSION['loginUserOK'];
           $ser_id = $_POST['service-id'];
-        $total = $_POST['total'];
-        $ser_total_day = $_POST['demo'];
-        $order_start = $_POST['from-date'];
-        $order_end = $_POST['to-date'];
+          $total = $_POST['total'];
+          $ser_total_day = $_POST['demo'];
+          $order_start = $_POST['from-date'];
+          $order_end = $_POST['to-date'];
           $cus_id = "";
           include '../config.php';
      
@@ -21,7 +21,7 @@
           }
 
           $sql1 = "INSERT INTO tb_order_services (ordser_total, ordser_total_day, ordser_start, ordser_end, ordser_status, ser_id, cus_id)
-               VALUES ('$total', '$ser_total_day', '$order_start', '$order_end','Đang xác nhận','$ser_id','$cus_id' )";
+               VALUES ('$total', '$ser_total_day', '$order_start', '$order_end','0','$ser_id','$cus_id' )";
                // echo $sql1;
           $result = mysqli_query($conn,$sql1);
 
@@ -31,8 +31,13 @@
                echo "location.href = 'index.php';";     
                echo '</script>';
           }else{
-               echo "Lỗi";
+               echo '<script>';
+               echo 'alert ("Có lỗi gì đó cả ra. Vui lòng thử lại!!!");';
+               echo "location.href = 'index.php';";     
+               echo '</script>';
           }
 
+      }else{
+          header ("location:login.php");
       }
 ?>
