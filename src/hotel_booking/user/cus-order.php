@@ -32,15 +32,15 @@
                         $ordroom_status=$row['ordroom_status'];
                         $room_image =$row['room_image'];
             ?>
-            <div class = "container-fluid p-5">
+            <div class = "container-fluid p-5 ">
                 <div class = "row">
-                    <div class="col-6 px-0">
+                    <div class="col-6 px-0   my-auto">
                         <!-- left -->
                         <?php
                             if($room_image == ""){
-                                echo "<div class='error'>Image not Available.</div>";
+                                echo "<div class='text-center error'>Image not Available.</div>";
                             }else{
-                                echo '<img src="../images/'.$room_image.'" alt="" class = "img-fluid "> ';
+                                echo '<img src="../images/'.$room_image.'" alt="" class = "img-fluid card-img-top" style = "height: 400px ; object-fit: cover;"> ';
                             }
                         ?>
                     </div>
@@ -56,7 +56,7 @@
                             <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordroom_start;?><br />
                             <label for="" class="fw-bold">Ngày trả phòng: </label> <?php echo $ordroom_end;?><br />
                             <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordroom_total_day;?><br />
-                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordroom_total; echo' VNĐ';?><br />
+                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo number_format($ordroom_total) ; echo' đ';?><br />
                             <?php
                                 if($ordroom_status=='Chờ xác nhận'){
                                     echo'<label for="" class="fw-bold">Tình trạng đơn: </label>  Đơn hàng chờ xác nhận<br />';
@@ -97,15 +97,15 @@
                         $ordser_status=$row['ordser_status'];
                         $ser_image =$row['ser_image'];
             ?>
-            <div class = "container-fluid p-5">
+            <div class = "container-fluid p-5 ">
                 <div class = "row">
-                    <div class="col-6 px-0">
+                    <div class="col-6 px-0 my-auto">
                         <!-- left -->
                         <?php
                             if($ser_image == ""){
-                                echo "<div class='error'>Image not Available.</div>";
+                                echo "<div class='text-center  error'>Image not Available.</div>";
                             }else{
-                                echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid "> ';
+                                echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid card-img-top" style = "height: 400px ;width 100%; object-fit: cover;" > ';
                             }
                         ?>
                     </div>
@@ -115,18 +115,18 @@
                         <div>
                             <h2 class="text-center pt-5 pb-4">ĐƠN DỊCH VỤ</h2>
                         </div>
-                        <div class="fs-5 px-0 ps-5">
+                        <div class="fs-5 px-0 ps-5 pb-5">
                             <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordser_id;?><br />
                             <label for="" class="fw-bold">Tên dịch vụ: </label> <?php echo $ser_name;?><br />
                             <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordser_start;?><br />
                             <label for="" class="fw-bold">Ngày trả phòng: </label> <?php echo $ordser_end;?><br />
                             <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordser_total_day;?><br />
-                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo $ordser_total; echo' VNĐ';?><br />
+                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo number_format($ordser_total); echo' đ';?><br />
                             <?php
-                                if($ordroom_status=='Chờ xác nhận'){
+                                if($ordser_status=='Chờ xác nhận'){
                                     echo'<label for="" class="fw-bold">Tình trạng đơn: </label>  Đơn hàng chờ xác nhận<br />';
                                 }else{
-                                    if($ordroom_status=='Đã xác nhận'){
+                                    if($ordser_status=='Đã xác nhận'){
                                     echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã xác nhận<br />';
                                     }else{
                                     echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã hủy<br />'; 

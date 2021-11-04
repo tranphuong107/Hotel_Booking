@@ -20,7 +20,7 @@
                 <thead class="table-light">
                     <tr class =" border-dark">
                         <th scope="col" class="top">Mã Đơn</th>
-                        <th scope="col" class="top">Tên khách hàng</th>
+                        <th scope="col" class="top">Tên Khách hàng</th>
                         <th scope="col" class="top" >Mã dịch vụ</th>
                         <th scope="col" class="top">Tên dịch vụ</th>
                         <th scope="col" class="top">Từ ngày</th>
@@ -51,7 +51,7 @@
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ordser_start'].'</td>';
                                      echo '<td>'.$row['ordser_end'].'</td>';
-                                     echo '<td>'.$row['ordser_total'].'</td>';
+                                     echo '<td>'.number_format($row['ordser_total']).' đ</td>';
                                      echo '<td>'.$row['ordser_status'].'</td>';
                                      if($row['ordser_status']=='Đã hủy'){
                                         echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
@@ -69,7 +69,7 @@
                             WHERE  o.ser_id = s.ser_id AND o.cus_id =c.cus_id ";
                              $result = mysqli_query($conn,$sql);
                              if(mysqli_num_rows($result)>0){
-                                 while($row=mysqli_fetch_assoc($result)){
+                                while($row=mysqli_fetch_assoc($result)){
                                      echo '<tr>';
                                      echo '<th scope="row">'.$row['ordser_id'].'</th>';
                                      echo '<td>'.$row['cus_name'].'</td>';
@@ -77,9 +77,9 @@
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ordser_start'].'</td>';
                                      echo '<td>'.$row['ordser_end'].'</td>';
-                                     echo '<td>'.$row['ordser_total'].'</td>';
+                                     echo '<td>'.number_format($row['ordser_total']).' đ</td>';
                                      echo '<td>'.$row['ordser_status'].'</td>';
-                                     if($row['ordser_status']=='Đã hủy'){
+                                    if($row['ordser_status']=='Đã hủy'){
                                         echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
                                     }else{
                                         echo '<td><a href ="confirm-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
@@ -87,8 +87,8 @@
                                     echo '<td><a href ="cancel-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
                                     echo '</tr>';
                                      
-                                 }
-                             }
+                                }
+                            }
                         }
                             mysqli_close($conn);
                     ?>

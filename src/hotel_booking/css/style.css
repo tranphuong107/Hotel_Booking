@@ -15,15 +15,13 @@
 }
 .breadcrumb li a{
     text-decoration: none;
+   
     
 }
 
 .bg-img{
     background-image: url(../images/Bg_room.jpg);
    
-}
-container row col card card-img card-img-top img{
-    transform: scale(1.2 1.2);
 }
 
 
@@ -137,7 +135,7 @@ label #sidebar-btn :hover{
 }
 .content{
     position: fixed;
-    width: 80%;
+    width: 82%;
     margin-top: 70px;
     margin-left: 250px ;
     background-color: white;
