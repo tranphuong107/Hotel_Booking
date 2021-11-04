@@ -3,7 +3,7 @@
 
 <div class="container-fluid" style=" width:100%; margin:0px; padding:0px;">
     
-    <img src="../images/Bg_room.jpg" class="img-header" style="height: 400px; width:100% "alt="">
+    <img src="../images/Bg_room.jpg" class="img-header" style="height: 450px; width:100% "alt="">
     
 
 
@@ -32,10 +32,7 @@
             </div>
             <div class="col-md-4 pt-2  ">
                     <form action="process-search.php" method="post">
-                    <!-- <div class="input-group mb-3">
-                            <input type="text" name="search" style="width:45%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?" >
-                            <button class="btn btn-dark " type="submit" name="btnsearch">SEARCH</button>
-                        </div> -->
+                    
                         <div class="d-flex " >
                             <input class="form-cn me-2 mr-0" type="search" name="search" style="width:100%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?">
                             <button class="btn btn-dark" type="submit" name="btnsearch">Search</button>
@@ -67,7 +64,7 @@
                     echo '<div class="col">';
                         echo'<div class="card">';
                        echo'<div class="inner">';
-                       echo ' <a href="details-room.php" class="card-img " >';
+                       echo ' <a href="details-room.php?id='.$row['room_id'].'" class="card-img " >';
                        echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top" alt="...">';
                        echo' </a>';
                        echo'</div>';

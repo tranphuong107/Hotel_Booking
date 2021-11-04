@@ -11,7 +11,7 @@
     <div class="container" >
         <div class="row">
             
-            <div class="col-md-5 p-3">
+            <div class="col-md-8 p-3">
                 
                 <div class="jumbotron">
                     <nav aria-label="breadcrumb">
@@ -28,14 +28,11 @@
                     </nav>                  
                 </div>
             </div>
-            <div class="col-md-7 pt-2  ">
+            <div class="col-md-4 pt-2  ">
                     <form action="process-search.php" method="post">
-                        <!-- <div class="input-group mb-3">
-                            <input type="text" name="search" style="width:50%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?" >                          
-                            <button class="btn btn-dark " type="submit" name="btnsearch">SEARCH</button>
-                        </div> -->
-                        <div class="d-flex ">
-                            <input class="form-cn me-2 mr-0" type="search" name="search" style="width:45%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?">
+                        
+                        <div class="d-flex " >
+                            <input class="form-cn me-2 mr-0" type="search" name="search" style="width:100%" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?">
                             <button class="btn btn-dark" type="submit" name="btnsearch">Search</button>
                         </div>
                     </form>                   
@@ -66,7 +63,7 @@
                             echo'<div class="card-body">';
                             echo'   <h5 class="card-title">'.$row['room_type'].'</h5>';
                             echo'   <p class="card-text">Giá: '.$row['room_price'].'₫</p>';
-                            echo'  <a href="details-room.php" class="btn btn-outline-dark">Chi tiết>></a>';
+                            echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark">Chi tiết>></a>';
                             echo'</div>';
                             echo'</div>';
                         echo'</div>';
