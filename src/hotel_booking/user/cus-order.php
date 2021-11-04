@@ -40,7 +40,7 @@
                             if($room_image == ""){
                                 echo "<div class='text-center error'>Image not Available.</div>";
                             }else{
-                                echo '<img src="../images/'.$room_image.'" alt="" class = "img-fluid "> ';
+                                echo '<img src="../images/'.$room_image.'" alt="" class = "img-fluid card-img-top" style = "height: 400px ; object-fit: cover;"> ';
                             }
                         ?>
                     </div>
@@ -105,7 +105,7 @@
                             if($ser_image == ""){
                                 echo "<div class='text-center  error'>Image not Available.</div>";
                             }else{
-                                echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid "> ';
+                                echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid card-img-top" style = "height: 400px ;width 100%; object-fit: cover;" > ';
                             }
                         ?>
                     </div>
