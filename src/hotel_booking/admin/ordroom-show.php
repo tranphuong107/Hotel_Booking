@@ -20,7 +20,7 @@
                 <thead class="table-light">
                     <tr class =" border-dark">
                         <th scope="col" class="top">Mã Đơn</th>
-                        <th scope="col" class="top">Tên khách hàng</th>
+                        <th scope="col" class="top">Tên Khách hàng</th>
                         <th scope="col" class="top" >Mã phòng</th>
                         <th scope="col" class="top">Tên phòng</th>
                         <th scope="col" class="top">Ngày nhận phòng</th>

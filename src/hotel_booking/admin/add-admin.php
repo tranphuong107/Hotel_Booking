@@ -1,49 +1,43 @@
 <?php
-    include('../config.php')
+    include('header.php');
+    include('../config.php');
 ?>
+<div class="content" >
+<div class="container-fluid  h-10">
+            <div class="row" >
+                
+                <div class="col-12" style="background-color:#f1f2f6;">
+                <form action ="process-add-admin.php" method ="post" class=" m-3 mx-auto rounded-3 " style ="width:45%; border-radius: 30px">
+                <h2 class ="text-center p-3 mb-3 ">Thêm tài khoản admin</h2>
+                    <div class="mb-3">
+                        <label for="txtAdmin" class="form-label">Tên tài khoản</label>
+                        <input type="text" class="form-control rounded-pill" id="txtAdmin" name ="txtAdmin">  
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtMobile" class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control rounded-pill" id="txtMobile" name ="txtMobile">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtEmail" class="form-label">Địa chỉ Email</label>
+                        <input type="email" class="form-control rounded-pill" id="txtEmail" name ="txtEmail" aria-describedby="emailHelp">
+                       
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtpass01" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control rounded-pill" id="txtPass01" name ="txtPass01">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtpass02" class="form-label">Nhập lại mật khẩu</label>
+                        <input type="password" class="form-control rounded-pill" id="txtPass02" name ="txtPass02">
+                    </div>
+                    <div  class=" d-flex justify-content-center">
+                    <button type="submit" class="btn text-white px-3 fs-5 " style="background-color:#6ab04c;" name ="btnadd">Thêm</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+</div>
 <?php
-        // session_start();
-        if(isset($_POST['btnRegister']) && $_POST['txtUser'] !='' && $_POST['txtMobile'] != '' 
-        && $_POST['txtEmail'] != '' && $_POST['txtPass01'] != ''  && $_POST['txtPass02'] != ''){
-            $user = $_POST['txtUser'];
-            $mobile =$_POST['txtMobile'];
-            $email = $_POST['txtEmail'];
-            $pass01= $_POST['txtPass01'];
-            $pass02 = $_POST['txtPass02'];
-            if($pass01 != $pass02){
-                $_SESSION['thongbao'] = 'Mật khẩu không trùng nhau!';
-                header('location:register.php'); 
-            }else{
-                $sql = "SELECT * FROM tb_admins WHERE admin_name ='$user'";
-                $result = mysqli_query($conn,$sql);
-                //Xử lý kết quả
-                if(mysqli_num_rows($result) > 0){
-                    $_SESSION['thongbao'] = 'Tên tài khoản đã tồn tại!';
-                    header('location:register.php');  
-                }else{
-                    //Truy vấn dữ liệu để kiểm tra email
-                    $sql2 = "SELECT * FROM tb_admins WHERE admin_email ='$email'";
-                    $result2 = mysqli_query($conn,$sql2);
-                    //Xử lý kết quả
-                    if(mysqli_num_rows($result2) > 0){
-                        $_SESSION['thongbao'] = 'Email đã tồn tại!';
-                        header('location:register.php'); 
-                    }else{
-                    //băm mật khẩu
-                        $pass_hash = md5($pass01);
-                        $sql3 = "INSERT INTO tb_admins(admin_name,admin_mobile,admin_email,admin_pass) 
-                        VALUES('$user','$mobile','$email','$pass_hash');";
-                        $result3 = mysqli_query($conn,$sql3);
-                        if($result3 >= 1){// nếu đăng ký thành công chuyển sang đăng nhập
-                            $_SESSION['thongbao'] = 'Đăng ký thành công!';
-                            header ('location:login.php');
-                        }
-                    }
-                }
-            }
-        }else{
-            $_SESSION['thongbao'] = 'Vui lòng nhập đủ thông tin!';
-            header('location:register.php');
-        }
-            
-    ?>   
+    include('footer.php');
+?>
