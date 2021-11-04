@@ -102,7 +102,7 @@
                 //GEt the Total REvenue
                 $Total = $row1['Total1'] + $row2['Total2'];
             ?>
-            <h1 class=><?php echo $Total; ?></h1> <?php echo 'VNĐ';?>
+            <h1 class=><?php echo number_format($Total); echo ' đ';?></h1> 
             <br />
         </div>
 

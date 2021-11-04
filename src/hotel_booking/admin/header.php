@@ -39,11 +39,18 @@
       <ul>
         <li><a href="room-show.php"><i class='fas fa-bed'></i><span>Phòng</span></a></li> 
         <li><a href="service-show.php"><i class="fas fa-concierge-bell"></i><span>Dịch vụ</span></a></li>
+<<<<<<< HEAD
         <li><a href="#"><i class="fas fa-user"></i><span>Khách hàng</span></a></li>
+=======
+        <li><a href="cus-show.php"><i class="fas fa-user"></i><span>Khách hàng</span></a></li>
+>>>>>>> 25887b4b3e71134d34a2a0dc7f8ce55492d22701
         <li><a href="ordroom-show.php"><i class="fas fa-clipboard"></i><span>Đơn phòng</span></a></li>
         <li><a href="ordser-show.php"><i class="fas fa-clipboard"></i><span>Đơn dịch vụ</span></a></li>
-        <li><a href=""><i class="fas fa-tools"></i><span>Giao diện</span></a></li>
+        <li><a href="admin-list.php"><i class="fas fa-users-cog"></i><span>Quản lý admin</span></a></li>
         <li><a href="../user/index.php"><i class="fas fa-home"></i><span>Trang chủ</span></a></li>
+        <div class="text-center p-3">
+        <label for="" class ="fs-6 fw-bold text-decoration-none mx-2 text-uppercase  p-2  py-auto rounded-pill " style ="color: #A65746; background:#fff;"><?php  echo $_SESSION['loginAdminOK'] ?></label>
+        </div>
       </ul>
     </div>
     <!-- sidebar end -->

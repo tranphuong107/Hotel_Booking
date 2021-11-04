@@ -20,7 +20,7 @@
                 <thead class="table-light">
                     <tr class =" border-dark">
                         <th scope="col" class="top">Mã Đơn</th>
-                        <th scope="col" class="top">Tên khách hàng</th>
+                        <th scope="col" class="top">Tên Khách hàng</th>
                         <th scope="col" class="top" >Mã phòng</th>
                         <th scope="col" class="top">Tên phòng</th>
                         <th scope="col" class="top">Ngày nhận phòng</th>
@@ -51,7 +51,7 @@
                                      echo '<td>'.$row['room_type'].'</td>';
                                      echo '<td>'.$row['ordroom_start'].'</td>';
                                      echo '<td>'.$row['ordroom_end'].'</td>';
-                                     echo '<td>'.$row['ordroom_total'].'</td>';
+                                     echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                      echo '<td>'.$row['ordroom_status'].'</td>';
                                      if($row['ordroom_status']=='Đã hủy'){
                                         echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
@@ -65,7 +65,7 @@
                         }else{
                             $sql = "SELECT o.ordroom_id,o.ordroom_total,o.ordroom_start,o.ordroom_end,o.ordroom_status,r.room_type,r.room_id,c.cus_name
                             FROM  tb_order_rooms o ,tb_rooms r ,tb_customers c
-                            WHERE  o.room_id = r.room_id AND o.cus_id =c.cus_id";
+                            WHERE  o.room_id = r.room_id AND o.cus_id = c.cus_id";
                             $result = mysqli_query($conn,$sql);
                                 if(mysqli_num_rows($result)>0){
                                     while($row=mysqli_fetch_assoc($result)){
@@ -76,7 +76,7 @@
                                         echo '<td>'.$row['room_type'].'</td>';
                                         echo '<td>'.$row['ordroom_start'].'</td>';
                                         echo '<td>'.$row['ordroom_end'].'</td>';
-                                        echo '<td>'.$row['ordroom_total'].'</td>';
+                                        echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                         echo '<td>'.$row['ordroom_status'].'</td>';
                                         if($row['ordroom_status']=='Đã hủy'){
                                             echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';

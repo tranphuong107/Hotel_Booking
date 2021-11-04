@@ -135,7 +135,7 @@ label #sidebar-btn :hover{
 }
 .content{
     position: fixed;
-    width: 80%;
+    width: 82%;
     margin-top: 70px;
     margin-left: 250px ;
     background-color: white;
@@ -143,9 +143,12 @@ label #sidebar-btn :hover{
     height: 100vh;
     transition: 0.5s;
     overflow: auto;
+    padding-bottom: 70px;
+    
 }
 #check:checked ~ .content{
     margin-left: 60px;
     width: 96%;
 }
+
 /* end css for sidebar */
