@@ -21,7 +21,7 @@
           }
 
           $sql1 = "INSERT INTO tb_order_services (ordser_total, ordser_total_day, ordser_start, ordser_end, ordser_status, ser_id, cus_id)
-               VALUES ('$total', '$ser_total_day', '$order_start', '$order_end','Đang xác nhận','$ser_id','$cus_id' )";
+               VALUES ('$total', '$ser_total_day', '$order_start', '$order_end','0','$ser_id','$cus_id' )";
                // echo $sql1;
           $result = mysqli_query($conn,$sql1);
 
@@ -31,7 +31,10 @@
                echo "location.href = 'index.php';";     
                echo '</script>';
           }else{
-               echo "Lỗi";
+               echo '<script>';
+               echo 'alert ("Có lỗi gì đó cả ra. Vui lòng thử lại!!!");';
+               echo "location.href = 'index.php';";     
+               echo '</script>';
           }
 
       }else{

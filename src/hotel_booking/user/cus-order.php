@@ -102,7 +102,7 @@
                     <div class="col-6 px-0">
                         <!-- left -->
                         <?php
-                            if($room_image == ""){
+                            if($ser_image == ""){
                                 echo "<div class='error'>Image not Available.</div>";
                             }else{
                                 echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid "> ';

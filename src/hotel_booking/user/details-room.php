@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             
-            <div class="card";">
+            <div class="card";>
                     <div class="row">
                         <div class="col-md-6 ">
                             <img src="../images/single_room.jpg" class="card-img-top " height="100%" alt="Card image cap">
