@@ -2,9 +2,11 @@
 <?php include('../config.php'); ?>
 
 <main>
-    <div class="header-inner">
-        <img src="../images/Bg_room.jpg" class="img-fluid w-100 h-100" alt="">
-    </div>
+<div class="container-fluid" style=" width:100%; margin:0px; padding:0px;">
+    
+    <img src="../images/Bg_room.jpg" class="img-header" style="height: 450px; width:100% "alt="">
+    
+</div>
 
 
 </main>
@@ -52,17 +54,29 @@
 
                 
                 if(mysqli_num_rows($result) > 0){
-                    echo'<div class="row row-cols-1 row-cols-md-3 g-5 ">';
+                    echo'<div class="row row-cols-1 row-cols-md-3 g-5">';
                     while($row = mysqli_fetch_assoc($result)){
-                        
+                        echo '<style type="text/css" scoped>';
+                            echo'.inner{
+                                overflow: hidden;
+                            }';
+                            echo'.inner img{
+                                transition: all 1s ease;
+                            }';
+                            echo'.inner:hover img{
+                                transform: scale(1.1);
+                            }';
+                        echo'</style>';
                         echo '<div class="col">';
                             echo'<div class="card">';
-                            echo ' <a href="details-room.php" class="card-img " >';
-                            echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top" alt="...">';
-                            echo' </a>';
+                           echo'<div class="inner">';
+                           echo ' <a href="details-room.php?id='.$row['room_id'].'" class="card-img " >';
+                           echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top" style = "height: 200px ;width 100%; object-fit: cover;" alt="...">';
+                           echo' </a>';
+                           echo'</div>';
                             echo'<div class="card-body">';
                             echo'   <h5 class="card-title">'.$row['room_type'].'</h5>';
-                            echo'   <p class="card-text">Giá: '.$row['room_price'].'₫</p>';
+                            echo'   <p class="card-text  ">Giá: '.$row['room_price'].'₫</p>';
                             echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark">Chi tiết>></a>';
                             echo'</div>';
                             echo'</div>';
@@ -70,10 +84,6 @@
                    
                     }
                     echo'</div>';
-                }else
-                {
-                    //Food Not Available
-                    echo "<div class='error'>Room not found.</div>";
                 }
     
            
