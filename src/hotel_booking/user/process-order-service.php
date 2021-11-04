@@ -1,12 +1,12 @@
 <?php
      session_start();//bảo vệ tk admin
      if(isset($_SESSION['loginUserOK'])){
-        $cus_name = $_SESSION['loginUserOK'];
+          $cus_name = $_SESSION['loginUserOK'];
           $ser_id = $_POST['service-id'];
-        $total = $_POST['total'];
-        $ser_total_day = $_POST['demo'];
-        $order_start = $_POST['from-date'];
-        $order_end = $_POST['to-date'];
+          $total = $_POST['total'];
+          $ser_total_day = $_POST['demo'];
+          $order_start = $_POST['from-date'];
+          $order_end = $_POST['to-date'];
           $cus_id = "";
           include '../config.php';
      
@@ -37,5 +37,7 @@
                echo '</script>';
           }
 
+      }else{
+          header ("location:login.php");
       }
 ?>

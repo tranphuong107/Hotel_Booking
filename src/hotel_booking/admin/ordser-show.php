@@ -5,7 +5,7 @@
 <div class="content p-3">
     <div>
         <div class="">
-            <h1 class="text-center pt-3">Danh sách đơn dịch vụ</h1>
+            <h1 class="text-center pt-3">Danh sách Đơn dịch vụ</h1>
         </div>
         <div class=" p-3 ">
             <form action="" method ="post">
@@ -19,15 +19,16 @@
             <table class="table my-3 py-5 border-light  text-aline table-light text-center" style="table-layout: auto;">
                 <thead class="table-light">
                     <tr class =" border-dark">
-                        <th scope="col" class="top">Mã đơn</th>
+                        <th scope="col" class="top">Mã Đơn</th>
                         <th scope="col" class="top">Tên khách hàng</th>
-                        <!-- <th scope="col" class="top" >Mã dịch vụ</th> -->
+                        <th scope="col" class="top" >Mã dịch vụ</th>
                         <th scope="col" class="top">Tên dịch vụ</th>
-                        <th scope="col" class="top">Ngày đặt dịch vụ</th>
-                        <th scope="col" class="top">Số ngày thuê</th>
+                        <th scope="col" class="top">Từ ngày</th>
+                        <th scope="col" class="top">Đến ngày</th>
                         <th scope="col" class="top">Tổng hóa đơn</th>
                         <th scope="col" class="top">Tình trạng đơn</th>
-                        <th scope="col" class="top">Thao tác</th>
+                        <th scope="col" class="top">Xác nhận đơn</th>
+                        <th scope="col" class="top">Hủy đơn</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,70 +38,57 @@
                         //2. Thực hiện truy vấn
                         if (isset($_POST['btn-search'])){
                             $cus_name = $_POST['cus-name'];
-                            $sql = "SELECT o.ordser_id,o.ordser_total,o.ordser_total_day,o.ordser_start,o.ordser_end,o.ordser_status,r.ser_type,r.ser_id,c.cus_name
-                            FROM  tb_order_services o ,tb_rooms r ,tb_customers c
-                            WHERE  o.ser_id = r.ser_id AND o.cus_id =c.cus_id AND c.cus_name ='$cus_name'";
+                            $sql = "SELECT o.ordser_id,o.ordser_total,o.ordser_end,o.ordser_start,o.ordser_status,s.ser_name,s.ser_id,c.cus_name
+                            FROM  tb_order_services o ,tb_services s ,tb_customers c
+                            WHERE  o.ser_id = s.ser_id AND o.cus_id =c.cus_id AND c.cus_name ='$cus_name'";
                              $result = mysqli_query($conn,$sql);
-                             if($result == true){
+                             if(mysqli_num_rows($result)>0){
                                  while($row=mysqli_fetch_assoc($result)){
-                                     if($row == "" OR $cus_name == ""){
-
-                                     }else{
                                      echo '<tr>';
-                                     echo '<th scope="row">'.$row['ordroom_id'].'</th>';
+                                     echo '<th scope="row">'.$row['ordser_id'].'</th>';
                                      echo '<td>'.$row['cus_name'].'</td>';
-                                    //  echo '<td>'.$row['ser_id'].'</td>';
+                                     echo '<td>'.$row['ser_id'].'</td>';
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ordser_start'].'</td>';
-                                     echo '<td>'.$row['ordser_total_day'].'</td>';
+                                     echo '<td>'.$row['ordser_end'].'</td>';
                                      echo '<td>'.$row['ordser_total'].'</td>';
-                                     if($row['ordser_status'] == 1){
-                                         echo '<td class = "text-success">Đã xác nhận</td>';
-                                     }else{
-                                        if($row['ordser_status'] == 0){
-                                        echo '<td><a href ="confirm-order.php?ids='.$row['ordser_id'].'" class = "text-decoration-none text-warning">Đang chờ xác nhận</a></td>';
-                                        }else{
-                                            echo '<td class = "text-danger">Đã hủy</td>';
-                                        }
-                                     }
+                                     echo '<td>'.$row['ordser_status'].'</td>';
+                                     if($row['ordser_status']=='Đã hủy'){
+                                        echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    }else{
+                                        echo '<td><a href ="confirm-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
+                                    }
+                                    echo '<td><a href ="cancel-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    echo '</tr>';
                                      
-                                     echo '<td><a href ="delete-order.php?ids='.$row['ordroom_id'].'"><i class="fas fa-info"></i></a></td>';
-                                     echo '</tr>';
-                                     }
                                  }
                              }
                         }else{
-                            $sql = "SELECT o.ordser_id,o.ordser_total,o.ordser_total_day,o.ordser_start,o.ordser_end,o.ordser_status,r.ser_name,r.ser_id,c.cus_name
-                            FROM  tb_order_services o ,tb_services r ,tb_customers c
-                            WHERE  o.ser_id = r.ser_id AND o.cus_id =c.cus_id";
-                
-                            $result = mysqli_query($conn,$sql);
-                                if($result == true){
-                                    while($row = mysqli_fetch_assoc($result)){
-                                        echo '<tr>';
-                                        echo '<th scope="row">'.$row['ordser_id'].'</th>';
-                                        echo '<td>'.$row['cus_name'].'</td>';
-                                        // echo '<td>'.$row['ser_id'].'</td>';
-                                        echo '<td>'.$row['ser_name'].'</td>';
-                                        echo '<td>'.$row['ordser_start'].'</td>';
-                                        echo '<td>'.$row['ordser_total_day'].'</td>';
-                                        echo '<td>'.$row['ordser_total'].'</td>';
-                                        if($row['ordser_status'] == 1){
-                                            echo '<td class = "text-success">Đã xác nhận</td>';
-                                        }else{
-                                           if($row['ordser_status'] == 0){
-                                           echo '<td><a href ="confirm-order.php?ids='.$row['ordser_id'].'" class = "text-decoration-none text-warning">Đang chờ xác nhận</a></td>';
-                                           }else{
-                                               echo '<td class = "text-danger">Đã hủy</td>';
-                                           }
-                                        }
-                                        echo '<td>
-                                                <a href ="delete-order.php?ids='.$row['ordser_id'].'"><i class="fas fa-trash" style = " color:red;"></i></a>
-                                                </td>';
-                                        echo '</tr>';
-                                        
+                            $sql = "SELECT o.ordser_id,o.ordser_total,o.ordser_end,o.ordser_start,o.ordser_status,s.ser_name,s.ser_id,c.cus_name
+                            FROM  tb_order_services o ,tb_services s ,tb_customers c
+                            WHERE  o.ser_id = s.ser_id AND o.cus_id =c.cus_id ";
+                             $result = mysqli_query($conn,$sql);
+                             if(mysqli_num_rows($result)>0){
+                                 while($row=mysqli_fetch_assoc($result)){
+                                     echo '<tr>';
+                                     echo '<th scope="row">'.$row['ordser_id'].'</th>';
+                                     echo '<td>'.$row['cus_name'].'</td>';
+                                     echo '<td>'.$row['ser_id'].'</td>';
+                                     echo '<td>'.$row['ser_name'].'</td>';
+                                     echo '<td>'.$row['ordser_start'].'</td>';
+                                     echo '<td>'.$row['ordser_end'].'</td>';
+                                     echo '<td>'.$row['ordser_total'].'</td>';
+                                     echo '<td>'.$row['ordser_status'].'</td>';
+                                     if($row['ordser_status']=='Đã hủy'){
+                                        echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    }else{
+                                        echo '<td><a href ="confirm-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
                                     }
-                                }
+                                    echo '<td><a href ="cancel-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    echo '</tr>';
+                                     
+                                 }
+                             }
                         }
                             mysqli_close($conn);
                     ?>
