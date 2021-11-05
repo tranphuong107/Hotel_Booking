@@ -58,9 +58,10 @@
                 
             </div>
             <div class="col-md-5 ml-7 bt-0" style="padding-left: 24px; padding-right:0px">                 
-                    <h1 class="card-title pt-0 pb-3"><?php echo $row['room_type']?></h1>
+                    <h1 class="card-title pt-2 pb-1"><?php echo $row['room_type']?></h1>
                     <hr  width="10%" size="2px" align="center" />
-                    <h5>Diện tích: <?php echo $row['room_size']?>, Số người: <?php echo $row['room_amount_people']?> </h5>
+                    <h5>Diện tích: <?php echo $row['room_size']?></h5>
+                    <h5> Số người: <?php echo $row['room_amount_people']?> </h5>
                     <hr class='dotted' />
                     <h5>Mô tả:</h5>  
                     <p> <?php echo $row['room_description']?> </p>
@@ -72,7 +73,7 @@
                      
                     
                     <h5 class="card-text">Giá: <?php echo number_format($row['room_price'])?>₫</h5>
-                    <a href="show-order-room.php"class="btn btn-warning mt-0 p-3 " style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt ngay</a>
+                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-3 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt ngay</a>
             </div>                                 
         </div>
     
