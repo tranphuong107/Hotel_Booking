@@ -36,9 +36,17 @@
         </div>
     <!-- Banner end -->
 
+    <!-- Introduction -->
+    <section class = "p-5 m-5">
+        <div class = "container" style = "padding: 0 15rem;">
+            <h1 class = "subject" style = "color:#a48011"><center>Mona Media Resorts</center></h1>
+            <p class = "introduction" style = "text-align:center;color:#272725e8; font-size: 20 !important;">Mona Media Resort tọa lạc ở vị trí đắc địa bên cạnh bờ biển Đà Nẵng, với bờ cát trải dài và không gian xanh lý tưởng, chúng tôi cung cấp những dịch vụ nghỉ dưỡng cao cấp, sang trọng.</p>
+        </div>
+    </section>
+    <!-- Introduction end -->
         <!-- Hotel -->
-        <section class = "p-4 container">
-            <div class = "text-uppercase fw-bold m-5" style = "color:#FFC40E"> 
+        <section class = "p-4 bg-light container">
+            <div class = "text-uppercase fw-bold m-5"> 
                 <h1><center>Khách sạn</center></h1>
             </div>
             <div class = "row row-cols-1 row-cols-md-3 p-0 m-0"> 
@@ -114,7 +122,7 @@
         <!-- Hotel end -->
 
     <!-- Service -->
-    <section class = "bg-light py-5">
+    <section class = "py-5">
         <div class = "container py-2">
             <h1 class = "text-uppercase fw-bold"><center>Dịch vụ</center></h1>
             <!-- images -->
@@ -152,7 +160,6 @@
 
      <!-- Service end -->
 </main>
-
         <?php
             include ('footer.php');
         ?>
