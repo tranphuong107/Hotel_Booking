@@ -23,7 +23,7 @@
             $tempname = $_FILES["uploadfile"]["tmp_name"]; 
             
             // echo $filename;
-            if($filename == ""){
+            if($filename == "" OR $filename == $ser_img){
                 $sql1 ="UPDATE tb_services SET 
                 ser_name = '$ser_name',
                 ser_room_size = '$ser_size',
@@ -48,6 +48,7 @@
                 }
                 
             }else{
+                
                 $folder = "../images/".$filename;
                 if (move_uploaded_file($tempname, $folder))  {
                     echo $msg = "Image uploaded successfully";
@@ -79,13 +80,6 @@
                 }
             }
             
-        //     $folder = "../images/".$filename;
-              
-        // if (move_uploaded_file($tempname, $folder))  {
-        //             echo $msg = "Image uploaded successfully";
-        //         }else{
-        //             echo $msg = "Failed to upload image";
-        //       }
         }
 
     ?>
