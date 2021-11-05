@@ -3,7 +3,7 @@
 
 <div class="container-fluid" style=" width:100%; margin:0px; padding:0px;">
     
-    <img src="../images/Bg_room.jpg" class="img-header" style="height: 450px; width:100% "alt="">
+    <img src="../images/Bg_room.jpg" class="img-header" style="height: 500px; width:100% ;object-fit:cover;"alt="">
     
 
 
@@ -59,13 +59,17 @@
                         }';
                         echo'.inner:hover img{
                             transform: scale(1.1);
+                            
+                        }';
+                        echo'.card-img{
+                            object-fit:cover;
                         }';
                     echo'</style>';
                     echo '<div class="col">';
                         echo'<div class="card">';
-                       echo'<div class="inner">';
-                       echo ' <a href="details-room.php?id='.$row['room_id'].'" class="card-img " >';
-                       echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top" alt="...">';
+                       echo'<div class="inner" >';
+                       echo ' <a href="details-room.php?id='.$row['room_id'].'" class="card-img">';
+                       echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top"  alt="...">';
                        echo' </a>';
                        echo'</div>';
                         echo'<div class="card-body">';
