@@ -17,7 +17,7 @@
         <div class = "mt-5">
         <h1 class = "text-center">Chi tiết dịch vụ</h1>
         </div>
-        <form action="update-service-process.php" method = "post" class ="py-5 mb-3"  enctype="multipart/form-data"> 
+        <form action="update-service-process.php" method = "post" class ="py-5 mb-3 w-75 mx-auto"  enctype="multipart/form-data"> 
             <input type="text" name = "ser-id" value = "<?php echo $row['ser_ID']?>" hidden>          
             <div class = "my-3">
                 Tên dịch vụ <input type="text" name = "ser-name" class = "form-control" value = "<?php echo $row['ser_name'];?>">
@@ -36,7 +36,7 @@
         </div>
         <div  class = "my-3">
             Ảnh hiện tại
-            <img src="../images/<?php echo $row['ser_image'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
+            <img src="../images/<?php echo $row['ser_image'];?>" alt="" style = "width: 20rem;height: 20rem;object-fit: contain;">
         </div>
         <div class = "my-3">
             Ảnh <input type="file" name="uploadfile" value=""/>
