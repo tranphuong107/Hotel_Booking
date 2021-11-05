@@ -11,7 +11,7 @@
             <form action="" method ="post">
                     <input type="search"  class="my-2 p-2 border-0 rounded-2 " name ="ser-name" style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm khách...">
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
-                    <a href="ordser-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
+                    <a href="room-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
             </form>
             <a href="process-add-room.php"><i class="far fa-plus-square"></i></a>
         </div>
