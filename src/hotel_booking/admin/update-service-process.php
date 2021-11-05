@@ -4,8 +4,7 @@
         if(isset($_POST['upload'])){
             $ser_id = $_POST['ser-id'];
             $ser_name = $_POST['ser-name'];
-            $ser_size = $_POST['ser-room-size'];
-            
+            $ser_size = $_POST['ser-room-size'];    
             $ser_price = $_POST['ser-price'];
             $ser_des = $_POST['ser-des'];
         
@@ -21,6 +20,7 @@
             
             $filename = $_FILES["uploadfile"]["name"];
             $tempname = $_FILES["uploadfile"]["tmp_name"]; 
+            $folder = "../images/".$filename;
             
             // echo $filename;
             if($filename == "" OR $filename == $ser_img){

@@ -35,7 +35,7 @@
             <div class="row">
                 
                 <div class="col-12">
-                <form action ="process-login.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height 100%; border-radius: 30px">
+                <form action ="process-login.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height: 100%; border-radius: 30px">
                 <h2 class ="text-center  mb-3 text-uppercase">ĐĂNG NHẬP</h2>
                     <div class="mb-3">
                         <label for="txtUser" class="form-label">Tên tài khoản</label>

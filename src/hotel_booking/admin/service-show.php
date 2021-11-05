@@ -4,9 +4,7 @@
 ?>
 <div class="content px-3">
 <style type="text/css" scoped>
-    .service-form{
-        /* position: relative; */
-    }
+   
     .add-popup{
         background: rgba(0,0,0,0.6);
         width: 100%;
@@ -43,7 +41,7 @@
         </div>
         <div class="p-3">
             <form action="" method ="post">
-                    <input type="search"  class="my-2 p-2 border-0 rounded-2 " name ="ser-name" style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm khách...">
+                    <input type="search"  class="my-2 p-2 border-0 rounded-2 " style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm dịch vụ...">
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
                     <a href="service-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
                     <a href="#" id = "add-btn" style = "color:#D98E73;font-size: 2.5rem;float:right;"><i class="far fa-plus-square"></i></a>
@@ -71,10 +69,9 @@
                         //2. Thực hiện truy vấn
                        
                         if (isset($_POST['btn-search'])){
-                            $ser_name = $_POST['ser-name'];
-                            $sql = "SELECT ser_ID, ser_name, ser_room_size, ser_description, ser_price, ser_image
-                            FROM  tb_services
-                            WHERE  ser_name = '$ser_name'";
+                            $ser_name = $_POST['Search'];
+                            $sql = "SELECT * FROM  tb_services
+                            WHERE  ser_name LIKE '%$ser_name%'";
                              $result = mysqli_query($conn,$sql);
                              if($result == true){
                                  while($row=mysqli_fetch_assoc($result)){
