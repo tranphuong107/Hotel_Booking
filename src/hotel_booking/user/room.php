@@ -61,15 +61,13 @@
                             transform: scale(1.1);
                             
                         }';
-                        echo'.card-img{
-                            object-fit:cover;
-                        }';
+                        
                     echo'</style>';
                     echo '<div class="col">';
                         echo'<div class="card">';
                        echo'<div class="inner" >';
                        echo ' <a href="details-room.php?id='.$row['room_id'].'" class="card-img">';
-                       echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top"  alt="...">';
+                       echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top" style="height: 200px;width:100%;object-fit:cover;" alt="...">';
                        echo' </a>';
                        echo'</div>';
                         echo'<div class="card-body">';
