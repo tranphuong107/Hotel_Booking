@@ -34,16 +34,16 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="../images/<?php echo $row['room_image']?>" class="d-block w-100" alt="...">
+                        <img src="../images/<?php echo $row['room_image']?>" class="d-block w-100 card-img-top" style = "height: 400px ;object-fit: cover;"alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                        <img src="../images/<?php echo $row['room_image1']?>" class="d-block w-100" alt="...">
+                        <img src="../images/<?php echo $row['room_image1']?>" class="d-block w-100 card-img-top" style = "height: 400px ;object-fit: cover;" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="../images/<?php echo $row['room_image2']?>" class="d-block w-100" alt="...">
+                        <img src="../images/<?php echo $row['room_image2']?>" class="d-block w-100 card-img-top" style = "height: 400px ;object-fit: cover;" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="../images/<?php echo $row['room_image3']?>" class="d-block w-100" alt="...">
+                        <img src="../images/<?php echo $row['room_image3']?>" class="d-block w-100 card-img-top" style = "height: 400px ;object-fit: cover;" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
