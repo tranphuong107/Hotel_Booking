@@ -26,9 +26,9 @@
   </head>
   <body>
 
-    <div class = "container" >
+    <div class = "" style = "padding: 0.1rem 5%">
     <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top pt-3 navbar-scroll">
-      <div class="container row align-items-center">
+      <div class="container-fluid row align-items-center">
         <div class = "col-3">
           <a class="navbar-brand" href="index.php">
             <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo.png" alt=""class = "img-fluid">

@@ -7,16 +7,16 @@
     
 </div>
 <div class="container" >
-        <div class="row">
+        <div class="row pb-3">
                 
-            <div class="col-md-8 p-3">
+            <div class="col-md-8 pt-4">
                 
                 <div class="jumbotron">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
                                 <a href="index.php">
-                                    <span class="text-dark">TRANG CHỦ</span>
+                                    <span class="text-dark fw-bold">TRANG CHỦ</span>
                                 </a></li>
                             <li class="breadcrumb-item active ">
                                 <a href="room.php">
@@ -27,7 +27,7 @@
                     
                 </div>
             </div>
-            <div class="col-md-4 pt-2  ">
+            <div class="col-md-4 pt-3  ">
                     <form action="process-search.php" method="post">
                     
                         <div class="d-flex " >
@@ -45,7 +45,7 @@
 
             // Phân tích và xử lí kết quả
             if(mysqli_num_rows($result) > 0){
-                echo'<div class="row row-cols-1 row-cols-md-3 g-5">';
+                echo'<div class="row row-cols-1 row-cols-md-3 g-5  px-4 pb-5">';
                 while($row = mysqli_fetch_assoc($result)){
                     echo '<style type="text/css" scoped>';
                         echo'.inner{
@@ -60,10 +60,12 @@
                         }';
                         echo'.card-img{
                             object-fit:cover;
-                        }';
+                        }
+                        .btn:hover{
+                            background-color: #765b378a;}';
                     echo'</style>';
-                    echo '<div class="col">';
-                        echo'<div class="card">';
+                    echo '<div class="col d-flex">';
+                        echo'<div class="card flex-fill">';
                        echo'<div class="inner">';
                        echo ' <a href="details-room.php?id='.$row['room_id'].'" class="card-img " >';
                        echo'   <img src="../images/'.$row['room_image'].'" class="card-img-top" style = "height: 200px ;width 100%; object-fit: cover;" alt="...">';
@@ -71,8 +73,8 @@
                        echo'</div>';
                         echo'<div class="card-body">';
                         echo'   <h5 class="card-title">'.$row['room_type'].'</h5>';
-                        echo'   <p class="card-text  ">Giá: '.$row['room_price'].'₫</p>';
-                        echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark">Chi tiết>></a>';
+                        echo'   <p class="card-text px-2 ">Giá: '.$row['room_price'].'₫</p>';
+                        echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark">Chi tiết...</a>';
                         echo'</div>';
                         echo'</div>';
                     echo'</div>';

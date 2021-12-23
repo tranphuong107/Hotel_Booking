@@ -45,7 +45,8 @@
     </section>
     <!-- Introduction end -->
         <!-- Hotel -->
-        <section class = "p-4 bg-light container">
+    <div class = "bg-light">
+        <section class = "p-4 container">
             <div class = "text-uppercase fw-bold m-5"> 
                 <h1><center>Khách sạn</center></h1>
             </div>
@@ -119,6 +120,7 @@
                     ?>
             </div>
         </section>
+    </div>
         <!-- Hotel end -->
 
     <!-- Service -->
