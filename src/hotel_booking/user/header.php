@@ -29,9 +29,9 @@
     <div class = "" style = "padding: 0.1rem 5%">
     <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top pt-3 navbar-scroll">
       <div class="container-fluid row align-items-center">
-        <div class = "col-3">
+        <div class = "col-2">
           <a class="navbar-brand" href="index.php">
-            <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo.png" alt=""class = "img-fluid">
+            <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo.png" alt="" style = "width: 14rem">
           </a></div>
         <div class = "col-auto">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
