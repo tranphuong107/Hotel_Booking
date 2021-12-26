@@ -79,7 +79,7 @@
                                         echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                         echo '<td>'.$row['ordroom_status'].'</td>';
                                         if($row['ordroom_status']=='Đã hủy'){
-                                            echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                            echo '<td><a href ="#"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
                                         }else{
                                             echo '<td><a href ="confirm-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
                                         }

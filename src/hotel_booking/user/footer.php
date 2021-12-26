@@ -4,7 +4,7 @@
 <footer class="text-center text-lg-start bg-dark text-muted">
 
     <!-- Section: Links  -->
-    <section class="p-5">
+    <section class="p-1">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
