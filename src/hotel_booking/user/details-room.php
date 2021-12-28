@@ -25,7 +25,7 @@
                                     <span class="text-white fw-bold">TRANG CHỦ</span>
                                 </a></li>
                             <li class="breadcrumb-item active ">
-                                <a href="service.php">
+                                <a href="#">
                                     <span class="text-white fw-bold">CHI TIẾT PHÒNG</span>
                                 </a></li>
                         </ol>
