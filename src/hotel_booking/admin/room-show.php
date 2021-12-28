@@ -3,7 +3,7 @@
     include ('../config.php');
 ?>
 
-<div class="content px-3">
+<div class="content p-3">
 <style type="text/css" scoped>
     
     .add-popup{
@@ -119,10 +119,10 @@
                                      echo '<td>'.$row['room_description'].'</td>';
                                      echo '<td>'.$row['room_price'].'</td>';
                                      echo '<td>'.$row['room_amount_people'].'</td>';
-                                     echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid" style = "width:10rem"></td>';
-                                     echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid" style = "width:10rem"></td>';
-                                     echo '<td><img src="../images/'.$row['room_image2'].'" class = "img-fluid" style = "width:10rem"></td>';
-                                     echo '<td><img src="../images/'.$row['room_image3'].'" class = "img-fluid" style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid " style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid " style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image2'].'" class = "img-fluid " style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image3'].'" class = "img-fluid " style = "width:10rem"></td>';
                                      echo '<td>';?>
                                         <a href="update-room.php?id=<?php echo $row['room_id'];?>" id = "update-room"><i class="fas fa-edit text-success" style = "font-size: 1.5rem"></i></a>
                                     <?php echo '</td>';
@@ -161,14 +161,17 @@
             <div class = "my-3">
                 Số người <input type="number"  name = "room-amount-people"  min = "1"class = "form-control">
                 
-            </div>
-            <div class = "my-3">
+            </div >
+            <div class="row">
+            <div class = "my-3 col-6">
                 Ảnh <input type="file" name="uploadfile" value=""/>
             </div>
             
-            <div class = "my-3">
+            <div class = "my-3 col-6">
                 Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
             </div>
+            </div>
+            <div>
             <div class = "my-3">
                 Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
             </div>

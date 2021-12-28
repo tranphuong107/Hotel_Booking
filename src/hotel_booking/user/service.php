@@ -3,34 +3,42 @@
   
 ?>
 
- <div class="container-fluid" style=" width:100%; margin:0px; padding:0px;">
+<style>
+    .float-container{
+        position: relative;
+        
+    }
+    .float-img{
+        position: absolute;
+        bottom: 45%;
+        left:43%;
+    }
+</style>
+<div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     
-    <img src="../images/b.jpg" class="img-header" style="height: 500px; width:100% ;object-fit:cover;"alt="">
-    
-</div>
-<div class="container" >
-        <div class="row pb-3">
-                
-            <div class="col-md-8 pt-4">
+    <img src="../images/banner2.jpg" class="img-header " style="height: 300px; width:100% ;object-fit:cover;"alt="">
+    <div class="col-md-8 pt-4 float-img">
                 
                 <div class="jumbotron">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
                                 <a href="index.php">
-                                    <span class="text-dark fw-bold">TRANG CHỦ</span>
+                                    <span class="text-white fw-bold">TRANG CHỦ</span>
                                 </a></li>
                             <li class="breadcrumb-item active ">
-                                <a href="room.php">
-                                    <span class="text-dark">DỊCH VỤ</span>
+                                <a href="service.php">
+                                    <span class="text-white fw-bold">DỊCH VỤ</span>
                                 </a></li>
                         </ol>
                     </nav>
                     
                 </div>
             </div>
-      
-            
+</div>
+<div class="container" >
+        <div class="row p-5">
+               
 	    </div>
         <?php
             include '../config.php';

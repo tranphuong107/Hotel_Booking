@@ -2,7 +2,7 @@
     include ('header.php');
     include ('../config.php');
 ?>
-<div class="content px-3">
+<div class="content p-3">
 <style type="text/css" scoped>
    
     .add-popup{

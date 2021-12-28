@@ -18,7 +18,7 @@
 
             <table class="table my-3 py-5 border-light  text-aline table-light text-center" style="table-layout: auto;">
                 <thead class="table-light">
-                    <tr class =" border-dark">
+                    <tr class =" border-dark ">
                         <th scope="col" class="top">Mã Đơn</th>
                         <th scope="col" class="top">Tên Khách hàng</th>
                         <th scope="col" class="top" >Mã phòng</th>
