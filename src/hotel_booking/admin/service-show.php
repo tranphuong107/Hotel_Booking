@@ -56,7 +56,7 @@
                         <th scope="col" class="top">Mã dịch vụ</th>
                         <th scope="col" class="top">Tên dịch vụ</th>
                         <th scope="col" class="top" >Sức chứa</th>
-                        <th scope="col" class="top ">Mô tả</th>
+                        <th scope="col" class="top " style ="width:38%">Mô tả</th>
                         <th scope="col" class="top">Giá dịch vụ</th>
                         <th scope="col" class="top">Ảnh</th>
                         <th scope="col" class="top">Thao tác</th>

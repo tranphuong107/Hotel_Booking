@@ -66,10 +66,10 @@
                         <th scope="col" class="top" style="width:30rem">Mô tả</th>
                         <th scope="col" class="top">Giá tiền</th>
                         <th scope="col" class="top">Số người</th>
-                        <th scope="col" class="top">Hình ảnh</th>
-                        <th scope="col" class="top">Hình ảnh 1</th>
-                        <th scope="col" class="top">Hình ảnh 2</th>
-                        <th scope="col" class="top">Hình ảnh 3</th>
+                        <th scope="col" class="top">Ảnh 1</th>
+                        <th scope="col" class="top">Ảnh 2</th>
+                        <th scope="col" class="top">Ảnh 3</th>
+                        <th scope="col" class="top">Ảnh 4</th>
                         <th scope="col" class="top">Thao tác</th>
                     </tr>
                 </thead>

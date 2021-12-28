@@ -87,7 +87,7 @@
               <a href="service.php" class="ser text-decoration-none" style = "color: #6c757d">Dịch vụ</a>
             </p>
             <p>
-              <a href="room.php" class="ser text-decoration-none" style = "color: #6c757d">Khách sạn</a>
+              <a href="room.php" class="ser text-decoration-none" style = "color: #6c757d">Phòng</a>
             </p>
           </div>
           <!-- Grid column -->
