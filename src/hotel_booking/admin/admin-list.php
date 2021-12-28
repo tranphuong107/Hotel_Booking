@@ -12,9 +12,10 @@
                     <input type="search"  class="my-2 p-2 border-0 rounded-2 " name ="admin-name" style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm...">
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
                     <a href="admin-list.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
-                    <div class="float-end py-3">
+                    <a href="add-admin.php"  style = "color:#D98E73;font-size: 2.5rem;float:right;"><i class="far fa-plus-square"></i></a>
+                    <!--<div class="float-end py-3">
                     <a href="add-admin.php" style="background-color:#6ab04c; color: white;" class="py-2 btn btn-primary border-0">Thêm Quản trị viên</a>
-                    </div>
+                    </div>-->
             </form>
             
         </div>

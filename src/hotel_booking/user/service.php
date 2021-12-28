@@ -16,10 +16,11 @@
 </style>
 <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     
-    <img src="../images/banner2.jpg" class="img-header " style="height: 300px; width:100% ;object-fit:cover;"alt="">
-    <div class="col-md-8 pt-4 float-img">
+    <img src="../images/banner3.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
+    <div class="col-md-8 pt-4 float-img ">
                 
-                <div class="jumbotron">
+                <div class="jumbotron ">
+                    <span class="text-white ms-5 fs-4">DỊCH VỤ</span>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
@@ -34,7 +35,7 @@
                     </nav>
                     
                 </div>
-            </div>
+    </div>
 </div>
 <div class="container" >
         <div class="row p-5">
