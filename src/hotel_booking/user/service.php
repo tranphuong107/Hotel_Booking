@@ -16,7 +16,7 @@
 </style>
 <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     
-    <img src="../images/banner3.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
+    <img src="../images/banner2.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
     <div class="col-md-8 pt-4 float-img ">
                 
                 <div class="jumbotron ">

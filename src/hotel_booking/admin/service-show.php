@@ -50,8 +50,8 @@
         </div>
     </div> 
     
-            <table class="table my-3 py-5 border-light  text-aline table-light " style="table-layout: auto;">
-                <thead class="table-light text-center">
+            <table class="table my-3 py-5 border-light text-center text-aline table-light " style="table-layout: auto;">
+                <thead class="table-light ">
                     <tr class =" border-dark">
                         <th scope="col" class="top">Mã dịch vụ</th>
                         <th scope="col" class="top">Tên dịch vụ</th>
@@ -82,7 +82,7 @@
                                         echo '<th scope="row">'.$row['ser_ID'].'</th>';
                                         echo '<td>'.$row['ser_name'].'</td>';
                                         echo '<td>'.$row['ser_room_size'].'</td>';
-                                        echo '<td>'.$row['ser_description'].'</td>';
+                                        echo '<td class="text-start">'.$row['ser_description'].'</td>';
                                         echo '<td style="width:15%" class="text-center">'.number_format($row['ser_price']).' đ</td>';
                                         echo '<td><img src="../images/'.$row['ser_image'].'" class = "img-fluid" style = "width:10rem"></td>';
                                         echo '<td>';?>
@@ -103,7 +103,7 @@
                                      echo '<th scope="row">'.$row['ser_ID'].'</th>';
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ser_room_size'].'</td>';
-                                     echo '<td >'.$row['ser_description'].'</td>';
+                                     echo '<td class="text-start">'.$row['ser_description'].'</td>';
                                      echo '<td style="width:15%" class="text-center">'.number_format($row['ser_price']).' đ</td>';
                                      echo '<td><img src="../images/'.$row['ser_image'].'" class = "img-fluid" style = "width:10rem"></td>';
                                      echo '<td>';?>

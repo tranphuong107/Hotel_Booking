@@ -92,8 +92,8 @@
                                         echo '<th scope="row">'.$row['room_id'].'</th>';
                                         echo '<td>'.$row['room_type'].'</td>';
                                         echo '<td>'.$row['room_size'].'</td>';
-                                        echo '<td>'.$row['room_description'].'</td>';
-                                        echo '<td>'.$row['room_price'].'</td>';
+                                        echo '<td class="text-start">'.$row['room_description'].'</td>';
+                                        echo '<td>'.number_format($row['room_price']).'đ</td>';
                                         echo '<td>'.$row['room_amount_people'].'</td>';
                                         echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid" style = "width:10rem"></td>';
                                         echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid" style = "width:10rem"></td>';
@@ -116,8 +116,8 @@
                                      echo '<th scope="row">'.$row['room_id'].'</th>';
                                      echo '<td>'.$row['room_type'].'</td>';
                                      echo '<td>'.$row['room_size'].'</td>';
-                                     echo '<td>'.$row['room_description'].'</td>';
-                                     echo '<td>'.$row['room_price'].'</td>';
+                                     echo '<td class="text-start">'.$row['room_description'].'</td>';
+                                     echo '<td>'.number_format($row['room_price']).'đ</td>';
                                      echo '<td>'.$row['room_amount_people'].'</td>';
                                      echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid " style = "width:10rem"></td>';
                                      echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid " style = "width:10rem"></td>';
