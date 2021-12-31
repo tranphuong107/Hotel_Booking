@@ -5,10 +5,42 @@
         header ("location:login.php");
     }
 ?>
-    <main>
-        <div class="header-inner">
-            <img src="../images/show-order1.jpg" class="d-block w-100 h-100" alt="">
-        </div>
+    
+    <style>
+    .float-container{
+        position: relative;
+        
+    }
+    .float-img{
+        position: absolute;
+        bottom: 45%;
+        left:43%;
+    }
+</style>
+    <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
+    
+    <img src="../images/b31.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
+    <div class="col-md-8 pt-4 float-img ">
+                
+                <div class="jumbotron ">
+                    <span class="text-white ms-5 fs-4">ĐƠN HÀNG</span>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item ">
+                                <a href="index.php">
+                                    <span class="text-white fw-bold">TRANG CHỦ</span>
+                                </a></li>
+                            <li class="breadcrumb-item active ">
+                                <a href="#">
+                                    <span class="text-white fw-bold">ĐƠN HÀNG</span>
+                                </a></li>
+                        </ol>
+                    </nav>
+                    
+                </div>
+    </div>
+
+    </div >
         <div style =" " ></div>
         <!-- show order room -->
             <?php
@@ -22,6 +54,7 @@
             $result = mysqli_query($conn,$sql);
             //echo '<div class="ps-5 pb-5">';
                 if(mysqli_num_rows($result)>0){
+                    echo'<div class="row   px-5">';
                     while($row=mysqli_fetch_assoc($result)){
                         $ordroom_id=$row['ordroom_id'];
                         $room_type=$row['room_type'];
@@ -32,23 +65,12 @@
                         $ordroom_status=$row['ordroom_status'];
                         $room_image =$row['room_image'];
             ?>
-            <div class = "container-fluid p-5 ">
-                <div class = "row">
-                    <div class="col-6 px-0   my-auto">
-                        <!-- left -->
-                        <?php
-                            if($room_image == ""){
-                                echo "<div class='text-center error'>Image not Available.</div>";
-                            }else{
-                                echo '<img src="../images/'.$room_image.'" alt="" class = "img-fluid card-img-top" style = "height: 400px ; object-fit: cover;"> ';
-                            }
-                        ?>
-                    </div>
-
-                        <!-- rright -->
-                    <div class="col-6 ps-5" style="background-color:#f1f2f6;">
+            <div class = "container-fluid p-5 pb-0 col-6">
+                
+                        <!-- right -->
+                    <div class=" p-3" style="background-color:#f1f2f6;">
                         <div>
-                            <h2 class="text-center pt-5 pb-4">ĐƠN PHÒNG</h2>
+                            <h5 class="text-center py-3">ĐƠN PHÒNG</h5>
                         </div>
                         <div class="fs-5 px-0 ps-5" style="padding-left:15px;">
                             <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordroom_id;?><br />
@@ -59,20 +81,21 @@
                             <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo number_format($ordroom_total) ; echo' đ';?><br />
                             <?php
                                 if($ordroom_status=='Chờ xác nhận'){
-                                    echo'<label for="" class="fw-bold">Tình trạng đơn: </label>  Đơn hàng chờ xác nhận<br />';
+                                    echo'<label for="" class="fw-bold fb-2">Tình trạng đơn: </label>  Đơn hàng chờ xác nhận<br />';
                                 }else{
                                     if($ordroom_status=='Đã xác nhận'){
-                                    echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã xác nhận<br />';
+                                    echo'<label for="" class="fw-bold pb-2">Tình trạng đơn:</label> Đơn hàng đã xác nhận<br />';
                                     }else{
-                                    echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã hủy<br />'; 
+                                    echo'<label for="" class="fw-bold pb-2">Tình trạng đơn:</label> Đơn hàng đã hủy<br />'; 
                                     }
                                 }
                             ?>
                         </div>
                     </div>
-                </div>
+               
             </div>
-            <?php }}else{
+            <?php }
+            echo '</div>';}else{
                 echo'<h1 for="" class=" text-center p-5 mb-0" style="background-color:#f1f2f6; color:#747d8c;">Bạn không có đơn Phòng nào !</h1>';
             } ?>
             <!-- show order service -->
@@ -140,7 +163,7 @@
             <?php }}else{
                 echo'<h1 for="" class="text-center p-5" style="background-color:#f1f2f6;color:#747d8c;">Bạn không có đơn Dịch vụ nào !</h1>';
             } ?>
-    </main>
+    
 <?php
     include('footer.php');
 ?>
