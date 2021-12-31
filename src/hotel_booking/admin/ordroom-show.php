@@ -54,11 +54,11 @@
                                      echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                      echo '<td>'.$row['ordroom_status'].'</td>';
                                      if($row['ordroom_status']=='Đã hủy'){
-                                        echo '<td><a href =""><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                        echo '<td><a href =""><i class="fas fa-times-circle" style ="color:#eb2f06;"></i></i></a></td>';
                                     }else{
                                         echo '<td><a href ="confirm-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
                                     }
-                                    echo '<td><a href ="cancel-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                    echo '<td><a href ="cancel-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fas fa-times-circle" style ="color:#eb2f06;"></i></i></a></td>';
                                     echo '</tr>';
                                  }
                              }
@@ -79,18 +79,24 @@
                                         echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
                                         echo '<td>'.$row['ordroom_status'].'</td>';
                                         if($row['ordroom_status']=='Đã hủy'){
-                                            echo '<td><a href ="#"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
-                                        }else{
-                                            echo '<td><a href ="confirm-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></i></a></td>';
+                                            echo '<td><a href ="#"><i class="fas fa-times-circle" style ="color:#eb2f06;"></i></a></td>';
+                                            echo '<td><a href ="#"><i class="fas fa-times-circle" style ="color:#eb2f06;"></i></a></td>';
+                                        }else if($row['ordroom_status']=='Chờ xác nhận'){
+                                            echo '<td><a href ="#" onclick="openForm1()"><i class="fas fa-check-circle" style ="color:#535c68;"></i></a></td>';
+                                            echo '<td><a href ="#" onclick="openForm2()"><i class="fas fa-times-circle" style ="color:#535c68;"></i></a></td>';
                                         }
-                                        echo '<td><a href ="cancel-order-room.php?id='.$row['ordroom_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
+                                        else{
+                                            echo '<td><a href ="#" ><i class="fas fa-check-circle" style ="color:#6ab04c;"></i></a></td>';
+                                            echo '<td><a href ="#" onclick="openForm2()"><i class="fas fa-times-circle" style ="color:#535c68;"></i></a></td>';
+                                        }
                                         echo '</tr>';
-                                        
-                                    }
+                                        include ('popup-confirm-room.php');
+                                        include ('popup-cancel-room.php');     
                                 }
+                            }
                         }
                             mysqli_close($conn);
-                    ?>
+                ?>
                 
                 </tbody>
             </table>

@@ -17,29 +17,44 @@
         <div class = "mt-5">
         <h1 class = "text-center">Chi tiết dịch vụ</h1>
         </div>
-        <form action="update-service-process.php" method = "post" class ="py-5 mb-3 w-75 mx-auto"  enctype="multipart/form-data"> 
+        <form action="update-service-process.php" method = "post" class ="pb-5 pt-3 mb-3  mx-auto" style="width:70%" enctype="multipart/form-data"> 
             <input type="text" name = "ser-id" value = "<?php echo $row['ser_ID']?>" hidden>          
             <div class = "my-3">
-                Tên dịch vụ <input type="text" name = "ser-name" class = "form-control" value = "<?php echo $row['ser_name'];?>">
+                <div class="row">
+               <div class="col-lg-2 pt-2 text-end">Tên dịch vụ:</div>
+               <div class="col">
+                    <input type="text" name = "ser-name" stlye="width:120%" class = "form-control" value = "<?php echo $row['ser_name'];?>">
+                </div>   
+                </div>
             </div>
         <div class = "my-3">
-            Số người <input type="number" name = "ser-room-size" min = "1"  class = "form-control" value = "<?php echo $row['ser_room_size'];?>"> 
-            
+                <div class="row">
+               <div class="col-lg-2 pt-2 text-end">Số người:</div>
+               <div class="col">
+                    <input type="number" name = "ser-room-size" min = "1"  class = "form-control" value = "<?php echo $row['ser_room_size'];?>"> 
+                </div>   
+                </div>
         </div>
         <div class = "my-3">
-            Giá tiền <input type="number"  name = "ser-price"  min = "1" class = "form-control" value = "<?php echo $row['ser_price'];?>">
+            Giá tiền: <input type="number"  name = "ser-price"  min = "1" class = "form-control" value = "<?php echo $row['ser_price'];?>">
             
         </div>
         <div  class = "my-3">
-            Mô tả
+            Mô tả:
             <textarea name ="ser-des"  cols="30" rows="3" class = "form-control" maxlength = "250"><?php echo $row['ser_description'];?></textarea>
         </div>
-        <div  class = "my-3">
-            Ảnh hiện tại
-            <img src="../images/<?php echo $row['ser_image'];?>" alt="" style = "width: 20rem;height: 20rem;object-fit: contain;">
-        </div>
-        <div class = "my-3">
-            Ảnh <input type="file" name="uploadfile" value=""/>
+        <div class="row">
+            <div class="col-6">
+                <div  class = "my-3">
+                     Ảnh hiện tại:
+                        <img src="../images/<?php echo $row['ser_image'];?>" alt="" style = "width: 20rem;height: 20rem;object-fit: contain;">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class = "my-3">
+                     Ảnh thay thế: <input type="file" name="uploadfile" value=""/>
+                </div>
+            </div>
         </div>
         <div class = "mt-3">
             <!-- <a href="" type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white" class = "border-5 p-2">Thêm</a> -->
