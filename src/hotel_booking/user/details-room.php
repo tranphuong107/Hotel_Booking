@@ -1,23 +1,43 @@
 <?php include('../config.php'); ?>
 <?php include('header.php'); ?>
-    <div class="container  pt-2 " style="padding-left: 0px; padding-right:0px;" >
-        <div class="row m-3">
-            <div class="col-md-12">
-                <div class="jumbotron">
+<style>
+    .float-container{
+        position: relative;
+        
+    }
+    .float-img{
+        position: absolute;
+        bottom: 45%;
+        left:43%;
+    }
+</style>
+    <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
+    
+    <img src="../images/b31.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
+    <div class="col-md-8 pt-4 float-img ">
+                
+                <div class="jumbotron ">
+                    <span class="text-white ms-4 fs-4">CHI TIẾT PHÒNG</span>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
-                                <a href="index.php"><span class="text-dark">TRANG CHỦ</span></a></li>
+                                <a href="index.php">
+                                    <span class="text-white fw-bold">TRANG CHỦ</span>
+                                </a></li>
                             <li class="breadcrumb-item active ">
-                                <a href="room.php"> <span class="text-dark">PHÒNG</span></a></li>
-                            <li class="breadcrumb-item active ">
-                                <a href="#"><span class="text-dark">Chi tiết</span></a></li>
+                                <a href="#">
+                                    <span class="text-white fw-bold">CHI TIẾT PHÒNG</span>
+                                </a></li>
                         </ol>
-                    </nav>                  
+                    </nav>
+                    
                 </div>
-            </div>
-        </div>
+    </div>
 
+    </div >
+    <div class="row p-4">
+               
+	</div>
         <?php
             if(isset($_GET['id'])){
                 $room_id = $_GET['id'];
@@ -28,8 +48,8 @@
                     
                     while($row = mysqli_fetch_assoc($result)){
         ?>
-        <div class="row m-3" >             
-            <div class="col-md-7 m-0 b-0  ">
+        <div class="row m-3 " >             
+            <div class="col-md-7  b-0  ">
                 <!-- <img src="../images/<?php echo $row['room_image']?>" class="card-img-top" alt="..."> -->
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">

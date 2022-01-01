@@ -2,7 +2,7 @@
     include ('header.php');
     include ('../config.php');
 ?>
-<div class="content px-3">
+<div class="content p-3">
 <style type="text/css" scoped>
    
     .add-popup{
@@ -54,13 +54,13 @@
         </div>
     </div> 
     
-            <table class="table my-3 py-5 border-light  text-aline table-light " style="table-layout: auto;">
-                <thead class="table-light text-center">
+            <table class="table my-3 py-5 border-light text-center text-aline table-light " style="table-layout: auto;">
+                <thead class="table-light ">
                     <tr class =" border-dark">
                         <th scope="col" class="top">Mã dịch vụ</th>
                         <th scope="col" class="top">Tên dịch vụ</th>
                         <th scope="col" class="top" >Sức chứa</th>
-                        <th scope="col" class="top ">Mô tả</th>
+                        <th scope="col" class="top " style ="width:38%">Mô tả</th>
                         <th scope="col" class="top">Giá dịch vụ</th>
                         <th scope="col" class="top">Ảnh</th>
                         <th scope="col" class="top">Thao tác</th>
@@ -86,7 +86,7 @@
                                         echo '<th scope="row">'.$row['ser_ID'].'</th>';
                                         echo '<td>'.$row['ser_name'].'</td>';
                                         echo '<td>'.$row['ser_room_size'].'</td>';
-                                        echo '<td>'.$row['ser_description'].'</td>';
+                                        echo '<td class="text-start">'.$row['ser_description'].'</td>';
                                         echo '<td style="width:15%" class="text-center">'.number_format($row['ser_price']).' đ</td>';
                                         echo '<td><img src="../images/'.$row['ser_image'].'" class = "img-fluid" style = "width:10rem"></td>';
                                         echo '<td>';?>
@@ -107,7 +107,7 @@
                                      echo '<th scope="row">'.$row['ser_ID'].'</th>';
                                      echo '<td>'.$row['ser_name'].'</td>';
                                      echo '<td>'.$row['ser_room_size'].'</td>';
-                                     echo '<td >'.$row['ser_description'].'</td>';
+                                     echo '<td class="text-start">'.$row['ser_description'].'</td>';
                                      echo '<td style="width:15%" class="text-center">'.number_format($row['ser_price']).' đ</td>';
                                      echo '<td><img src="../images/'.$row['ser_image'].'" class = "img-fluid" style = "width:10rem"></td>';
                                      echo '<td>';?>

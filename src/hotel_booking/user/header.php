@@ -26,12 +26,12 @@
   </head>
   <body>
 
-    <div class = "container" >
+    <div class = "" style = "padding: 0.1rem 5%">
     <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top pt-3 navbar-scroll">
-      <div class="container row align-items-center">
-        <div class = "col-3">
+      <div class="container-fluid row align-items-center">
+        <div class = "col-2">
           <a class="navbar-brand" href="index.php">
-            <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo.png" alt=""class = "img-fluid">
+            <img src="http://mauweb.monamedia.net/howello/wp-content/uploads/2019/03/logo.png" alt="" style = "width: 14rem">
           </a></div>
         <div class = "col-auto">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,12 +42,11 @@
                 <a class="nav-link active fw-bold fs-6 text-decoration-none mx-2" style = "color:black" aria-current="page" href="index.php">Trang chủ</a>
                 <a href="room.php" class = "nav-link fs-6 fw-bold text-decoration-none  mx-2" style = "color:black">Phòng</a>
                 <a href="service.php" class = "nav-link  fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Dịch vụ</a>
-
+                <a href="cus-order.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đơn hàng</a>
                 <?php
                    //bảo vệ tk user
                    session_start();// ở đây có dịch vụ bảo vệ
                    if(isset($_SESSION['loginUserOK'])){ 
-                       echo '<a href="cus-order.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đơn hàng</a>';
                        echo '<a href="logout.php" class = "nav-link fs-6 fw-bold text-decoration-none mx-2" style = "color:black">Đăng xuất</a>';
                        echo '<label for="" class ="fs-6 fw-bold text-decoration-none mx-2 text-uppercase my-bg p-2 py-auto rounded-pill text-white">'.$_SESSION['loginUserOK'].'</label>';
                    }else

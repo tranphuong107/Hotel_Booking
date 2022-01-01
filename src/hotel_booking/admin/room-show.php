@@ -3,7 +3,7 @@
     include ('../config.php');
 ?>
 
-<div class="content px-3">
+<div class="content p-3">
 <style type="text/css" scoped>
     
     .add-popup{
@@ -66,10 +66,10 @@
                         <th scope="col" class="top" style="width:30rem">Mô tả</th>
                         <th scope="col" class="top">Giá tiền</th>
                         <th scope="col" class="top">Số người</th>
-                        <th scope="col" class="top">Hình ảnh</th>
-                        <th scope="col" class="top">Hình ảnh 1</th>
-                        <th scope="col" class="top">Hình ảnh 2</th>
-                        <th scope="col" class="top">Hình ảnh 3</th>
+                        <th scope="col" class="top">Ảnh 1</th>
+                        <th scope="col" class="top">Ảnh 2</th>
+                        <th scope="col" class="top">Ảnh 3</th>
+                        <th scope="col" class="top">Ảnh 4</th>
                         <th scope="col" class="top">Thao tác</th>
                     </tr>
                 </thead>
@@ -92,8 +92,8 @@
                                         echo '<th scope="row">'.$row['room_id'].'</th>';
                                         echo '<td>'.$row['room_type'].'</td>';
                                         echo '<td>'.$row['room_size'].'</td>';
-                                        echo '<td>'.$row['room_description'].'</td>';
-                                        echo '<td>'.$row['room_price'].'</td>';
+                                        echo '<td class="text-start">'.$row['room_description'].'</td>';
+                                        echo '<td>'.number_format($row['room_price']).'đ</td>';
                                         echo '<td>'.$row['room_amount_people'].'</td>';
                                         echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid" style = "width:10rem"></td>';
                                         echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid" style = "width:10rem"></td>';
@@ -116,13 +116,13 @@
                                      echo '<th scope="row">'.$row['room_id'].'</th>';
                                      echo '<td>'.$row['room_type'].'</td>';
                                      echo '<td>'.$row['room_size'].'</td>';
-                                     echo '<td>'.$row['room_description'].'</td>';
-                                     echo '<td>'.$row['room_price'].'</td>';
+                                     echo '<td class="text-start">'.$row['room_description'].'</td>';
+                                     echo '<td>'.number_format($row['room_price']).'đ</td>';
                                      echo '<td>'.$row['room_amount_people'].'</td>';
-                                     echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid" style = "width:10rem"></td>';
-                                     echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid" style = "width:10rem"></td>';
-                                     echo '<td><img src="../images/'.$row['room_image2'].'" class = "img-fluid" style = "width:10rem"></td>';
-                                     echo '<td><img src="../images/'.$row['room_image3'].'" class = "img-fluid" style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image'].'" class = "img-fluid " style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image1'].'" class = "img-fluid " style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image2'].'" class = "img-fluid " style = "width:10rem"></td>';
+                                     echo '<td><img src="../images/'.$row['room_image3'].'" class = "img-fluid " style = "width:10rem"></td>';
                                      echo '<td>';?>
                                         <a href="update-room.php?id=<?php echo $row['room_id'];?>" id = "update-room"><i class="fas fa-edit text-success" style = "font-size: 1.5rem"></i></a>
                                     <?php echo '</td>';
@@ -161,6 +161,7 @@
             <div class = "my-3">
                 Số người <input type="number"  name = "room-amount-people"  min = "1"class = "form-control">
                 
+<<<<<<< HEAD
             </div>
             <div class = "row my-3"> 
                 <div class="col-md-6">
@@ -169,15 +170,33 @@
                 <div class = "col-md-6">
                     Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
                 </div>
+=======
+            </div >
+            <div class="row">
+            <div class = "my-3 col-6">
+                Ảnh <input type="file" name="uploadfile" value=""/>
+>>>>>>> 78508eef45d814d092356052eb96e495e6ff1a22
             </div>
 
             
+<<<<<<< HEAD
             
             <div class = "row my-3">
                 <div class="col-md-6">
                     Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
                 </div>
                 <div class = "col-md-6">
+=======
+            <div class = "my-3 col-6">
+                Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
+            </div>
+            </div>
+            <div>
+            <div class = "my-3">
+                Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
+            </div>
+            <div class = "my-3">
+>>>>>>> 78508eef45d814d092356052eb96e495e6ff1a22
                 Ảnh thêm 3 <input type="file" name="uploadfile3" value=""/>
             </div>
 

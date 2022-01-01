@@ -4,7 +4,7 @@
 <footer class="text-center text-lg-start bg-dark text-muted">
 
     <!-- Section: Links  -->
-    <section class="p-5">
+    <section class="p-1">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -87,7 +87,7 @@
               <a href="service.php" class="ser text-decoration-none" style = "color: #6c757d">Dịch vụ</a>
             </p>
             <p>
-              <a href="room.php" class="ser text-decoration-none" style = "color: #6c757d">Khách sạn</a>
+              <a href="room.php" class="ser text-decoration-none" style = "color: #6c757d">Phòng</a>
             </p>
           </div>
           <!-- Grid column -->
