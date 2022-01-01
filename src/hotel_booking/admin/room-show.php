@@ -18,8 +18,8 @@
     }
     .add-content{
         background : white;
-        width: 100%;
-        height: 90rem;
+        width: 100%; 
+        height: 70rem;
         position: absolute;
         top : 0;
        
@@ -27,7 +27,7 @@
     .detail-popup{
         background: rgba(0,0,0,0.6);
         width: 100%;
-        height: 100%;
+        height: 100rem;
         position: absolute;
         top : 0;
         display: none;
@@ -49,7 +49,9 @@
                     <input type="search"  class="my-2 p-2 border-0 rounded-2 " style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm phòng...">
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
                     <a href="room-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
+
                     <a href="#" id = "add-btn" style = "color:#D98E73;font-size: 2.5rem;float:right;"><i class="far fa-plus-square"></i></a>
+
             </form>
             
         </div>
@@ -160,20 +162,27 @@
                 Số người <input type="number"  name = "room-amount-people"  min = "1"class = "form-control">
                 
             </div>
-            <div class = "my-3">
-                Ảnh <input type="file" name="uploadfile" value=""/>
+            <div class = "row my-3"> 
+                <div class="col-md-6">
+                    Ảnh <input type="file" name="uploadfile" value=""/>
+                </div>
+                <div class = "col-md-6">
+                    Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
+                </div>
             </div>
+
             
-            <div class = "my-3">
-                Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
-            </div>
-            <div class = "my-3">
-                Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
-            </div>
-            <div class = "my-3">
+            
+            <div class = "row my-3">
+                <div class="col-md-6">
+                    Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
+                </div>
+                <div class = "col-md-6">
                 Ảnh thêm 3 <input type="file" name="uploadfile3" value=""/>
             </div>
 
+            </div>
+            
             <div class = "mt-3">
                 <!-- <a href="" type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white" class = "border-5 p-2">Thêm</a> -->
                 <button type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white" class = "border-0 p-2">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 04, 2021 lúc 02:48 AM
+-- Thời gian đã tạo: Th10 05, 2021 lúc 03:19 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -40,7 +40,9 @@ CREATE TABLE `tb_admins` (
 --
 
 INSERT INTO `tb_admins` (`admin_id`, `admin_name`, `admin_mobile`, `admin_email`, `admin_pass`) VALUES
-(14, 'phuong', '0231234563', 'phuong@gmail.com', '60c9312821b0d1eb614810a21f159147');
+(14, 'phuong', '0231234563', 'phuong@gmail.com', '60c9312821b0d1eb614810a21f159147'),
+(15, 'Hường', '0345678942', 'huong@gmail.com', '145a829dff80553d2747dfa14f44cc56'),
+(16, 'My', '0345672854', 'my@gmail.com', '6864f389d9876436bc8778ff071d1b6c');
 
 -- --------------------------------------------------------
 
@@ -90,7 +92,11 @@ CREATE TABLE `tb_order_rooms` (
 
 INSERT INTO `tb_order_rooms` (`ordroom_id`, `ordroom_total`, `ordroom_total_day`, `ordroom_start`, `ordroom_end`, `ordroom_status`, `room_id`, `cus_id`) VALUES
 (1, 900000, 1, '2021-10-31', '2021-11-01', 'Đã xác nhận', 2, 23),
-(2, 900000, 1, '2021-11-10', '2021-11-11', 'Đã hủy', 2, 4);
+(2, 900000, 1, '2021-11-10', '2021-11-11', 'Đã hủy', 2, 4),
+(3, 900000, 1, '2021-11-05', '2021-11-06', 'Chờ xác nhận', 2, 23),
+(4, 3500000, 1, '2021-11-06', '2021-11-07', 'Đã xác nhận', 8, 22),
+(5, 4000000, 2, '2021-11-06', '2021-11-08', 'Chờ xác nhận', 1, 21),
+(6, 7000000, 2, '2021-11-07', '2021-11-08', 'Chờ xác nhận', 8, 20);
 
 -- --------------------------------------------------------
 
@@ -114,7 +120,12 @@ CREATE TABLE `tb_order_services` (
 --
 
 INSERT INTO `tb_order_services` (`ordser_id`, `ordser_total`, `ordser_total_day`, `ordser_start`, `ordser_end`, `ordser_status`, `ser_id`, `cus_id`) VALUES
-(1, 400000, 2, '2021-10-31', '2021-11-02', 'Chờ xác nhận', 2, 23);
+(1, 400000, 2, '2021-10-31', '2021-11-02', 'Đã xác nhận', 2, 23),
+(2, 300000, 1, '2021-10-31', '2021-11-01', 'Đã xác nhận', 1, 23),
+(3, 150000, 1, '2021-10-31', '2021-11-01', 'Đã hủy', 4, 23),
+(4, 200000, 1, '2021-11-06', '2021-11-07', 'Đã xác nhận', 2, 23),
+(5, 200000, 1, '2021-11-04', '2021-11-05', 'Chờ xác nhận', 2, 4),
+(7, 300000, 1, '2021-11-04', '2021-11-05', 'Chờ xác nhận', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -129,21 +140,24 @@ CREATE TABLE `tb_rooms` (
   `room_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `room_price` int(11) NOT NULL,
   `room_amount_people` int(10) NOT NULL,
-  `room_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `room_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `room_image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `room_image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `room_image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tb_rooms`
 --
 
-INSERT INTO `tb_rooms` (`room_id`, `room_type`, `room_size`, `room_description`, `room_price`, `room_amount_people`, `room_image`) VALUES
-(1, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single-room.jpg'),
-(2, 'Luxury Single Room Art', '30m2', 'Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 2, 'luxury-single.jpg'),
-(6, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single_room.jpg'),
-(7, 'Deluxe Double Room', '35m2', ' Yên bình và riêng tư, phòng Deluxe rộng 35 m2 mang lại không gian nghỉ dưỡng thư thái và tiện nghi. Balcony rộng rãi nhìn ra thung lũng tạo thêm một điểm nhấn lãng mạn cho kì nghỉ của bạn.', 2500000, 3, 'double_room.jpg'),
-(8, 'Luxury Family Room Suite', '59m2', ' Không gian rộng với 2 phòng ngủ riêng biệt, 1 phòng khách sang trọng, ấm áp, Family Suite sở hữu diện tích 59m2 mang lại sự tiện nghi và thoải mái nhất cho cả gia đình, đồng thời các thành viên đều có một không gian riêng. ', 3500000, 4, 'family_room.jpg'),
-(9, 'Luxury Single Room Art', '30m2', ' Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 1, 'single_room2.jpg'),
-(10, 'Prenium Deluxe Double Room', '43m2', ' Premium Deluxe là lựa chọn tuyệt vời cho du khách yêu thích sự thoải mái và tiện nghi chuẩn quốc tế. Thiết kế đương đại cùng trang thiết bị đẳng cấp phù hợp cho một chuyến công tác kết hợp nghỉ dưỡng hay đơn giản chỉ là tận hưởng kì nghỉ bên cạnh người t', 3000000, 2, 'single_room3.jpg');
+INSERT INTO `tb_rooms` (`room_id`, `room_type`, `room_size`, `room_description`, `room_price`, `room_amount_people`, `room_image`, `room_image1`, `room_image2`, `room_image3`) VALUES
+(1, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single-room.jpg', '1-01.jpg', '1-02.jpg', '1-03.jpg'),
+(2, 'Luxury Single Room Art', '30m2', 'Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 2, 'luxury-single.jpg', '1-01.jpg', '1-02.jpg', '1-03.jpg'),
+(6, 'Superior Single Room', '28m2', 'Được thiết kế theo phong cách đương đại và trang bị nhiều tiện nghi cao cấp, phòng Superior là lựa chọn tuyệt vời cho khách du lịch một mình hay cặp đôi.', 2000000, 2, 'single_room.jpg', '1-03.jpg', '1-02.jpg', '1-01.jpg'),
+(7, 'Deluxe Double Room', '35m2', ' Yên bình và riêng tư, phòng Deluxe rộng 35 m2 mang lại không gian nghỉ dưỡng thư thái và tiện nghi. Balcony rộng rãi nhìn ra thung lũng tạo thêm một điểm nhấn lãng mạn cho kì nghỉ của bạn.', 2500000, 3, 'double_room.jpg', '1-02.jpg', '1-03.jpg', '1-01.jpg'),
+(8, 'Luxury Family Room Suite', '59m2', ' Không gian rộng với 2 phòng ngủ riêng biệt, 1 phòng khách sang trọng, ấm áp, Family Suite sở hữu diện tích 59m2 mang lại sự tiện nghi và thoải mái nhất cho cả gia đình, đồng thời các thành viên đều có một không gian riêng. ', 3500000, 4, 'family_room.jpg', '1-03.jpg', '1-02.jpg', '1-01.jpg'),
+(9, 'Luxury Single Room Art', '30m2', ' Luxury Single Room Art có kích thước giường đôi thoải mái, khu vực tiếp khách, bàn làm việc và phòng tắm riêng biệt với bồn tắm và vòi sen cùng nghệ thuật hiện đại và màu sắc trung tính.', 900000, 1, 'single_room2.jpg', '1-02.jpg', '1-01.jpg', '1-03.jpg'),
+(10, 'Prenium Deluxe Double Room', '43m2', ' Premium Deluxe là lựa chọn tuyệt vời cho du khách yêu thích sự thoải mái và tiện nghi chuẩn quốc tế. Thiết kế đương đại cùng trang thiết bị đẳng cấp phù hợp cho một chuyến công tác kết hợp nghỉ dưỡng hay đơn giản chỉ là tận hưởng kì nghỉ bên cạnh người t', 3000000, 2, 'single_room3.jpg', '1-03.jpg', '1-01.jpg', '1-02.jpg');
 
 -- --------------------------------------------------------
 
@@ -165,10 +179,10 @@ CREATE TABLE `tb_services` (
 --
 
 INSERT INTO `tb_services` (`ser_ID`, `ser_name`, `ser_room_size`, `ser_description`, `ser_price`, `ser_image`) VALUES
-(1, 'Nhà hàng', '200', 'Nhà hàng thiết kế phong cách châu Âu mang lại sự sang trọng và đẳng cấp, không gian bên ngoài thoáng đãng phù hợp với những người tìm kiếm sự thư giãn yên bình.', 300000, ''),
-(2, 'Phòng họp', '50', 'Phòng họp với số lượng tối đa 50 người, không gian thoáng đãng tràn ngập ánh mặt trời với một bên là tường kính nhìn ra mặt biển.', 200000, 'luxury-single.jpg'),
-(3, 'Đám cưới', '400', 'Khách sạn cung cấp dịch vụ tổ chức đám cưới phù hợp tùy nhu cầu của từng cặp đôi. Chúng tôi có một phòng đám cưới nhỏ hoặc các cặp đôi lựa chọn tổ chức đám cưới ở biển.', 1000000, ''),
-(4, 'Massage', '30', 'Đến với chúng tôi, khách hàng sẽ được trải nghiệm những phút giây yên bình, thư giãn. Cơ thể và tâm trí được thả lỏng, cảm nhận sự chậm rãi của tự nhiên..', 150000, '');
+(1, 'Nhà hàng', '150', 'Nhà hàng thiết kế phong cách châu Âu mang lại sự sang trọng và đẳng cấp, không gian bên ngoài thoáng đãng phù hợp với những người tìm kiếm sự thư giãn yên bình.', 300000, 'restaurant.jpg'),
+(2, 'Phòng họp', '50', 'Phòng họp với số lượng tối đa 50 người, không gian thoáng đãng tràn ngập ánh mặt trời với một bên là tường kính nhìn ra mặt biển.', 200000, 'meeting-room.jpg'),
+(3, 'Đám cưới', '400', 'Khách sạn cung cấp dịch vụ tổ chức đám cưới phù hợp tùy nhu cầu của từng cặp đôi. Chúng tôi có một phòng đám cưới nhỏ hoặc các cặp đôi lựa chọn tổ chức đám cưới ở biển.', 1000000, 'wedding.jpg'),
+(4, 'Massage', '30', 'Đến với chúng tôi, khách hàng sẽ được trải nghiệm những phút giây yên bình, thư giãn. Cơ thể và tâm trí được thả lỏng, cảm nhận sự chậm rãi của tự nhiên..', 150000, 'massage.jpg');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -222,7 +236,7 @@ ALTER TABLE `tb_services`
 -- AUTO_INCREMENT cho bảng `tb_admins`
 --
 ALTER TABLE `tb_admins`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_customers`
@@ -234,13 +248,13 @@ ALTER TABLE `tb_customers`
 -- AUTO_INCREMENT cho bảng `tb_order_rooms`
 --
 ALTER TABLE `tb_order_rooms`
-  MODIFY `ordroom_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ordroom_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_order_services`
 --
 ALTER TABLE `tb_order_services`
-  MODIFY `ordser_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ordser_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_rooms`
@@ -252,7 +266,7 @@ ALTER TABLE `tb_rooms`
 -- AUTO_INCREMENT cho bảng `tb_services`
 --
 ALTER TABLE `tb_services`
-  MODIFY `ser_ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ser_ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

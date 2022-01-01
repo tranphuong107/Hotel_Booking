@@ -48,6 +48,7 @@
                 }
                 
             }else{
+                
                 $folder = "../images/".$filename;
                 if (move_uploaded_file($tempname, $folder))  {
                     echo $msg = "Image uploaded successfully";
@@ -79,13 +80,6 @@
                 }
             }
             
-        //     $folder = "../images/".$filename;
-              
-        // if (move_uploaded_file($tempname, $folder))  {
-        //             echo $msg = "Image uploaded successfully";
-        //         }else{
-        //             echo $msg = "Failed to upload image";
-        //       }
         }
 
     ?>
