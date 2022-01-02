@@ -142,10 +142,14 @@
         <div clas = "m-3">
             <a href="room-show.php" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
         </div>
-        <h1 style = "color: #D98E73;">Thêm phòng</h1>
-        <form action="process-add-room.php" method="POST" enctype="multipart/form-data">
+        <h1 class = "text-center" style = "color: #D98E73;">Thêm phòng</h1>
+        <form action="process-add-room.php" method="POST" class="mx-auto" style="width:70%" enctype="multipart/form-data">
             <div class = "my-3">
-                Tên phòng <input type="text" name = "room-type" class = "form-control">
+                <div class="row">
+               <div class="col-lg-2 pt-2 text-end">Tên phòng:</div>
+               <div class="col"> 
+                   <input type="text" name = "room-type" class = "form-control">
+                </div>
             </div>
             <div class = "my-3">
                 Diện tích <input type="text" name = "room-size"  class = "form-control">
@@ -164,19 +168,19 @@
             </div >
             <div class="row">
             <div class = "my-3 col-6">
-                Ảnh <input type="file" name="uploadfile" value=""/>
+                Ảnh 1:<input type="file" name="uploadfile" value=""/>
             </div>
             
             <div class = "my-3 col-6">
-                Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
+                Ảnh 2: <input type="file" name="uploadfile1" value=""/>
             </div>
             </div>
             <div>
             <div class = "my-3">
-                Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
+                Ảnh 3 <input type="file" name="uploadfile2" value=""/>
             </div>
             <div class = "my-3">
-                Ảnh thêm 3 <input type="file" name="uploadfile3" value=""/>
+                Ảnh 4 <input type="file" name="uploadfile3" value=""/>
             </div>
 
             <div class = "mt-3">

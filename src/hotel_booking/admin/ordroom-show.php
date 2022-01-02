@@ -9,7 +9,7 @@
         </div>
         <div class=" p-3 ">
             <form action="" method ="post">
-                    <input type="search"  class="my-2 p-2 border-0 rounded-2 " name ="cus-name" style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm khách...">
+                    <input type="search"  class="my-2 p-2 border border-dark rounded-2 " name ="cus-name" style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm khách...">
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
                     <a href="ordroom-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
             </form>
@@ -20,15 +20,15 @@
                 <thead class="table-light">
                     <tr class =" border-dark ">
                         <th scope="col" class="top">Mã Đơn</th>
-                        <th scope="col" class="top">Tên Khách hàng</th>
+                        <th scope="col" class="top">Tên Khách </th>
                         <th scope="col" class="top" >Mã phòng</th>
                         <th scope="col" class="top">Tên phòng</th>
-                        <th scope="col" class="top">Ngày nhận phòng</th>
-                        <th scope="col" class="top">Ngày trả phòng</th>
-                        <th scope="col" class="top">Tổng hóa đơn</th>
-                        <th scope="col" class="top">Tình trạng đơn</th>
-                        <th scope="col" class="top">Xác nhận đơn</th>
-                        <th scope="col" class="top">Hủy đơn</th>
+                        <th scope="col" class="top">Ngày nhận </th>
+                        <th scope="col" class="top">Ngày trả </th>
+                        <th scope="col" class="top">Tổng </th>
+                        <th scope="col" class="top">Tình trạng đơn </th>
+                        <th scope="col" class="top">Xác nhận </th>
+                        <th scope="col" class="top">Hủy </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,7 +76,7 @@
                                         echo '<td>'.$row['room_type'].'</td>';
                                         echo '<td>'.$row['ordroom_start'].'</td>';
                                         echo '<td>'.$row['ordroom_end'].'</td>';
-                                        echo '<td>'.number_format($row['ordroom_total']).' đ</td>';
+                                        echo '<td class="text-end">'.number_format($row['ordroom_total']).' đ</td>';
                                         echo '<td>'.$row['ordroom_status'].'</td>';
                                         if($row['ordroom_status']=='Đã hủy'){
                                             echo '<td><a href ="#"><i class="fas fa-times-circle" style ="color:#eb2f06;"></i></a></td>';

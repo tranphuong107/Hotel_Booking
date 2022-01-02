@@ -27,23 +27,23 @@
                 </div>   
                 </div>
             </div>
-        <div class = "my-3">
+            <div class = "my-3">
                 <div class="row">
                <div class="col-lg-2 pt-2 text-end">Số người:</div>
                <div class="col">
                     <input type="number" name = "ser-room-size" min = "1"  class = "form-control" value = "<?php echo $row['ser_room_size'];?>"> 
                 </div>   
                 </div>
-        </div>
-        <div class = "my-3">
+            </div>
+            <div class = "my-3">
             Giá tiền: <input type="number"  name = "ser-price"  min = "1" class = "form-control" value = "<?php echo $row['ser_price'];?>">
             
-        </div>
-        <div  class = "my-3">
+            </div>
+            <div  class = "my-3">
             Mô tả:
             <textarea name ="ser-des"  cols="30" rows="3" class = "form-control" maxlength = "250"><?php echo $row['ser_description'];?></textarea>
-        </div>
-        <div class="row">
+            </div>
+            <div class="row">
             <div class="col-6">
                 <div  class = "my-3">
                      Ảnh hiện tại:

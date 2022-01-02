@@ -8,10 +8,7 @@
         $sql ="UPDATE tb_order_services SET ordser_status = 'Đã hủy' WHERE ordser_id = '$order_id'";
         $result = mysqli_query($conn,$sql);
         if($result>0){
-            echo '<script>';
-            echo 'alert ("Hủy đơn thành công");';
-            echo "location.href = 'ordser-show.php';";   
-            echo '</script>';
+            include 'alert-cancel-ordser.php';
         }else{
             echo '<script>';
             echo 'alert ("Có lỗi xảy ra");';  

@@ -16,7 +16,7 @@
             margin: 0 auto ;
         }
     </style>
-    <div class="thongbao rouned alert alert-success d-flex align-items-center " style="color:black;border: #38ada9 solid 2px" >
+    <div class="thongbao rouned alert alert-success d-flex align-items-center " style="color:black;border:  #60a3bc solid 2px" >
         <div class="mx-auto">
         <p class="pt-3">Xác nhận đơn thành công!</p>
         </div>
