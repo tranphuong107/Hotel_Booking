@@ -23,7 +23,7 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
                                 <a href="index.php">
-                                    <span class="text-white fw-bold">TRANG CHỦ</span>
+                                    <span class="text-white fw-bold" style="">TRANG CHỦ</span>
                                 </a></li>
                             <li class="breadcrumb-item active ">
                                 <a href="room.php">

@@ -21,12 +21,12 @@
         <p class="pt-3">Hủy đơn thành công!</p>
         </div>
         <div class="pb-5">
-        <a href="ordroom-show.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></a>
+        <a href="ordser-show.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></a>
         </div>
     </div>
     <script>
         function closeFormAlert() {
-            document.location.href = 'ordroom-show.php'
+            document.location.href = 'ordser-show.php'
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
