@@ -10,19 +10,26 @@
         bottom: 45%;
         left:43%;
     }
+    .breadcrumb-item + .breadcrumb-item::before         {
+        color:white;
+    }
 </style>
     <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     
     <img src="../images/b31.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
-    <div class="col-md-8 pt-4 float-img ">
+    <div class="col-md-8 pt-4 float-img " >
                 
                 <div class="jumbotron ">
                     <span class="text-white ms-4 fs-4">CHI TIẾT PHÒNG</span>
-                    <nav aria-label="breadcrumb">
+                    <nav aria-label="breadcrumb" style="margin-left:-40px">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
                                 <a href="index.php">
                                     <span class="text-white fw-bold">TRANG CHỦ</span>
+                                </a></li>
+                            <li class="breadcrumb-item  ">
+                                <a href="room.php">
+                                    <span class="text-white fw-bold">PHÒNG</span>
                                 </a></li>
                             <li class="breadcrumb-item active ">
                                 <a href="#">
