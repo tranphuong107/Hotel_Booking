@@ -7,6 +7,9 @@
 ?>
     
     <style>
+    td{
+        height: 40px;
+    }
     .float-container{
         position: relative;
         
@@ -15,6 +18,9 @@
         position: absolute;
         bottom: 45%;
         left:43%;
+    }
+    .breadcrumb-item + .breadcrumb-item::before         {
+        color:white;
     }
 </style>
     <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
@@ -41,8 +47,26 @@
     </div>
 
     </div >
-        <div style =" " ></div>
-        <!-- show order room -->
+        <!--<div class="container">
+            
+            <h4 class="fieldset pt-5 border-none align-middle" style="margin-left:100px; transform: translatey(28%);width: max-content;background: white;">ĐƠN PHÒNG</h4>
+            <div class="legend pb-5 mx-4 rounded"style ="background-color: white;border: #D99559 solid 2px; " >-->
+            <!-- start show order room -->
+            <h4 class="container fs-4 pb-0 p-5 px-1"  style = " margin-left:150px; width: max-content; transform: translatey(28%); background: white;">Đơn hàng của bạn</h4>
+            <div class="container  pb-3 rounded" style ="background-color: white;border-top: #D99559 solid 2px;  " ></div>
+            <table class="container table table-striped table-warning my-3 py-5 border-light  text-aline  text-center" style="table-layout: auto;">
+                <thead class="">
+                    <tr class ="  ">
+                        <th scope="col" class="top ">Loại đơn</th>
+                        <th scope="col" class="top">Mã Đơn</th>
+                        <th scope="col" class="top">Tên phòng</th>
+                        <th scope="col" class="top">Ngày nhận </th>
+                        <th scope="col" class="top">Ngày trả </th>
+                        <th scope="col" class="top">Tổng </th>
+                        <th scope="col" class="top">Tình trạng đơn </th>
+                    </tr>
+                </thead>
+                <tbody>
             <?php
             //1 .lấy id_cus     
             if(isset($_SESSION['loginUserOK'])){ 
@@ -53,57 +77,44 @@
             WHERE  o.room_id = r.room_id AND o.cus_id =$id";
             $result = mysqli_query($conn,$sql);
             //echo '<div class="ps-5 pb-5">';
+            
                 if(mysqli_num_rows($result)>0){
-                    echo'<div class="row   px-5">';
                     while($row=mysqli_fetch_assoc($result)){
-                        $ordroom_id=$row['ordroom_id'];
-                        $room_type=$row['room_type'];
-                        $ordroom_start=$row['ordroom_start'];
-                        $ordroom_end=$row['ordroom_end'];
-                        $ordroom_total_day=$row['ordroom_total_day'];
-                        $ordroom_total=$row['ordroom_total'];
-                        $ordroom_status=$row['ordroom_status'];
-                        $room_image =$row['room_image'];
+                        echo '<tr>';
+                                     echo  '<td scope="row">Đơn phòng</th>';
+                                     echo '<th scope="row">'.$row['ordroom_id'].'</th>';
+                                     echo '<td>'.$row['room_type'].'</td>';
+                                     echo '<td>'.$row['ordroom_start'].'</td>';
+                                     echo '<td>'.$row['ordroom_end'].'</td>';
+                                     echo '<td class="text-end">'.number_format($row['ordroom_total']).' đ</td>';
+                                     echo '<td>'.$row['ordroom_status'].'</td>';
+                        echo '</tr>';
+            
+            //đơn dịch vụ
+            
             ?>
-            <div class = "container-fluid p-5 pb-0 col-6">
-                
-                        <!-- right -->
-                    <div class=" p-3" style="background-color:#f1f2f6;">
-                        <div>
-                            <h5 class="text-center py-3">ĐƠN PHÒNG</h5>
-                        </div>
+          
+            <!--<div class = "container-fluid p-2 pt-5 pb-0 col-6" >
+                #E8D9B6
+                         right 
+                    <div class="p-1 py-3 rounded mx-auto " style="background-color:#F2DFA7;width:90%">
                         <div class="fs-5 px-0 ps-5" style="padding-left:15px;">
-                            <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordroom_id;?><br />
-                            <label for="" class="fw-bold">Loại phòng: </label> <?php echo $room_type;?><br />
-                            <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordroom_start;?><br />
-                            <label for="" class="fw-bold">Ngày trả phòng: </label> <?php echo $ordroom_end;?><br />
-                            <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordroom_total_day;?><br />
-                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo number_format($ordroom_total) ; echo' đ';?><br />
-                            <?php
-                                if($ordroom_status=='Chờ xác nhận'){
-                                    echo'<label for="" class="fw-bold fb-2">Tình trạng đơn: </label>  Đơn hàng chờ xác nhận<br />';
-                                }else{
-                                    if($ordroom_status=='Đã xác nhận'){
-                                    echo'<label for="" class="fw-bold pb-2">Tình trạng đơn:</label> Đơn hàng đã xác nhận<br />';
-                                    }else{
-                                    echo'<label for="" class="fw-bold pb-2">Tình trạng đơn:</label> Đơn hàng đã hủy<br />'; 
-                                    }
-                                }
-                            ?>
+                            <div class="row"><label for="" class="col-lg-4 text-start">Mã đơn: </label><div class="col"><?php echo $ordroom_id;?><br /></div></div>
+                            <div class="row"><label for="" class="col-lg-4 text-start">Loại phòng: </label><div class="col"> <?php echo $room_type;?><br /></div></div>
+                            <div class="row"><label for="" class="col-lg-4 text-start">Số ngày: </label><div class="col"> <?php echo $ordroom_total_day;?><br /></div></div>
+                            <div class="row"><label for="" class="col-lg-4 text-start">Ngày nhận: </label><div class="col"> <?php echo $ordroom_start;?><br /></div></div>
+                            <div class="row"><label for="" class="col-lg-4 text-start">Ngày trả: </label><div class="col"> <?php echo $ordroom_end;?><br /></div></div>
+                            <div class="row"><label for="" class="col-lg-4 text-start">Tổng: </label><div class="col"> <?php echo number_format($ordroom_total) ; echo' đ';?><br /></div></div>
                         </div>
                     </div>
                
-            </div>
-            <?php }
-            echo '</div>';}else{
-                echo'<h1 for="" class=" text-center p-5 mb-0" style="background-color:#f1f2f6; color:#747d8c;">Bạn không có đơn Phòng nào !</h1>';
+            </div>-->
+            <?php }}else{
+                echo'<h1 for="" class=" text-center p-5 mb-0" style=" color:#747d8c;">Bạn không có đơn Phòng nào !</h1>';
             } ?>
-            <!-- show order service -->
-            <?php
-            //1 .lấy id_cus     
+            <?php 
             if(isset($_SESSION['loginUserOK'])){ 
-            $id = $_SESSION['idCus'];}
-            //2. Thực hiện truy vấn
+                $id = $_SESSION['idCus'];}
             $sql = "SELECT o.ordser_id,o.ordser_total,o.ordser_total_day,o.ordser_start,o.ordser_end,o.ordser_status,s.ser_name,s.ser_image
             FROM  tb_order_services o ,tb_services s 
             WHERE  o.ser_id = s.ser_id AND o.cus_id =$id";
@@ -111,59 +122,26 @@
             //echo '<div class="ps-5 pb-5">';
                 if(mysqli_num_rows($result)>0){
                     while($row=mysqli_fetch_assoc($result)){
-                        $ordser_id=$row['ordser_id'];
-                        $ser_name=$row['ser_name'];
-                        $ordser_start=$row['ordser_start'];
-                        $ordser_end=$row['ordser_end'];
-                        $ordser_total_day=$row['ordser_total_day'];
-                        $ordser_total=$row['ordser_total'];
-                        $ordser_status=$row['ordser_status'];
-                        $ser_image =$row['ser_image'];
-            ?>
-            <div class = "container-fluid p-5 ">
-                <div class = "row">
-                    <div class="col-6 px-0 my-auto">
-                        <!-- left -->
-                        <?php
-                            if($ser_image == ""){
-                                echo "<div class='text-center  error'>Image not Available.</div>";
-                            }else{
-                                echo '<img src="../images/'.$ser_image.'" alt="" class = "img-fluid card-img-top" style = "height: 400px ;width 100%; object-fit: cover;" > ';
-                            }
-                        ?>
-                    </div>
-
-                        <!-- rright -->
-                    <div class="col-6 ps-5 " style="background-color:#f1f2f6;">
-                        <div>
-                            <h2 class="text-center pt-5 pb-4">ĐƠN DỊCH VỤ</h2>
-                        </div>
-                        <div class="fs-5 px-0 ps-5 pb-5">
-                            <label for="" class="fw-bold">Mã đơn: </label> <?php echo $ordser_id;?><br />
-                            <label for="" class="fw-bold">Tên dịch vụ: </label> <?php echo $ser_name;?><br />
-                            <label for="" class="fw-bold">Ngày nhận phòng: </label> <?php echo $ordser_start;?><br />
-                            <label for="" class="fw-bold">Ngày trả phòng: </label> <?php echo $ordser_end;?><br />
-                            <label for="" class="fw-bold">Số ngày: </label> <?php echo $ordser_total_day;?><br />
-                            <label for="" class="fw-bold">Tổng hóa đơn: </label> <?php echo number_format($ordser_total); echo' đ';?><br />
-                            <?php
-                                if($ordser_status=='Chờ xác nhận'){
-                                    echo'<label for="" class="fw-bold">Tình trạng đơn: </label>  Đơn hàng chờ xác nhận<br />';
-                                }else{
-                                    if($ordser_status=='Đã xác nhận'){
-                                    echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã xác nhận<br />';
-                                    }else{
-                                    echo'<label for="" class="fw-bold">Tình trạng đơn:</label> Đơn hàng đã hủy<br />'; 
-                                    }
-                                }
-                            ?>
-                        </div>
-                    </div>
-                </div>
+                        echo '<tr>';
+                                     echo '<td scope="row">Đơn dịch vụ</th>';
+                                     echo '<th scope="row">'.$row['ordser_id'].'</th>';
+                                     echo '<td>'.$row['ser_name'].'</td>';
+                                     echo '<td>'.$row['ordser_start'].'</td>';
+                                     echo '<td>'.$row['ordser_end'].'</td>';
+                                     echo '<td class="text-end">'.number_format($row['ordser_total']).' đ</td>';
+                                     echo '<td>'.$row['ordser_status'].'</td>';
+                        echo '</tr>';
+                    }}else{
+                        echo'<h1 for="" class=" text-center p-5 mb-0" style=" color:#747d8c;">Bạn không có đơn Phòng nào !</h1>';
+                    } ?>
+              </tbody>
+            </table>
+            <!--
             </div>
-            <?php }}else{
-                echo'<h1 for="" class="text-center p-5" style="background-color:#f1f2f6;color:#747d8c;">Bạn không có đơn Dịch vụ nào !</h1>';
-            } ?>
-    
+            </div>-->
+            <!-- end show order room -->
+          <div style="height:200px;"></div>
+            
 <?php
     include('footer.php');
 ?>
