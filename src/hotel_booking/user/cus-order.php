@@ -19,6 +19,9 @@
         bottom: 45%;
         left:43%;
     }
+    .breadcrumb-item + .breadcrumb-item::before         {
+        color:white;
+    }
 </style>
     <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     

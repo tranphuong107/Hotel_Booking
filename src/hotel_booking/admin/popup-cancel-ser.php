@@ -30,7 +30,7 @@
                     </div>
                     <div class="row pt-3">
                         <div class="col-lg-2 justify-content-start">
-                        <i class="far fa-question-circle fa-3x ps-4 pt-4 fs-1" style ="width: 500px; heigh:300px;color: #6ab04c;"></i>
+                        <i class="far fa-question-circle fa-3x ps-4 pt-4 fs-1" style ="width: 500px; color: #6ab04c;"></i>
                         </div>
                     <!--<i class="far fa-times-circle fa-3x text-center pt-4 fs-1" style ="width: 500px; heigh:300px;color: #e17055;"></i>-->
                         <div class="col">
