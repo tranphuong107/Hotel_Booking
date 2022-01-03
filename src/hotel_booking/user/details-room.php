@@ -56,7 +56,7 @@
                     while($row = mysqli_fetch_assoc($result)){
         ?>
         <div class="row m-3 " >             
-            <div class="col-md-7  b-0  ">
+            <div class="col-md-7  b-0 ">
                 <!-- <img src="../images/<?php echo $row['room_image']?>" class="card-img-top" alt="..."> -->
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -100,7 +100,7 @@
                      
                     
                     <h5 class="card-text">Giá: <?php echo number_format($row['room_price'])?>₫</h5>
-                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-2 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt ngay</a>
+                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-2 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt phòng</a>
             </div>                                 
         </div>
     
