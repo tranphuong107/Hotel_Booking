@@ -10,19 +10,26 @@
         bottom: 45%;
         left:43%;
     }
+    .breadcrumb-item + .breadcrumb-item::before         {
+        color:white;
+    }
 </style>
     <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     
     <img src="../images/b31.jpg" class="img-header " style="height: 260px; width:100% ;object-fit:cover;"alt="">
-    <div class="col-md-8 pt-4 float-img ">
+    <div class="col-md-8 pt-4 float-img " >
                 
                 <div class="jumbotron ">
                     <span class="text-white ms-4 fs-4">CHI TIẾT PHÒNG</span>
-                    <nav aria-label="breadcrumb">
+                    <nav aria-label="breadcrumb" style="margin-left:-40px">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item ">
                                 <a href="index.php">
                                     <span class="text-white fw-bold">TRANG CHỦ</span>
+                                </a></li>
+                            <li class="breadcrumb-item  ">
+                                <a href="room.php">
+                                    <span class="text-white fw-bold">PHÒNG</span>
                                 </a></li>
                             <li class="breadcrumb-item active ">
                                 <a href="#">
@@ -49,7 +56,7 @@
                     while($row = mysqli_fetch_assoc($result)){
         ?>
         <div class="row m-3 " >             
-            <div class="col-md-7  b-0  ">
+            <div class="col-md-7  b-0 ">
                 <!-- <img src="../images/<?php echo $row['room_image']?>" class="card-img-top" alt="..."> -->
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -93,7 +100,7 @@
                      
                     
                     <h5 class="card-text">Giá: <?php echo number_format($row['room_price'])?>₫</h5>
-                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-2 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt ngay</a>
+                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-2 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt phòng</a>
             </div>                                 
         </div>
     

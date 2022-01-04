@@ -1,4 +1,4 @@
-            <style>
+<style>
             .content-popup{
                 background: rgba(0,0,0,0.4);
                 width: 100%;
@@ -42,7 +42,7 @@
                     
                     <div class="row p-4  justify-content-end">
                         <div class="col-3 text-center" >
-                           <?php echo'<a href="confirm-order-room.php?id='.$row['ordroom_id'].'" style="background-color:#e17055; width: 90px; color: white;" class="py-2 btn btn-primary fs-6 border-0">Có</a>'?>
+                           <?php echo'<a href="confirm-order-ser.php?id='.$row['ordser_id'].'" style="background-color:#e17055; width: 90px; color: white;" class="py-2 btn btn-primary fs-6 border-0">Có</a>'?>
                            <!-- <input class="btn text-white px-3 fs-6 " value="Có" type="submit" style="width: 90px; background-color:#e17055;">-->
                         </div>
                         <div class="col-3" >

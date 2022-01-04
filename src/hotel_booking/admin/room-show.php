@@ -18,8 +18,8 @@
     }
     .add-content{
         background : white;
-        width: 100%;
-        height: 90rem;
+        width: 100%; 
+        height: 70rem;
         position: absolute;
         top : 0;
        
@@ -27,7 +27,7 @@
     .detail-popup{
         background: rgba(0,0,0,0.6);
         width: 100%;
-        height: 100%;
+        height: 100rem;
         position: absolute;
         top : 0;
         display: none;
@@ -142,46 +142,72 @@
         <div clas = "m-3">
             <a href="room-show.php" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
         </div>
-        <h1 style = "color: #D98E73;">Thêm phòng</h1>
-        <form action="process-add-room.php" method="POST" enctype="multipart/form-data">
+        <h1 class="text-center" style = "color: #D98E73;">Thêm phòng</h1>
+        <form action="process-add-room.php" method="POST" class ="pb-5 pt-3 mb-3  mx-auto" style="width:70%" enctype="multipart/form-data">
             <div class = "my-3">
-                Tên phòng <input type="text" name = "room-type" class = "form-control">
+                <div class="row">
+                    <div class="col-lg-2 pt-2 text-begin">Tên phòng:</div>
+                    <div class="col">
+                        <input type="text" name = "room-type" class = "form-control">
+                    </div>
+                </div>
             </div>
             <div class = "my-3">
-                Diện tích <input type="text" name = "room-size"  class = "form-control">
-                
+                <div class="row">
+                    <div class="col-lg-2 pt-2 text-begin">Diện tích:</div>
+                    <div class="col">
+                        <input type="text" name = "room-size"  class = "form-control">
+                    </div>
+                </div>
             </div>
             <div  class = "my-3">
-                Mô tả
-                <textarea name ="room-des"  cols="30" rows="3" class = "form-control" maxlength = "250"></textarea>
+                <div class="row">
+                    <div class="col-lg-2 pt-2 text-begin">Mô tả:</div>
+                    <div class="col">
+                        <textarea name ="room-des"  cols="30" rows="3" class = "form-control" maxlength = "250"></textarea>
+                    </div>
+                </div>
             </div>
             <div class = "my-3">
-                Giá tiền <input type="number"  name = "room-price"  min = "1"class = "form-control">   
+                <div class="row">
+                    <div class="col-lg-2 pt-2 text-begin">Giá tiền:</div>
+                    <div class="col">
+                        <input type="number"  name = "room-price"  min = "1"class = "form-control">   
+                    </div>
+                </div>
             </div>
             <div class = "my-3">
-                Số người <input type="number"  name = "room-amount-people"  min = "1"class = "form-control">
-                
-            </div >
-            <div class="row">
-            <div class = "my-3 col-6">
-                Ảnh <input type="file" name="uploadfile" value=""/>
+                <div class="row">
+                    <div class="col-lg-2 pt-2 text-begin">Số người:</div>
+                    <div class="col">
+                        <input type="number"  name = "room-amount-people"  min = "1"class = "form-control">
+                    </div>
+                </div>
             </div>
-            
-            <div class = "my-3 col-6">
-                Ảnh thêm 1 <input type="file" name="uploadfile1" value=""/>
-            </div>
-            </div>
-            <div>
-            <div class = "my-3">
-                Ảnh thêm 2 <input type="file" name="uploadfile2" value=""/>
-            </div>
-            <div class = "my-3">
-                Ảnh thêm 3 <input type="file" name="uploadfile3" value=""/>
+            <div class = "row my-3"> 
+                <div class="col-md-6">
+                    Ảnh 1: <input type="file" name="uploadfile" value=""/>
+                </div>
+                <div class = "col-md-6">
+                    Ảnh 2: <input type="file" name="uploadfile1" value=""/>
+                </div>
             </div>
 
+            
+            
+            <div class = "row my-3">
+                <div class="col-md-6">
+                    Ảnh 3: <input type="file" name="uploadfile2" value=""/>
+                </div>
+                <div class = "col-md-6">
+                    Ảnh 4: <input type="file" name="uploadfile3" value=""/>
+            </div>
+
+            </div>
+            
             <div class = "mt-3">
                 <!-- <a href="" type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white" class = "border-5 p-2">Thêm</a> -->
-                <button type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white" class = "border-0 p-2">
+                <button type="submit" name="upload" style = "background: #D98E73; text-decoration: none; float: right;color: white" class = "border-0 p-2">
                     Thêm phòng
                     </button>
             </div>
