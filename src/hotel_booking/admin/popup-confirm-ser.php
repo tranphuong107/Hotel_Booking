@@ -1,4 +1,4 @@
-            <style>
+<style>
             .content-popup{
                 background: rgba(0,0,0,0.4);
                 width: 100%;
@@ -25,7 +25,7 @@
                 <div class="confirm rounded">
                     <div class="row" style="margin-top:-80px">
                     <div class="text-end px-4 pt-3 pb-0" style="margin-bottom:-6%">
-                        <button href="#" class="btn-close" style="margin-top:-90px; padding-top:6%" onclick="closeForm1()" on data-bs-dismiss="alert" aria-label="Close"></button>
+                        <button href="#" class="btn-close" style="margin-top:-90px padding-top:6%" onclick="closeForm1()" on data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     </div>
                     <div class="row pt-3">
@@ -42,7 +42,7 @@
                     
                     <div class="row p-4  justify-content-end">
                         <div class="col-3 text-center" >
-                           <?php echo'<a href="confirm-order-room.php?id='.$row['ordroom_id'].'" style="background-color:#e17055; width: 90px; color: white;" class="py-2 btn btn-primary fs-6 border-0">Có</a>'?>
+                           <?php echo'<a href="confirm-order-ser.php?id='.$row['ordser_id'].'" style="background-color:#e17055; width: 90px; color: white;" class="py-2 btn btn-primary fs-6 border-0">Có</a>'?>
                            <!-- <input class="btn text-white px-3 fs-6 " value="Có" type="submit" style="width: 90px; background-color:#e17055;">-->
                         </div>
                         <div class="col-3" >
