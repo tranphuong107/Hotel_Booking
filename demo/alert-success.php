@@ -11,9 +11,9 @@
     <title>Hello, world!</title>
   </head>
   <body>
-  <div class="alert rounded p-1 m-5" role="alert" style = "background-color: #c9af911c;width: 250px;height: 90px;border: #c49872b3 solid 2px ">
+  <div class="alert rounded p-1 m-5" role="alert" style = "background-color: #aee4c069;width: 250px;height: 90px;border:#75ba90 solid 2px ">
     <div style = "text-align:right">
-      <a  class="btn-close p-1 me-2" data-bs-dismiss="alert" aria-label="Close" style = "font-size: 10px; color:#c49872b3 ;"></a>
+      <a  class="btn-close p-1 me-2" data-bs-dismiss="alert" aria-label="Close" style = "font-size: 10px; color:#75ba90 ;"></a>
     </div>
   <p class="alert-heading ps-4" >Bạn đã đặt thành công!</p>
 </div>
