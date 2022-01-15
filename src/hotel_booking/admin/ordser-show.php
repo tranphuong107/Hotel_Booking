@@ -60,7 +60,6 @@
                                     }
                                     echo '<td><a href ="cancel-order-ser.php?id='.$row['ordser_id'].'"><i class="fas fa-window-close" style ="color:#eb2f06;"></i></i></a></td>';
                                     echo '</tr>';
-                                     
                                  }
                              }
                         }else{
