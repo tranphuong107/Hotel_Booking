@@ -80,7 +80,7 @@
                         echo'<div class="card-body">';
                         echo'   <h5 class="card-title">'.$row['ser_name'].'</h5>';
                         echo'   <p class="card-title px-2 fs-6">Số người: '.$row['ser_room_size'].'</p>';
-                        echo'   <p class="card-title px-2 fs-6">Giá tiền: '.$row['ser_price'].' đ</p>';
+                        echo'   <p class="card-title px-2 fs-6">Giá tiền: '.number_format($row['ser_price']).'đ</p>';
                         echo'   <p class="card-text text-muted px-2">'.$row['ser_description'].'</p>';
                         echo'  <a href="show-order-service.php?id='.$row['ser_ID'].'" class="btn btn-outline-dark align-bottom;" style = " float:right">Đặt dịch vụ...</a>';
                         echo'</div>';

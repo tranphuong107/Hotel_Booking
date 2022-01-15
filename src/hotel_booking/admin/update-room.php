@@ -17,7 +17,7 @@
         <div class = "mt-5">
         <h1 class = "text-center">Chi tiết phòng</h1>
         </div>
-        <form action="process-update-room.php" method = "post" class ="py-5 mb-3"  enctype="multipart/form-data"> 
+        <form action="process-update-room.php" method = "post" class ="py-5 mb-3 w-75 mx-auto"  enctype="multipart/form-data"> 
             <input type="text" name = "room-id" value = "<?php echo $row['room_id']?>" hidden>          
             <div class = "my-3">
                 Tên phòng <input type="text" name = "room-type" class = "form-control" value = "<?php echo $row['room_type'];?>">
@@ -37,11 +37,15 @@
             Số người <input type="number"  name = "room-amount-people"  min = "1" class = "form-control" value = "<?php echo $row['room_amount_people'];?>">
             
         </div>
-        <div  class = "my-3">
+        <div  class = "my-3 row">
+            <div class="col-6">
             Ảnh hiện tại
             <img src="../images/<?php echo $row['room_image'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-            <br>
+            
+            </div>
+            <div class="col-6 pt-5">
             Ảnh <input type="file" name="uploadfile" value=""/>
+            </div>
         </div>
         
         <div  class = "my-3">

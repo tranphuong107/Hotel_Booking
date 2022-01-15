@@ -46,7 +46,7 @@
         </div>
         <div class=" p-3 ">
             <form action="" method ="post">
-                    <input type="search"  class="my-2 p-2 border-0 rounded-2 " style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm phòng...">
+                    <input type="search"  class="my-2 p-2 border border-dark rounded-2 " style="width: 300px; background-color:#f1f2f6;" name="Search" placeholder="Tìm kiếm phòng...">
                     <input type="submit" name="btn-search" value="Tìm kiếm" class="py-2 btn btn-primary  border-0 " style="background-color: #D98E73 ">
                     <a href="room-show.php" style="background-color:#D98E73; color: white;" class="py-2 btn btn-primary border-0">Làm mới</a>
 
@@ -177,11 +177,13 @@
                 </div>
             </div>
             <div class = "my-3">
+
                 <div class="row">
                     <div class="col-lg-2 pt-2 text-begin">Số người:</div>
                     <div class="col">
                         <input type="number"  name = "room-amount-people"  min = "1"class = "form-control">
                     </div>
+
                 </div>
             </div>
             <div class = "row my-3"> 
