@@ -5,7 +5,7 @@
 <div class="content p-3">
     <div>
         <div class="">
-            <h1 class="text-center pt-3">Danh sách Đơn dịch vụ</h1>
+            <h1 class="text-center pt-3">Danh sách đơn dịch vụ</h1>
         </div>
         <div class=" p-3 ">
             <form action="" method ="post">
