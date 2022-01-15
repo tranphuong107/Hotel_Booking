@@ -22,96 +22,111 @@
                             $ser_image = $row['ser_image']; 
 ?>
         
-<style type="text/css" scoped>
-    .ser-ord{
-        background-image: url('https://www.xmple.com/wallpaper/gradient-brown-highlight-black-linear-1920x1080-c2-8b4513-000000-l-33-a-60-f-21.svg');
-    }
-    </style>
+        <style>
+            .content-popup{
+                background: rgba(0,0,0,0.4);
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 70px;
+                left:-8px;
+            }
+            .form-popup {
+               display:none;
+             
+                }
+            .confirm{
+                background: white;
+                margin: 15% 31%;
+                width:38%;
+                
+            }
+            .khung{
+          width: 350px;
+          height:500px;
+          background-color: #c9af911c;
+      }
+      .title{     
+        color: #835542;
+      }
+      .title:after{
+        content: ""; /* This is necessary for the pseudo element to work. */ 
+        display: block; /* This will put the pseudo element on its own line. */
+        margin: 0 auto; /* This will center the border. */
+        width: 35%; /* Change this to whatever width you want. */
+        padding-top: 5px; /* This creates some space between the element and the border. */
+        border-bottom: 2px solid #835542; /* This creates the border. Replace black with whatever color you want. */
+      }
+      .vao{
+          color: #835542;
+          padding-top: 10px;
+          padding-left:45px;
+      }
+      .btn{
+          background-color:#c49872b3;
+          width: 110px;
+          height: 40px;
+          margin-top: 40px;
+          margin-left: 70px;
+          float: middle;
+      }
+      .btn:hover{
+        background-color:#835542;
+        color: white;
+      }
+      .rounded{
+          padding-left: 3px;
+      }
+      .button{
+          text-align: center;
+      }
+      .cancel{
+        text-align: right;
+        font-size: 1.7rem;
+        padding-right: 20px;
+        padding-top: 10px;
+    
+      }
+            </style>
     <div class = "ser-ord">
-        <div class = "container-fluid form-center" style = "padding: 14vh 50vh;" > 
-            <form action="process-order-service.php" method = "post" class = "m-3 p-0 mx-auto shadow-lg" style = "background-color:#e0e0cd47">
-                <div style >
-                    <img src="../images/<?php echo $ser_image;?>" alt="" style = "object-fit:cover;width:100%;height:20rem;">
+    <div class = "khung">
+        <div class = "cancel">
+            <a href="service.php" style = "color: #835542;"><i class="far fa-times-circle"></i></a>
+        </div>
+        <div class = "title">
+            <h3 class = "titlee"><center>ĐẶT DỊCH VỤ</center></h3>
+        </div>
+        <div class = "vao fw-bold">
+            Loại dịch vụ:
+            <div class = "pt-2">
+                <select class  = "rounded pb-1 pt-1 ps-1" style = "background-color:#c49872b3;border:none;color:#2e1c09;width:263px;">
+                    <option value="0">Chọn loại dịch vụ</option>
+                    <option value="1">Phòng đơn</option>
+                    <option value="2">Phòng đôi</option>
+                </select>
+            </div>
+        </div>
+        <div class = "vao fw-bold">
+            Số người:
+            <div class = "pt-2"><input type="number" class = "rounded pb-1 pt-1 ps-1" min = "1" style = "background-color:#c49872b3;border:none;color:#2e1c09;width:263px"></div> 
+            
+        </div>
+        <div class = "vao">
+            <div class = " fw-bold">Thời gian:</div>
+             
+            <div class = "pt-2" style = "">
+                <input type="date" class = "rounded pb-1 pt-1 ps-1" style = "background-color:#c49872b3;border:none;color:#2e1c09;width:263px;"> 
+                <div class = "pt-1 pb-1" style = "float:right; padding-right:50px;">(Tháng/Ngày/Năm)</div>
+                <div class = "pt-2">
+                    <input type="time" class = "rounded pb-1 pt-1 ps-1" style = "background-color:#c49872b3;border:none;color:#2e1c09;width:263px">
+                    <div class = "pt-1 pb-1" style = "float:right; padding-right:50px;"> (Giờ)</div>
                 </div>
-                            
-                            <h1 style = "color:#5c3215" class = "ms-5 mt-5">Đặt dịch vụ</h1>
-                            <input id = "ser-id" name = "service-id" value = "<?php echo $ser_id;?>" hidden >
-                            <div class = "ms-5" style = "color:#d8ac75">
-                                <h2><?php echo $ser_name;?> </h2>
-                            </div>
-
-                                <div class = "ms-5 my-1 row" style = "color:white">
-                                    <div class = "col-3">
-                                        Số người :
-                                    </div> 
-                                    <div class = "col-4 ms-3">
-                                        <?php echo $ser_room_size;?>
-                                    </div>
-                                </div>
-                                <div class = "ms-5 my-1 row" style = "color:white">
-                                    <div class = "col-3">
-                                        Giá dịch vụ :
-                                    </div>
-                                    <div class = "col-6 ms-3"> 
-                                        <input type = "text" id = "ser-price" value = "<?php echo $ser_price;?>" style = "background-color: #ffffff00 !important;border: none !important; color:white; width:6rem;">VNĐ
-                                    </div>
-                                </div>
-                                <div class = "ms-5 my-1 row" style = "color:white">
-                                    <div class = "col-3">
-                                        Từ ngày : 
-                                        <input type="date" id="from-date" name = "from-date" oninvalid="this.setCustomValidity('Vui lòng chọn ngày!')" required>
-                                    </div>
-                                    <div class = "col-4 ms-3">
-                                        Đến ngày : 
-                                        <input type="date" id="to-date" name = "to-date" oninvalid="this.setCustomValidity('Vui lòng chọn ngày!')" onchange = "myFunction()" required>
-                                    </div> 
-                                </div>
-                                <script type = "text/javascript" scr = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
-                                    <script type = "text/javascript">
-                                        var fromdate;
-                                        $('#from-date').on('change', function() {
-                                            fromdate = $(this).val();
-                                            $('#to-date').prop('min', function() {
-                                                return fromdate;
-                                            })
-                                        });
-                                    </script>
-                                <div  class = "ms-5 my-1 row" style = "color:white">
-                                    <div class = "col-3">
-                                        Số ngày:
-                                    </div> 
-                                    <div class = "col-6 ms-3">
-                                        <input type = "text" id = "demo" name = "demo" readonly style = "background-color: #ffffff00 !important;border: none !important; color:white;"></input>
-                                    </div> 
-                                </div>
-                                    <div class = "ms-5 my-1 row"  style = "color:white">
-                                    <div class = "col-3">
-                                        Tổng số tiền : 
-                                    </div> 
-                                    <div class = "col-6 ms-3 ">
-                                        <input type = "text" id = "total" name = "total" readonly style = "background-color: #ffffff00 !important;border: none !important; color:white;  width:6rem;"></input>
-                                        <span>VNĐ</span>
-                                    </div> 
-                                </div>
-                                <script>
-                                    function myFunction() {
-                                        var x = new Date(document.getElementById("from-date").value);
-                                        var y = new Date(document.getElementById("to-date").value);
-                                        var diff = (y.getTime() - x.getTime())/(1000*3600*24);
-                                        document.getElementById("demo").value = diff;
-                                        var price = document.getElementById("ser-price").value;
-                                        var day = document.getElementById("demo").value;
-                                        document.getElementById("total").value = price * day;
-                                    }
-                                </script>
-                            <div>
-                                <style type = "text/css" scoped>
-                                    .btn:hover{
-                                        color:#784f27;
-                                    }
-                                </style>
-                                <button class = "btn m-5" style = "background-color:#b8ab8147" id = "confirm"><h6 class = "mt-2">Xác nhận đặt</h6></button>
-                            </div>
+            </div>
+        </div>
+        <div class = "button">
+            <a href="" class = "btn fw-bold" style = "font-size: 15px;">Đặt dịch vụ</a>
+        </div>
+    </div>
                            
                     
             <?php
