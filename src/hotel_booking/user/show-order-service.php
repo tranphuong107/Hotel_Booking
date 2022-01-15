@@ -101,8 +101,8 @@
             <div class = "pt-2">
                 <select class  = "rounded pb-1 pt-1 ps-1" style = "background-color:#c49872b3;border:none;color:#2e1c09;width:263px;">
                     <option value="0">Chọn loại dịch vụ</option>
-                    <option value="1">Phòng đơn</option>
-                    <option value="2">Phòng đôi</option>
+                    <option value="1">Massage</option>
+                    <option value="2"></option>
                 </select>
             </div>
         </div>

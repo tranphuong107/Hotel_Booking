@@ -46,12 +46,12 @@
                     ?>
                 </p>
                     <div class="mb-3">
-                        <label for="txtUser" class="form-label">Tên tài khoản</label>
+                        <label for="txtUser" class="form-label">Tên tài khoản:</label>
                         <input type="text" class="form-control rounded-pill" id="txtName" name ="txtName">  
                     </div>
                     
                     <div class="mb-3">
-                        <label for="txtpass01" class="form-label">Mật khẩu</label>
+                        <label for="txtpass01" class="form-label">Mật khẩu:</label>
                         <input type="password" class="form-control rounded-pill" id="txtPass" name ="txtPass">
                     </div>
                     
@@ -64,7 +64,7 @@
 
                     <div class=" text-center pt-3">
                         <label for="txtpass01" class="form-label ">Bạn chưa có tài khoản?</label>
-                        <a href="register.php" class="text-decoration-none text-black fw-bold ">Đăng ký Ngay</a>
+                        <a href="register.php" class="text-decoration-none text-black fw-bold ">Đăng ký ngay</a>
                         
                     </div>
                     </div>

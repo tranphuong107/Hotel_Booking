@@ -38,12 +38,12 @@
                 <form action ="process-login.php" method ="post" class=" m-3 p-5 mx-auto my-form rounded-3 " style ="width:40%;height: 100%; border-radius: 30px">
                 <h2 class ="text-center  mb-3 text-uppercase">ĐĂNG NHẬP</h2>
                     <div class="mb-3">
-                        <label for="txtUser" class="form-label">Tên tài khoản</label>
+                        <label for="txtUser" class="form-label">Tên tài khoản:</label>
                         <input type="text" class="form-control rounded-pill" id="txtName" name ="txtName">  
                     </div>
                     
                     <div class="mb-3">
-                        <label for="txtpass01" class="form-label">Mật khẩu</label>
+                        <label for="txtpass01" class="form-label">Mật khẩu:</label>
                         <input type="password" class="form-control rounded-pill" id="txtPass" name ="txtPass">
                     </div>
                     
