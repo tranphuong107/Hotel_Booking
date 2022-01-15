@@ -88,7 +88,7 @@
                        echo'</div>';
                         echo'<div class="card-body">';
                         echo'   <h5 class="card-title">'.$row['room_type'].'</h5>';
-                        echo'   <p class="card-text px-2 ">Giá: '.$row['room_price'].'₫</p>';
+                        echo'   <p class="card-text px-2 ">Giá: '.number_format($row['room_price']).'₫</p>';
                         echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark" style = "float:right">Chi tiết...</a>';
                         echo'</div>';
                         echo'</div>';

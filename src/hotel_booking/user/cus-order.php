@@ -110,7 +110,7 @@
                
             </div>-->
             <?php }}else{
-                echo'<h1 for="" class=" text-center p-5 mb-0" style=" color:#747d8c;">Bạn không có đơn Phòng nào !</h1>';
+                echo'<h4 for="" class=" text-center p-5 mb-0" style=" color:#747d8c;">Bạn không có đơn Phòng nào !</h4>';
             } ?>
             <?php 
             if(isset($_SESSION['loginUserOK'])){ 
@@ -132,7 +132,7 @@
                                      echo '<td>'.$row['ordser_status'].'</td>';
                         echo '</tr>';
                     }}else{
-                        echo'<h1 for="" class=" text-center p-5 mb-0" style=" color:#747d8c;">Bạn không có đơn Phòng nào !</h1>';
+                        echo'<h4 for="" class=" text-center p-5 mb-0" style=" color:#747d8c;">Bạn không có đơn Phòng nào !</h4>';
                     } ?>
               </tbody>
             </table>
