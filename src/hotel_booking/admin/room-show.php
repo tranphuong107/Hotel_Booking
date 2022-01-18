@@ -70,7 +70,7 @@
                         <th scope="col" class="top">Ảnh 2</th>
                         <th scope="col" class="top">Ảnh 3</th>
                         <th scope="col" class="top">Ảnh 4</th>
-                        <th scope="col" class="top">Thao tác</th>
+                        <th scope="col" class="top">Sửa</th>
                     </tr>
                 </thead>
                 <tbody>
