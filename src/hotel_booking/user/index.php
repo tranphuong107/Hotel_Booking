@@ -44,10 +44,10 @@ style=" fill:#000000"><g fill="none" fill-rule="nonzero" stroke="none" stroke-wi
 </div>
 <div class="row"  id="row-1268317428">
 <div class="col medium-6 small-12 large-6"  data-animate="fadeInDown"><div class="col-inner"  >
-<p style="color:#7F7F7F; margin:20px; margin-left: 20%">Khách sạn Mona là một nhà nghỉ khách sạn được thành lập vào năm 2021 với 7 phòng có kích cỡ khách nhau phù hợp với nhiều nhu cầu của khách hàng. Mona Media Resort tọa lạc ở vị trí đắc địa bên cạnh bờ biển Đà Nẵng, với bờ cát trải dài và không gian xanh lý tưởng, chúng tôi cung cấp những dịch vụ nghỉ dưỡng cao cấp, sang trọng.</p>
+<p style="color:#7F7F7F; margin:20px; margin-left: 20%">Khách sạn Mona là một nhà nghỉ khách sạn được thành lập vào năm 2021 với 7 phòng có kích cỡ khác nhau phù hợp với nhiều nhu cầu của khách hàng. Mona Media Resort tọa lạc ở vị trí đắc địa bên cạnh bờ biển Đà Nẵng, với bờ cát trải dài và không gian xanh lý tưởng, chúng tôi cung cấp những dịch vụ nghỉ dưỡng cao cấp, sang trọng.</p>
 </div></div>
 <div class="col medium-6 small-12 large-6"  data-animate="fadeInDown"><div class="col-inner"  >
-<p style="color:#7F7F7F; margin:20px; margin-right: 20%">Khách sạn Mona đi đầu với hệ thống thiết bị hiện đại, điều hòa, tivi, bàn ghế được làm từ gỗ, sóng wifi và các các dịch vụ đưa đón khách tham quan các điểm du lịch. Khách sạn được thiết kế và trang trí theo phong cách Mona rất sang trọng và quý phái. Các trang thiết bị và phòng ốc của nhà nghỉ &#8211; khách sạn rất tiện nghi và hiện đại nhằm mang lại sự hài lòng và thoải mái cho khách hàng trong suốt thời gian lưu trú tại phòng khách sạn.</p>
+<p style="color:#7F7F7F; margin:20px; margin-right: 20%">Khách sạn Mona đi đầu với hệ thống thiết bị hiện đại, điều hòa, tivi, bàn ghế được làm từ gỗ, sóng wifi và các các dịch vụ đưa đón khách tham quan các điểm du lịch. Khách sạn được thiết kế và trang trí theo phong cách Mona rất sang trọng và quý phái. Các trang thiết bị và phòng ốc của khách sạn rất tiện nghi và hiện đại nhằm mang lại sự hài lòng và thoải mái cho khách hàng trong suốt thời gian lưu trú tại khách sạn.</p>
 </div></div>
 </div>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -65,7 +65,8 @@ style=" fill:#000000"><g fill="none" fill-rule="nonzero" stroke="none" stroke-wi
     
 </div>
 <div class="gap-element clearfix" style="display:block; height:auto; padding-top:30px"></div>
-		</div><!-- .section-content -->
+		</div>
+    <!-- .section-content -->
 
 		
 <style scope="scope">
@@ -90,13 +91,11 @@ style=" fill:#000000"><g fill="none" fill-rule="nonzero" stroke="none" stroke-wi
 
 		<div class="section-content relative">
 			
-<div class="gap-element clearfix" style="display:block; height:auto; padding-top:60px"></div>
-<div class="row"  id="row-1524883488">
-<div class="col small-12 large-12"  ><div class="col-inner" style="margin:0px 0px -20px 0px;" >
-<h2 style="margin: 5px; margin-left: 10%; font-family: Arial, Helvetica, sans-serif;">ĐIỂM NỔI BẬT</h2></div></div>
-</div>
-<div class="row"  id="row-1210784620">
-<div class="col col-special medium-4 small-12 large-4" style="color:#7F7F7F; margin:25px; margin-left: 15%" data-animate="bounceInRight"><div class="col-inner"  >
+<section class = "m-5 py-2 container">
+    <div class = "title"><h2 style="margin-left:150px" class="pb-3"><center>ĐIỂM NỔI BẬT</center></h2></div>
+    <div class = "row row-cols-1 row-cols-md-3 p-4 m-0 justify-content-evenly">
+    <div class="col-auto mx-auto" style="color:#7F7F7F;" data-animate="bounceInRight">
+    <div class="col-inner"  >
 <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="30" height="30"
 viewBox="0 0 172 172"
@@ -110,7 +109,7 @@ width="30" height="30"
 viewBox="0 0 172 172"
 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#f1c40f"><path d="M86,0c-9.43139,0 -17.2,7.76861 -17.2,17.2h-11.46667h-11.46667c-9.43116,0 -17.2,7.76884 -17.2,17.2v103.2c0,9.43116 7.76884,17.2 17.2,17.2h80.26667c9.43116,0 17.2,-7.76884 17.2,-17.2v-103.2c0,-9.43116 -7.76884,-17.2 -17.2,-17.2h-11.46667h-11.46667c0,-9.43139 -7.76861,-17.2 -17.2,-17.2zM86,11.46667c3.23434,0 5.73333,2.49899 5.73333,5.73333c0,3.23434 -2.49899,5.73333 -5.73333,5.73333c-3.23434,0 -5.73333,-2.49899 -5.73333,-5.73333c0,-3.23434 2.49899,-5.73333 5.73333,-5.73333zM45.86667,28.66667h11.46667c0,6.33533 5.13133,11.46667 11.46667,11.46667h34.4c6.33533,0 11.46667,-5.13133 11.46667,-11.46667h11.46667c3.23951,0 5.73333,2.49383 5.73333,5.73333v103.2c0,3.23951 -2.49383,5.73333 -5.73333,5.73333h-80.26667c-3.23951,0 -5.73333,-2.49383 -5.73333,-5.73333v-103.2c0,-3.23951 2.49383,-5.73333 5.73333,-5.73333zM114.55469,68.74401c-1.48951,0.04438 -2.90324,0.66691 -3.94167,1.73568l-30.34636,30.34636l-13.14636,-13.14636c-1.43802,-1.49778 -3.5734,-2.10113 -5.5826,-1.57735c-2.0092,0.52378 -3.57826,2.09284 -4.10204,4.10204c-0.52378,2.0092 0.07957,4.14458 1.57735,5.5826l17.2,17.2c2.23904,2.23811 5.86825,2.23811 8.10729,0l34.4,-34.4c1.69569,-1.64828 2.20555,-4.16851 1.28389,-6.3463c-0.92166,-2.17779 -3.08576,-3.56638 -5.44952,-3.49667z"></path></g></g></svg> Điểm tâm tận nơi</p>
 </div></div>
-<div class="col col-special medium-4 small-12 large-4"style="color:#7F7F7F; margin:25px; margin-left: 5%" data-animate="bounceInRight"><div class="col-inner"  >
+<div class="col-auto mx-auto"style="color:#7F7F7F;" data-animate="bounceInRight"><div class="col-inner"  >
 <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="30" height="30"
 viewBox="0 0 172 172"
@@ -124,7 +123,7 @@ width="30" height="30"
 viewBox="0 0 172 172"
 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#f1c40f"><path d="M86,0c-9.43139,0 -17.2,7.76861 -17.2,17.2h-11.46667h-11.46667c-9.43116,0 -17.2,7.76884 -17.2,17.2v103.2c0,9.43116 7.76884,17.2 17.2,17.2h80.26667c9.43116,0 17.2,-7.76884 17.2,-17.2v-103.2c0,-9.43116 -7.76884,-17.2 -17.2,-17.2h-11.46667h-11.46667c0,-9.43139 -7.76861,-17.2 -17.2,-17.2zM86,11.46667c3.23434,0 5.73333,2.49899 5.73333,5.73333c0,3.23434 -2.49899,5.73333 -5.73333,5.73333c-3.23434,0 -5.73333,-2.49899 -5.73333,-5.73333c0,-3.23434 2.49899,-5.73333 5.73333,-5.73333zM45.86667,28.66667h11.46667c0,6.33533 5.13133,11.46667 11.46667,11.46667h34.4c6.33533,0 11.46667,-5.13133 11.46667,-11.46667h11.46667c3.23951,0 5.73333,2.49383 5.73333,5.73333v103.2c0,3.23951 -2.49383,5.73333 -5.73333,5.73333h-80.26667c-3.23951,0 -5.73333,-2.49383 -5.73333,-5.73333v-103.2c0,-3.23951 2.49383,-5.73333 5.73333,-5.73333zM114.55469,68.74401c-1.48951,0.04438 -2.90324,0.66691 -3.94167,1.73568l-30.34636,30.34636l-13.14636,-13.14636c-1.43802,-1.49778 -3.5734,-2.10113 -5.5826,-1.57735c-2.0092,0.52378 -3.57826,2.09284 -4.10204,4.10204c-0.52378,2.0092 0.07957,4.14458 1.57735,5.5826l17.2,17.2c2.23904,2.23811 5.86825,2.23811 8.10729,0l34.4,-34.4c1.69569,-1.64828 2.20555,-4.16851 1.28389,-6.3463c-0.92166,-2.17779 -3.08576,-3.56638 -5.44952,-3.49667z"></path></g></g></svg> Tiệc Buffet tối</p>
 </div></div>
-<div class="col col-special medium-4 small-12 large-4" style="color:#7F7F7F; margin:25px; margin-left: 5%" data-animate="bounceInRight"><div class="col-inner"  >
+<div class="col-auto ms-5" style="color:#7F7F7F;" data-animate="bounceInRight"><div class="col-inner"  >
 <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="30" height="30"
 viewBox="0 0 172 172"
@@ -138,7 +137,9 @@ width="30" height="30"
 viewBox="0 0 172 172"
 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#f1c40f"><path d="M86,0c-9.43139,0 -17.2,7.76861 -17.2,17.2h-11.46667h-11.46667c-9.43116,0 -17.2,7.76884 -17.2,17.2v103.2c0,9.43116 7.76884,17.2 17.2,17.2h80.26667c9.43116,0 17.2,-7.76884 17.2,-17.2v-103.2c0,-9.43116 -7.76884,-17.2 -17.2,-17.2h-11.46667h-11.46667c0,-9.43139 -7.76861,-17.2 -17.2,-17.2zM86,11.46667c3.23434,0 5.73333,2.49899 5.73333,5.73333c0,3.23434 -2.49899,5.73333 -5.73333,5.73333c-3.23434,0 -5.73333,-2.49899 -5.73333,-5.73333c0,-3.23434 2.49899,-5.73333 5.73333,-5.73333zM45.86667,28.66667h11.46667c0,6.33533 5.13133,11.46667 11.46667,11.46667h34.4c6.33533,0 11.46667,-5.13133 11.46667,-11.46667h11.46667c3.23951,0 5.73333,2.49383 5.73333,5.73333v103.2c0,3.23951 -2.49383,5.73333 -5.73333,5.73333h-80.26667c-3.23951,0 -5.73333,-2.49383 -5.73333,-5.73333v-103.2c0,-3.23951 2.49383,-5.73333 5.73333,-5.73333zM114.55469,68.74401c-1.48951,0.04438 -2.90324,0.66691 -3.94167,1.73568l-30.34636,30.34636l-13.14636,-13.14636c-1.43802,-1.49778 -3.5734,-2.10113 -5.5826,-1.57735c-2.0092,0.52378 -3.57826,2.09284 -4.10204,4.10204c-0.52378,2.0092 0.07957,4.14458 1.57735,5.5826l17.2,17.2c2.23904,2.23811 5.86825,2.23811 8.10729,0l34.4,-34.4c1.69569,-1.64828 2.20555,-4.16851 1.28389,-6.3463c-0.92166,-2.17779 -3.08576,-3.56638 -5.44952,-3.49667z"></path></g></g></svg> Hồ bơi &#038; phòng Gym</p>
 </div></div>
-</div>
+    </div>
+    </div>
+</section>
 <div class="row row-small"  id="row-1628873629">
 <div class="col medium-4 small-12 large-4"  data-animate="fadeInDown"><div class="col-inner"  >
 	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_561887362">

@@ -4,7 +4,10 @@
 ?>
 <div class = "content px-3 ">
         <div clas = "m-3 row">
-            <a href="room-show.php" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
+            <a href="#" onclick="openForm3()" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
+            <?php
+            include 'popup-exit-room.php';
+            ?>
         </div>
     <?php
             $room_id = $_GET['id'];
@@ -17,70 +20,103 @@
         <div class = "mt-5">
         <h1 class = "text-center">Chi tiết phòng</h1>
         </div>
-        <form action="process-update-room.php" method = "post" class ="py-5 mb-3"  enctype="multipart/form-data"> 
-            <input type="text" name = "room-id" value = "<?php echo $row['room_id']?>" hidden>          
+        <form action="process-update-room.php" method = "post" class ="pb-5 pt-3 mb-3  mx-auto" style="width:70%" enctype="multipart/form-data"> 
+            <input type="text-left" name = "room-id" value = "<?php echo $row['room_id']?>" hidden>          
             <div class = "my-3">
-                Tên phòng <input type="text" name = "room-type" class = "form-control" value = "<?php echo $row['room_type'];?>">
+                <div class="row">
+               <div class="col-lg-2 pt-2 text-left">Tên phòng:</div>
+               <div class="col">
+                   <input type="text" name = "room-type" class = "form-control" value = "<?php echo $row['room_type'];?>">
+                </div>   
+                </div>
+            </div>
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2 text-left">Diện tích:</div>
+               <div class="col">
+                   <input type="text" name = "room-size" class = "form-control" value = "<?php echo $row['room_size'];?>"> 
+                </div>   
+                </div>
+            </div>     
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2">Mô tả:</div>
+               <div class="col">
+            <textarea name ="room-des"  cols="30" rows="3" class = "form-control" maxlength = "250"><?php echo $row['room_description'];?></textarea>
+            </div>   
+                </div>
+            </div>  
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2">Giá tiền:</div>
+               <div class="col">
+                   <input type="number"  name = "room-price"  min = "1" class = "form-control" value = "<?php echo $row['room_price'];?>">     
+                   </div>   
+                </div>
+            </div>
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2">Số người:</div>
+               <div class="col">
+                    <input type="number"  name = "room-amount-people"  min = "1" class = "form-control" value = "<?php echo $row['room_amount_people'];?>">
+                    </div>   
+                </div>
+            </div>
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2" style="margin: auto">Ảnh 1 hiện tại:</div>
+               <div class="col">
+            <img src="../images/<?php echo $row['room_image'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;"> 
+            Ảnh 1 thay thế: <input type="file" name="uploadfile" value=""/>
+            </div>   
+                </div>
+            </div>
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2"style="margin: auto">Ảnh 2 hiện tại:</div>
+               <div class="col">
+            <img src="../images/<?php echo $row['room_image1'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
+            Ảnh 2 thay thế: <input type="file" name="uploadfile1" value=""/>
+            </div>   
+                </div>
             </div>
         <div class = "my-3">
-            Diện tích <input type="text" name = "room-size" class = "form-control" value = "<?php echo $row['room_size'];?>"> 
-            
-        </div>       
-        <div  class = "my-3">
-            Mô tả
-            <textarea name ="room-des"  cols="30" rows="3" class = "form-control" maxlength = "250"><?php echo $row['room_description'];?></textarea>
-        </div>
-        <div class = "my-3">
-            Giá tiền <input type="number"  name = "room-price"  min = "1" class = "form-control" value = "<?php echo $row['room_price'];?>">     
-        </div>
-        <div class = "my-3">
-            Số người <input type="number"  name = "room-amount-people"  min = "1" class = "form-control" value = "<?php echo $row['room_amount_people'];?>">
-            
-        </div>
-        <div  class = "my-3">
-            Ảnh hiện tại
-            <img src="../images/<?php echo $row['room_image'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-            <br>
-            Ảnh <input type="file" name="uploadfile" value=""/>
-        </div>
-        
-        <div  class = "my-3">
-            Ảnh thêm 1
-            <img src="../images/<?php echo $row['room_image1'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-        </div>
-        <div class = "my-3">
-            Ảnh <input type="file" name="uploadfile1" value=""/>
-        </div>
-        <div  class = "my-3">
-            Ảnh thêm 2
+                <div class="row">
+               <div class="col-lg-2 pt-2"style="margin: auto">Ảnh 3 hiện tại:</div>
+               <div class="col">
             <img src="../images/<?php echo $row['room_image2'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-        </div>
-        <div class = "my-3">
-            Ảnh <input type="file" name="uploadfile2" value=""/>
-        </div>
-        <div  class = "my-3">
-            Ảnh thêm 3
+            Ảnh 3 thay thế: <input type="file" name="uploadfile2" value=""/>
+            </div>   
+                </div>
+            </div>
+            <div class = "my-3">
+                <div class="row">
+               <div class="col-lg-2 pt-2"style="margin: auto">Ảnh 4 hiện tại:</div>
+               <div class="col">
             <img src="../images/<?php echo $row['room_image3'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-        </div>
-        <div class = "my-3">
-            Ảnh <input type="file" name="uploadfile3" value=""/>
-        </div>
+            Ảnh 4 thay thế: <input type="file" name="uploadfile3" value=""/>
+            </div>   
+                </div>
+            </div>
 
         <div class = "mt-3">
             <!-- <a href="" type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white" class = "border-5 p-2">Thêm</a> -->
+            <a href="alert-update-room.php">
             <button type="submit" name="upload" style = "background: #D98E73; text-decoration: none; color: white;float: right;margin-bottom: 5rem;" class = "border-0 p-2">
                   Lưu phòng
                 </button>
+                </a>
         </div>
                      <?php
                          }}else{
                             echo '<script>';
                             echo 'alert ("Có lỗi gì đó xảy ra. Vui lòng thử lại!!!");';
                             echo "location.href = 'index.php';";     
-                            echo '</script>';
+                            echo '</script>'; 
+
             }?>
 
-            </form>
+        </form>
 </div>
             <?php
     include ('footer.php');

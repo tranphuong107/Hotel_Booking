@@ -28,7 +28,7 @@
         
       
         if($result == true){
-            header ('Location: service-show.php');
+            header ('Location: alert-add-service.php');
         }else{
             echo $sql;
         }

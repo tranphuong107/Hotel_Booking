@@ -25,7 +25,7 @@
                 <div class="confirm rounded">
                     <div class="row" style="margin-top:-80px">
                     <div class="text-end px-4 pt-3 pb-0" style="margin-bottom:-6%">
-                        <button href="#" class="btn-close" style="margin-top:-90px; padding-top:6%" onclick="closeForm1()" on data-bs-dismiss="alert" aria-label="Close"></button>
+                        <button href="#" class="btn-close" style="margin-top:-90px padding-top:6%" onclick="closeForm1()" on data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     </div>
                     <div class="row pt-3">

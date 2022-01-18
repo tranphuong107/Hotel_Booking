@@ -30,7 +30,7 @@
                                 </a></li>
                             <li class="breadcrumb-item active ">
                                 <a href="room.php">
-                                    <span class="text-white fw-bold">PHÒNG</span>
+                                    <span class="text-white fw-bold text-decoration-underline">PHÒNG</span>
                                 </a></li>
                         </ol>
                     </nav>
@@ -76,7 +76,8 @@
                             object-fit:cover;
                         }
                         .btn:hover{
-                            background-color: #765b378a;}';
+                            background-color: #ffc40ead;
+                            color: black;}';
                     echo'</style>';
                     echo '<div class="col d-flex">';
                         echo'<div class="card flex-fill">';
@@ -87,8 +88,8 @@
                        echo'</div>';
                         echo'<div class="card-body">';
                         echo'   <h5 class="card-title">'.$row['room_type'].'</h5>';
-                        echo'   <p class="card-text px-2 ">Giá: '.$row['room_price'].'₫</p>';
-                        echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark">Chi tiết...</a>';
+                        echo'   <p class="card-text px-2 ">Giá: '.number_format($row['room_price']).'₫</p>';
+                        echo'  <a href="details-room.php?id='.$row['room_id'].'" class="btn btn-outline-dark" style = "float:right">Chi tiết...</a>';
                         echo'</div>';
                         echo'</div>';
                     echo'</div>';
