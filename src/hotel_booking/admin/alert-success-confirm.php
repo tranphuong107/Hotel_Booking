@@ -16,9 +16,9 @@
             margin: 0 auto ;
         }
     </style>
-    <div class="thongbao rouned alert  d-flex align-items-center " style="background-color: #6ab04c;" >
+    <div class="thongbao rouned alert alert-success d-flex align-items-center" style="border: #1dd1a1 solid 2px " >
         <div class="mx-auto">
-        <p class="pt-3 text-white">Thêm thành công!</p>
+        <p class="pt-3 ">Xác nhận đơn thành công!</p>
         </div>
         <div class="pb-5">
         <button href="ordroom-show.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></button>

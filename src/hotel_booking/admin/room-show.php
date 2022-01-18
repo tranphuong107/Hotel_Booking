@@ -70,7 +70,7 @@
                         <th scope="col" class="top">Ảnh 2</th>
                         <th scope="col" class="top">Ảnh 3</th>
                         <th scope="col" class="top">Ảnh 4</th>
-                        <th scope="col" class="top">Thao tác</th>
+                        <th scope="col" class="top">Sửa</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -140,7 +140,7 @@
 <div class = "add-popup" id = "add-popup">
     <div class = "add-content p-5">
         <div clas = "m-3">
-            <a href="room-show.php" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
+            <a href="popup-cancel-add-room.php" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
         </div>
         <h1 class="text-center" style = "color: #D98E73;">Thêm phòng</h1>
         <form action="process-add-room.php" method="POST" class ="pb-5 pt-3 mb-3  mx-auto" style="width:70%" enctype="multipart/form-data">
