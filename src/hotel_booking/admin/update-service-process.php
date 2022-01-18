@@ -35,10 +35,7 @@
                 $result1 = mysqli_query($conn,$sql1);
 
                 if($result1 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'service-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-service.php';
                 }else{
                     // echo $sql1;
                     echo '<script>';
@@ -67,10 +64,7 @@
                 $result1 = mysqli_query($conn,$sql1);
 
                 if($result1 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'service-show.php';";   
-                    echo '</script>';
+                    include 'alter-update-service.php';
                 }else{
                     // echo $sql1;
                     echo '<script>';
