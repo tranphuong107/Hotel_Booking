@@ -80,23 +80,26 @@
                         echo'<div class="card-body">';
                         echo'   <h5 class="card-title">'.$row['ser_name'].'</h5>';
                         echo'   <p class="card-title px-2 fs-6">Số người: '.$row['ser_room_size'].'</p>';
-                        echo'   <p class="card-title px-2 fs-6">Số tiền: '.number_format($row['ser_price']).'đ</p>';
+                        echo'   <p class="card-title px-2 fs-6">Giá tiền: '.number_format($row['ser_price']).'đ</p>';
                         echo'   <p class="card-text text-muted px-2">'.$row['ser_description'].'</p>';
-                        echo'  <a href="show-order-service.php?id='.$row['ser_ID'].'" class="btn btn-outline-dark align-bottom;" style = " float:right">Đặt dịch vụ...</a>';
+                        echo'  <a href="#" onclick = "openForm2()" class="btn btn-outline-dark align-bottom p-2 fs-bold" style = "font-size: 15px;float:right">Đặt dịch vụ...</a>';
                         echo'</div>';
                         echo'</div>';
                     echo'</div>';
-               
+                    
                 }
                 echo'</div>';
+                include ('show-order-service.php');
+                
             }
 
         ?> 
     
     
 </div> 
-    
+
 
 <?php
+    
     include 'footer.php'
 ?>

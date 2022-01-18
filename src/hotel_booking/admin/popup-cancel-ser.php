@@ -34,7 +34,7 @@
                         </div>
                     <!--<i class="far fa-times-circle fa-3x text-center pt-4 fs-1" style ="width: 500px; heigh:300px;color: #e17055;"></i>-->
                         <div class="col">
-                        <p class="text-start fs-6 " style ="padding-top:6% ; padding-right:15%; " >Bạn có chắc chắn thực hiện Hủy đơn không ? Thao tác sau khi thực hiện sẽ không thể thay đổi.</p>
+                        <p class="text-start fs-6 " style ="padding-top:6% ; padding-right:15%; " >Bạn có chắc chắn thực hiện Hủy đơn không? Thao tác sau khi thực hiện sẽ không thể thay đổi.</p>
                         </div>
                         <!--<h1 class="text-center pb-4 pt-4 ps-4 fs-6" style ="color: #4b4b4b;">Thao tác sau khi thực hiện sẽ không thể thay đổi</h1>-->
                         

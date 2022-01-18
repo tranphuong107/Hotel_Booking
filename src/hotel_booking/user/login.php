@@ -64,7 +64,7 @@
 
                     <div class=" text-center pt-3">
                         <label for="txtpass01" class="form-label ">Bạn chưa có tài khoản?</label>
-                        <a href="register.php" class="text-decoration-none text-black fw-bold ">Đăng ký Ngay</a>
+                        <a href="register.php" class="text-decoration-none text-black fw-bold ">Đăng ký ngay</a>
                         
                     </div>
                     </div>

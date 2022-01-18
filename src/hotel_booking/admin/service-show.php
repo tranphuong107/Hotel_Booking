@@ -129,7 +129,7 @@
         <div clas = "m-3">
             <a href="service-show.php" id = "close" class = "close" style = "color: #D98E73; text-decoration: none;float: right;font-size:1.5rem;"><i class="far fa-times-circle"></i></a>
         </div>
-        <h1 class = "text-center" style = "color: #D98E73;">Thêm dịch vụ</h1>
+        <h1 class = "text-center" style = "color: black;">Thêm dịch vụ</h1>
         <form action="add-service-process.php" method="POST" class ="pb-5 pt-3 mb-3  mx-auto" style="width:70%" enctype="multipart/form-data">
             <div class = "my-3">
                 <div class="row">

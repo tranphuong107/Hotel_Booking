@@ -44,10 +44,10 @@ style=" fill:#000000"><g fill="none" fill-rule="nonzero" stroke="none" stroke-wi
 </div>
 <div class="row"  id="row-1268317428">
 <div class="col medium-6 small-12 large-6"  data-animate="fadeInDown"><div class="col-inner"  >
-<p style="color:#7F7F7F; margin:20px; margin-left: 20%">Khách sạn Mona là một nhà nghỉ khách sạn được thành lập vào năm 2021 với 7 phòng có kích cỡ khách nhau phù hợp với nhiều nhu cầu của khách hàng. Mona Media Resort tọa lạc ở vị trí đắc địa bên cạnh bờ biển Đà Nẵng, với bờ cát trải dài và không gian xanh lý tưởng, chúng tôi cung cấp những dịch vụ nghỉ dưỡng cao cấp, sang trọng.</p>
+<p style="color:#7F7F7F; margin:20px; margin-left: 20%">Khách sạn Mona là một nhà nghỉ khách sạn được thành lập vào năm 2021 với 7 phòng có kích cỡ khác nhau phù hợp với nhiều nhu cầu của khách hàng. Mona Media Resort tọa lạc ở vị trí đắc địa bên cạnh bờ biển Đà Nẵng, với bờ cát trải dài và không gian xanh lý tưởng, chúng tôi cung cấp những dịch vụ nghỉ dưỡng cao cấp, sang trọng.</p>
 </div></div>
 <div class="col medium-6 small-12 large-6"  data-animate="fadeInDown"><div class="col-inner"  >
-<p style="color:#7F7F7F; margin:20px; margin-right: 20%">Khách sạn Mona đi đầu với hệ thống thiết bị hiện đại, điều hòa, tivi, bàn ghế được làm từ gỗ, sóng wifi và các các dịch vụ đưa đón khách tham quan các điểm du lịch. Khách sạn được thiết kế và trang trí theo phong cách Mona rất sang trọng và quý phái. Các trang thiết bị và phòng ốc của nhà nghỉ &#8211; khách sạn rất tiện nghi và hiện đại nhằm mang lại sự hài lòng và thoải mái cho khách hàng trong suốt thời gian lưu trú tại phòng khách sạn.</p>
+<p style="color:#7F7F7F; margin:20px; margin-right: 20%">Khách sạn Mona đi đầu với hệ thống thiết bị hiện đại, điều hòa, tivi, bàn ghế được làm từ gỗ, sóng wifi và các các dịch vụ đưa đón khách tham quan các điểm du lịch. Khách sạn được thiết kế và trang trí theo phong cách Mona rất sang trọng và quý phái. Các trang thiết bị và phòng ốc của khách sạn rất tiện nghi và hiện đại nhằm mang lại sự hài lòng và thoải mái cho khách hàng trong suốt thời gian lưu trú tại khách sạn.</p>
 </div></div>
 </div>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
