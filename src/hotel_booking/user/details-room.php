@@ -100,7 +100,7 @@
                      
                     
                     <h5 class="card-text">Giá: <?php echo number_format($row['room_price'])?>₫</h5>
-                    <a href="show-order-room.php?id=<?php echo $room_id;?>" method = "GET" class="btn btn-warning mt-0 p-2 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt phòng</a>
+                    <a href="#" onclick = "openForm2()" class="btn btn-warning mt-0 p-2 "  style="width:8rem; height:3rem;display: flex;align-items: center;justify-content: center;font-size:19px; margin-left: 19rem;">Đặt phòng</a>
             </div>                                 
         </div>
     
@@ -132,7 +132,9 @@
                     </div>
                     </div>
         </div>
-        <?php      }} }?>
+        <?php      }} }
+        include ('show-order-room.php');
+        include ('alert-order-success.php');?>
     </div>
 
 

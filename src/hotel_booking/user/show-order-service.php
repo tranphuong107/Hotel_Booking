@@ -1,39 +1,17 @@
-<?php
-    include 'header.php';
-?>
-<div>
-<?php
-                   //bảo vệ tk user
- 
-        if(isset($_SESSION['loginUserOK'])){ 
-            $ser_id = $_GET['id'];
-            include '../config.php';
-                    
-                    $sql = "SELECT * FROM tb_services WHERE ser_ID = $ser_id";
-                    $result = mysqli_query($conn,$sql);
-
-                    if($result == true){
-                        while($row = mysqli_fetch_assoc($result)){
-                            $ser_id = $row['ser_ID'];
-                            $ser_name = $row['ser_name'];
-                            $ser_room_size = $row['ser_room_size'];
-                            $ser_description = $row['ser_description'];
-                            $ser_price = $row['ser_price'];
-                            $ser_image = $row['ser_image']; 
-?>
-        
-        <style>
-            .content-popup{
-                background: rgba(0,0,0,0.4);
+<style>
+            .form-popup{
+                background: rgba(0,0,0,0.3);
                 width: 100%;
                 height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 position: fixed;
-                top: 70px;
-                left:-8px;
+                top: 0;
+                left:0;
             }
-            .form-popup {
-               display:none;
-             
+            .content-popup {
+               display: none;
                 }
             .confirm{
                 background: white;
@@ -44,7 +22,7 @@
             .khung{
           width: 350px;
           height:500px;
-          background-color: #c9af911c;
+          background-color: white;
       }
       .title{     
         color: #835542;
@@ -87,22 +65,40 @@
         padding-top: 10px;
     
       }
-            </style>
-    <div class = "ser-ord">
-    <div class = "khung">
+                </style>
+ <div class="content-popup" id="myForm2">
+     <div class = "form-popup">
+        <div class="khung">
         <div class = "cancel">
-            <a href="service.php" style = "color: #835542;"><i class="far fa-times-circle"></i></a>
-        </div>
+            <a href="#" onclick = "closeForm2()" style = "color: #835542;">
+                <svg width = "25" height= "25" aria-hidden="true" focusable="false" data-prefix="far" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"></path></svg>
+            </a>
+        </div>   
         <div class = "title">
             <h3 class = "titlee"><center>ĐẶT DỊCH VỤ</center></h3>
-        </div>
+        </div> 
         <div class = "vao fw-bold">
             Loại dịch vụ:
             <div class = "pt-2">
                 <select class  = "rounded pb-1 pt-1 ps-1" style = "background-color:#c49872b3;border:none;color:#2e1c09;width:263px;">
-                    <option value="0">Chọn loại dịch vụ</option>
-                    <option value="1">Massage</option>
-                    <option value="2"></option>
+                    <option value="0">Chọn loại dịch vụ</option>    
+ <?php       
+        session_start();
+        if(isset($_SESSION['loginUserOK'])){ 
+            $ser_id = $_GET['id'];
+            include '../config.php';
+                    
+                    $sql = "SELECT * FROM tb_services";
+                    $result = mysqli_query($conn,$sql);
+
+                    if($result == true){
+                        while($row = mysqli_fetch_assoc($result)){
+                           
+    ?>  
+            
+                   <?php echo '<option value="'.$row['ser_ID'].'">'.$row['ser_name'].'</option>';}}}else {
+            echo 'Có lỗi';
+        }?>
                 </select>
             </div>
         </div>
@@ -124,24 +120,18 @@
             </div>
         </div>
         <div class = "button">
-            <a href="" class = "btn fw-bold" style = "font-size: 15px;">Đặt dịch vụ</a>
+            <a href="" onclick = "openForm2()" class = "btn fw-bold" style = "font-size: 15px;">Đặt dịch vụ</a>
+        </div></div>
         </div>
-    </div>
-                           
-                    
-            <?php
-                }}}else{
-                    header ('Location: login.php');
-                    }
-                ?>       
-          
-           </form>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src = "js/ser-js.js"></script>
 
-<?php             
-    include 'footer.php';
 
+   
+<script>
+    function openForm2() {
+        document.getElementById("myForm2").style.display = "block";
+    }
+
+    function closeForm2() {
+        document.getElementById("myForm2").style.display = "none";
+    }
+</script>
