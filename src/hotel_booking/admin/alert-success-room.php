@@ -16,17 +16,17 @@
             margin: 0 auto ;
         }
     </style>
-    <div class="thongbao rouned alert alert-success d-flex align-items-center " style="color:black;border:  #60a3bc solid 2px" >
+    <div class="thongbao rouned alert alert-success d-flex align-items-center" style="border: #1dd1a1 solid 2px " >
         <div class="mx-auto">
-        <p class="pt-3">Xác nhận sửa dịch vụ thành công!</p>
+        <p class="pt-3 ">Thêm thành công!</p>
         </div>
         <div class="pb-5">
-        <a href="service-detail.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></a>
+        <button href="ordroom-show.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     </div>
     <script>
         function closeFormAlert() {
-            document.location.href = 'service-show.php'
+            document.location.href = 'room-show.php'
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

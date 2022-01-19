@@ -76,7 +76,7 @@
                <div class="col-lg-2 pt-2"style="margin: auto">Ảnh 2 hiện tại:</div>
                <div class="col">
             <img src="../images/<?php echo $row['room_image1'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-            Ảnh 2 thay thế: <input type="file" name="uploadfile2" value=""/>
+            Ảnh 2 thay thế: <input type="file" name="uploadfile1" value=""/>
             </div>   
                 </div>
             </div>
@@ -85,7 +85,7 @@
                <div class="col-lg-2 pt-2"style="margin: auto">Ảnh 3 hiện tại:</div>
                <div class="col">
             <img src="../images/<?php echo $row['room_image2'];?>" alt="" style = "width: 10rem;height: 10rem;object-fit: contain;">
-            Ảnh 3 thay thế: <input type="file" name="uploadfile3" value=""/>
+            Ảnh 3 thay thế: <input type="file" name="uploadfile2" value=""/>
             </div>   
                 </div>
             </div>

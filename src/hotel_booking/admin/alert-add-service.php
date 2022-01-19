@@ -16,12 +16,12 @@
             margin: 0 auto ;
         }
     </style>
-    <div class="thongbao rouned alert alert-success d-flex align-items-center " style="color:black;border:  #60a3bc solid 2px" >
+    <div class="thongbao rouned alert alert-success d-flex align-items-center" style="border: #1dd1a1 solid 2px " >
         <div class="mx-auto">
-        <p class="pt-3">Xác nhận sửa dịch vụ thành công!</p>
+        <p class="pt-3 ">Thêm thành công!</p>
         </div>
         <div class="pb-5">
-        <a href="service-detail.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></a>
+        <button href="service-show.php" class="btn-close" onclick="closeFormAlert()" on data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     </div>
     <script>
