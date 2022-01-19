@@ -120,9 +120,12 @@
             </div>
         </div>
         <div class = "button">
-            <a href="" onclick = "openForm2()" class = "btn fw-bold" style = "font-size: 15px;">Đặt dịch vụ</a>
-        </div></div>
+            <a href="#" onclick = "runAlert()" class = "btn fw-bold" style = "font-size: 15px;">Đặt dịch vụ</a>
         </div>
+    </div>
+</div>
+</div>
+</div>
 
 
    
@@ -133,5 +136,16 @@
 
     function closeForm2() {
         document.getElementById("myForm2").style.display = "none";
+    }
+    function openAlertSuccess() {
+        document.getElementById("AlertSuccess").style.display = "block";
+    }
+
+    function closeAlertSuccess() {
+        document.getElementById("AlertSuccess").style.display = "none";
+    }
+    function runAlert() {
+        closeForm2();
+        openAlertSuccess();
     }
 </script>

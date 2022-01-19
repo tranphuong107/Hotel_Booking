@@ -82,14 +82,18 @@
                         echo'   <p class="card-title px-2 fs-6">Số người: '.$row['ser_room_size'].'</p>';
                         echo'   <p class="card-title px-2 fs-6">Giá tiền: '.number_format($row['ser_price']).'đ</p>';
                         echo'   <p class="card-text text-muted px-2">'.$row['ser_description'].'</p>';
-                        echo'  <a href="#" onclick = "openForm2()" class="btn btn-outline-dark align-bottom p-2 fs-bold" style = "font-size: 15px;float:right">Đặt dịch vụ...</a>';
+                        echo'   </div>';
+                        echo'   <div class= "card-footer p-4 m-0 border-none" 
+                        style = "background-color: #ffffff; border: none; height: 6rem;padding-bottom: 10rem; content-justify: right; text-align: right" >';
+                    
+                        echo'   <a href="#" onclick = "openForm2()" class="btn btn-outline-dark m-0 p-2 fs-bold" style = "font-size: 15px;">Đặt dịch vụ...</a>';
+                  
+                        echo'   </div>';
+                        echo'   </div>';
                         echo'</div>';
-                        echo'</div>';
-                    echo'</div>';
                     
                 }
                 echo'</div>';
-                include ('show-order-service.php');
                 
             }
 
@@ -100,6 +104,7 @@
 
 
 <?php
-    
+    include ('show-order-service.php');
+    include ('alert-order-success.php');
     include 'footer.php'
 ?>
