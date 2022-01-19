@@ -108,17 +108,17 @@
             <!-- picture -->
             <ul class = "row p-0 m-0 large-columns-2" style = "list-style:none">
               <li class = "col img-ser p-0 m-1">
-              <a href="">
+              <a >
                 <img src="../images/double-room.jpg" alt="#" class = "img-fluid">
               </a></li>
               <li class = "col img-ser p-0 m-1">
-              <a href="#">
+              <a >
                 <img src="../images/single-room.jpg" alt="#" class = "img-fluid">
               </a></li>
             </ul>
             <ul class = "row p-0 m-0 medium-columns-2" style = "list-style:none">
              <li class = "col img-ser col-auto p-0 m-1">
-              <a href="#">
+              <a >
                 <img src="../images/image-index.jpg" alt="#" class = "img-fluid">
               </a></li>
             </ul>
