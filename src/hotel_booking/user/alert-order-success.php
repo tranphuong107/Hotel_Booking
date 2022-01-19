@@ -7,11 +7,11 @@
                 width: 30%;
                 height: 10%;
                 display: flex;
-                align-items: right;
-                justify-content: right;
+                align-items: center;
+                justify-content: center;
                 position: fixed;
-                bottom: 20%;
-                right: 5%;
+                top: 13%;
+                left: 70%;
                 }
 </style>
 <div class = "alert-popup" id = "AlertSuccess">
