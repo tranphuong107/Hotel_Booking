@@ -75,9 +75,14 @@
                         echo'.card-img{
                             object-fit:cover;
                         }
+                        .btn{
+                            background-color:#c49872b3;
+                        
+                        }
                         .btn:hover{
-                            background-color: #ffc40ead;
-                            color: black;}';
+                          background-color:#835542;
+                          color: white;
+                        }';
                     echo'</style>';
                     echo '<div class="col d-flex">';
                         echo'<div class="card flex-fill">';
