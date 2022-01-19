@@ -1,6 +1,6 @@
 <style>
     .alert-popup{
-        display: block;
+        display: none;
             }
     .alert-content-popup {
                background: rgba(0,0,0,0);
