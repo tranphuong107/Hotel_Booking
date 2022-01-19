@@ -14,6 +14,10 @@
     .breadcrumb-item + .breadcrumb-item::before         {
         color:white;
     }
+    .btn:hover{
+        background-color:#835542;
+        color: white;
+        }
 </style>
 <div class="container-fluid float-container " style=" width:100%; margin:0px; padding:0px;">
     
@@ -46,7 +50,7 @@
                     
                         <div class="d-flex " >
                             <input class="form-cn me-2 mr-0" type="search" name="search" style="width:300px" placeholder="Bạn muốn phòng nào?" aria-label="Bạn muốn phòng nào?">
-                            <button class="btn btn-dark" type="submit" name="btnsearch">Search</button>
+                            <button class="btn btn-dark text-dark" type="submit"  name="btnsearch">Search</button>
                         </div>
                     </form>
                     
