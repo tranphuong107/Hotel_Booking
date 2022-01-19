@@ -61,10 +61,7 @@
                     $result10 = mysqli_query($conn,$sql10);
 
                     if($result10 == true){
-                        echo '<script>';
-                        echo 'alert ("Thay đổi thành công");';
-                        echo "location.href = 'room-show.php';";   
-                        echo '</script>';
+                        include 'alert-update-room.php';
                     }else{
                         // echo $sql1;
                         echo '<script>';
@@ -96,10 +93,7 @@
                 $result11 = mysqli_query($conn,$sql11);
 
                 if($result11 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                     
                     echo '<script>';
@@ -133,10 +127,7 @@
                 $result12 = mysqli_query($conn,$sql12);
     
                 if($result12 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                     // echo $sql1;
                     echo '<script>';
@@ -168,10 +159,7 @@
             $result13 = mysqli_query($conn,$sql13);
 
             if($result13 == true){
-                echo '<script>';
-                echo 'alert ("Thay đổi dịch vụ thành công");';
-                echo "location.href = 'room-show.php';";   
-                echo '</script>';
+                include 'alert-update-room.php';
             }else{
                 
                 echo '<script>';
@@ -201,10 +189,7 @@
                 $result14 = mysqli_query($conn,$sql14);
     
                 if($result14 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                     // echo $sql1;
                     echo '<script>';
@@ -234,10 +219,7 @@
                 $result15 = mysqli_query($conn,$sql15);
     
                 if($result15 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                     
                     echo '<script>';
@@ -267,10 +249,7 @@
                 $result16 = mysqli_query($conn,$sql16);
     
                 if($result16 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -301,10 +280,7 @@
                 $result17 = mysqli_query($conn,$sql17);
     
                 if($result17 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -334,10 +310,7 @@
                 $result18 = mysqli_query($conn,$sql18);
     
                 if($result18 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -367,10 +340,7 @@
                 $result19 = mysqli_query($conn,$sql19);
     
                 if($result19 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -400,10 +370,7 @@
                 $result20 = mysqli_query($conn,$sql20);
     
                 if($result20 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -433,10 +400,7 @@
                 $result21 = mysqli_query($conn,$sql21);
     
                 if($result21 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -466,10 +430,7 @@
                 $result22 = mysqli_query($conn,$sql22);
     
                 if($result22 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -499,10 +460,7 @@
                 $result23= mysqli_query($conn,$sql23);
     
                 if($result23 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -532,10 +490,7 @@
                 $result25= mysqli_query($conn,$sql25);
     
                 if($result25 == true){
-                    echo '<script>';
-                    echo 'alert ("Thay đổi dịch vụ thành công");';
-                    echo "location.href = 'room-show.php';";   
-                    echo '</script>';
+                    include 'alert-update-room.php';
                 }else{
                    
                     echo '<script>';
@@ -563,10 +518,7 @@
             $result24 = mysqli_query($conn,$sql24);
 
             if($result24 == true){
-                echo '<script>';
-                echo 'alert ("Thay đổi thành công");';
-                echo "location.href = 'room-show.php';";   
-                echo '</script>';
+                include 'alert-update-room.php';
             }else{
                 // echo $sql1;
                 echo '<script>';
